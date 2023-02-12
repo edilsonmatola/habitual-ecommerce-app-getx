@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.paytekafrica.habitual">
+    package="com.edilsonmatola.habitual">
    <application
         android:label="habitual"
         android:name="${applicationName}"
