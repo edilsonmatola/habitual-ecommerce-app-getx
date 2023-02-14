@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AppThemes {
-  static const Color mainCardColor = Color.fromRGBO(216, 216, 216, 1);
+import '../core/core_export.dart';
 
+class AppThemes {
   final lightTheme = ThemeData.light().copyWith(
-    primaryColor: const Color.fromARGB(255, 68, 181, 30),
+    primaryColor: AppColors.yellow500,
     splashColor: Colors.grey,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
