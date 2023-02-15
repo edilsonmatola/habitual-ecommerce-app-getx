@@ -1,5 +1,8 @@
+// ignore_for_file: avoid_classes_with_only_static_members
+
 import 'package:get/get.dart';
-import 'package:habitual/src/routes/app_routes.dart';
+
+import 'app_routes.dart';
 
 // part 'app_routes.dart';
 
