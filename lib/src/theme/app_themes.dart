@@ -5,21 +5,25 @@ import '../core/core_export.dart';
 
 class AppThemes {
   final lightTheme = ThemeData.light().copyWith(
+    useMaterial3: true,
+    scaffoldBackgroundColor: AppColors.white,
     primaryColor: AppColors.yellow500,
     splashColor: Colors.grey,
+    // * ===== AppBar Theme ======
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.transparent,
       elevation: 0,
-      color: const Color.fromARGB(255, 68, 181, 30),
+      backgroundColor: Colors.transparent,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarColor: Color.fromARGB(255, 68, 181, 30),
       ),
     ),
-    textTheme: const TextTheme(
+    // * ===== Text Theme ======
+    textTheme: TextTheme(
       displayLarge: TextStyle(
-        color: Colors.black,
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
+        fontFamily: AppFonts.loraFontFamily,
+        color: AppColors.neutral900,
+        fontSize: 40,
+        fontWeight: AppFonts.loraSemiBold,
       ),
       displayMedium: TextStyle(
         color: Colors.grey,
@@ -31,7 +35,7 @@ class AppThemes {
         fontSize: 14,
         fontWeight: FontWeight.bold,
       ),
-      titleSmall: TextStyle(
+      titleLarge: TextStyle(
         color: Color.fromARGB(255, 68, 181, 30),
         fontSize: 12,
         fontWeight: FontWeight.w300,
@@ -41,7 +45,24 @@ class AppThemes {
         fontSize: 12,
         fontWeight: FontWeight.normal,
       ),
+      titleSmall: TextStyle(
+        color: Color.fromARGB(255, 68, 181, 30),
+        fontSize: 12,
+        fontWeight: FontWeight.w300,
+      ),
+      bodyLarge: TextStyle(),
+      bodyMedium: TextStyle(),
+      bodySmall: TextStyle(),
+      labelLarge: TextStyle(),
+      labelMedium: TextStyle(
+        color: AppColors.neutral800,
+        fontFamily: AppFonts.interFontFamily,
+        fontWeight: AppFonts.loraSemiBold,
+      ),
+      labelSmall: TextStyle(),
     ),
+    // * ===== ColorScheme Theme ======
+
     colorScheme: const ColorScheme(
       background: Colors.black,
       brightness: Brightness.light,
@@ -56,10 +77,12 @@ class AppThemes {
       onSurface: Colors.black, //* Cores dos icones normais,
     ),
   );
-  final darkTheme = ThemeData.light().copyWith(
+  final darkTheme = ThemeData.dark().copyWith(
+    useMaterial3: true,
+    scaffoldBackgroundColor: AppColors.white,
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
       elevation: 0,
+      backgroundColor: Colors.transparent,
     ),
     primaryColor: const Color.fromARGB(255, 68, 181, 30),
     textTheme: const TextTheme(
@@ -68,21 +91,27 @@ class AppThemes {
         fontSize: 25,
         fontWeight: FontWeight.bold,
       ),
-      displayMedium: TextStyle(
-        color: Colors.grey,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
       titleMedium: TextStyle(
         color: Color.fromARGB(255, 68, 181, 30),
         fontSize: 16,
         fontWeight: FontWeight.w300,
+      ),
+      displayMedium: TextStyle(
+        color: Colors.grey,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
       ),
       titleSmall: TextStyle(
         color: Color.fromARGB(255, 255, 255, 255),
         fontSize: 16,
         fontWeight: FontWeight.normal,
       ),
+      bodyLarge: TextStyle(),
+      bodyMedium: TextStyle(),
+      bodySmall: TextStyle(),
+      labelLarge: TextStyle(),
+      labelMedium: TextStyle(),
+      labelSmall: TextStyle(),
     ),
     colorScheme: const ColorScheme(
       background: Colors.black,
