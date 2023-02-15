@@ -1,8 +1,15 @@
+import 'package:flutter/widgets.dart';
+
 class AppFonts {
-  // Titles : Lora
+  static const loraFontFamily = 'Lora';
+  static const loraSemiBold = FontWeight.w600;
+  // Titles Font: Lora
   // Weight: 600
 
-  // Description: Inter
+  static const interFontFamily = 'Inter';
+  static const interRegular = FontWeight.w400;
+  static const interMedium = FontWeight.w500;
+  // Description Font: Inter
   // Weight: 400
   // Weight: 500
   // Weight: 600
