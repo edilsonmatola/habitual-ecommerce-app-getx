@@ -11,6 +11,8 @@ class AppDimensions {
   static const p32 = 32.0;
   static const p48 = 48.0;
   static const p64 = 64.0;
+  static const p280 = 280.0;
+  
   static const onboardingScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 55);
   static const cartScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 55);
 }
@@ -36,3 +38,4 @@ const gapH24 = SizedBox(height: AppDimensions.p24);
 const gapH32 = SizedBox(height: AppDimensions.p32);
 const gapH48 = SizedBox(height: AppDimensions.p48);
 const gapH64 = SizedBox(height: AppDimensions.p64);
+const gapH280 = SizedBox(height: AppDimensions.p280);
