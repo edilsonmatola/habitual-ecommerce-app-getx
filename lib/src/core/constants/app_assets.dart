@@ -34,12 +34,30 @@ class AppAssets {
   static const githubIcon = 'assets/icons/social-media-bar/youtube.svg';
 
   /* 
+  * ==== Paralax Background Images ====
+   */
+  static const paralaxImage1 =
+      'assets/images/intro_screen/paralax-background/image-1.svg';
+  static const paralaxImage2 =
+      'assets/images/intro_screen/paralax-background/image-2.svg';
+  static const paralaxImage3 =
+      'assets/images/intro_screen/paralax-background/image-3.svg';
+  static const paralaxImage4 =
+      'assets/images/intro_screen/paralax-background/image-4.svg';
+  static const paralaxImage5 =
+      'assets/images/intro_screen/paralax-background/image-5.svg';
+  static const paralaxImage6 =
+      'assets/images/intro_screen/paralax-background/image-6.svg';
+
+  /* 
   * =============== Icons =======================
    */
   static const closeIcon = 'assets/icons/x.svg';
   static const leftArrowIcon = 'assets/icons/arrow-left.svg';
-  static const circleRightArrowIcon = 'assets/icons/others/arrow-right-circle.svg';
-  static const circleLeftArrowIcon = 'assets/icons/others/arrow-left-circle.svg';
+  static const circleRightArrowIcon =
+      'assets/icons/others/arrow-right-circle.svg';
+  static const circleLeftArrowIcon =
+      'assets/icons/others/arrow-left-circle.svg';
   static const iOSLeftArrowIcon = 'assets/icons/others/chevron-left.svg';
   static const iOSRightArrowIcon = 'assets/icons/others/chevron-right.svg';
   static const eyeOffIcon = 'assets/icons/others/eye-off.svg';
