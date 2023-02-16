@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../common_widgets/common_widgets_export.dart';
+import '../../common_widgets/primary_button.dart';
 import '../../core/core_export.dart';
 
 class IntroductionScreen extends StatelessWidget {
@@ -27,8 +27,7 @@ class IntroductionScreen extends StatelessWidget {
                   gapH280,
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: AppDimensions.p24,
-                    ),
+                        horizontal: AppDimensions.p24),
                     child: SizedBox(
                       height: 48,
                       child: PrimaryButton(
