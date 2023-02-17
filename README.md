@@ -99,8 +99,8 @@ The app uses the following dependencies:
 
 ## **System Requirements**
 
-Dart SDK Version 2.19.0 or greater.
-Flutter SDK Version 3.0.0 or greater.
+- Dart SDK Version 2.19.0 or greater
+- Flutter SDK Version 3.0.0 or greater.
 
 ## **Installation**
 
