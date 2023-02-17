@@ -10,7 +10,7 @@
 
 # **Habitual - The Flutter Ecommerce App**
 
-![Habitual Logo]()
+![Habitual-Logo](.github/images/images/logo/habitual-logo.png)
 
 Habitual is a **modern** and **intuitive** mobile shopping app that provides customers with a seamless and convenient shopping experience. This app offers fast load times, reliable performance, and smooth navigation.Habitual enables users to browse and purchase products easily.
 
@@ -130,10 +130,10 @@ flutter run -d chrome --web-renderer html (to see the best output)
 
 ## **Contributing**
 
-Contributions to the app are welcome! If you'd like to contribute, please take a moment to review the **`CONTRIBUTING`** guideline. This file outlines the guidelines and processes for contributing to Habitual.
+Contributions to the app are welcome! If you'd like to contribute, please take a moment to review the **[CONTRIBUTING](./CONTRIBUTING.md)** guideline. This file outlines the guidelines and processes for contributing to Habitual.
 
-If you have any questions or concerns about the contributing process, please don't hesitate to reach me out (here)[issues]. I'm always happy to help new contributors get up to speed.
+If you have any questions or concerns about the contributing process, please don't hesitate to reach me out [here](https://github.com/edilsonmatola/habitual-ecommerce-getx/issues). I'm always happy to help new contributors get up to speed.
 
 # **License**
 
-This project is licensed under the **MIT License**. See the **LICENSE** file for details.
+This project is licensed under the **MIT License**. See the **[LICENSE](./LICENSE)** file for details.
