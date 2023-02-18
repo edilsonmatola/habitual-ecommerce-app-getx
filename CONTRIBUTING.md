@@ -31,7 +31,7 @@ If you'd like to add a feature or fix a bug, I'm more than happy to accept pull 
 **2.** Clone your new fork of the repository:
 
 ```bash
-git clone https://github.com/edilsonmatola/habitual-ecommerce-getx
+git clone https://github.com/YOUR_GITHUB_USERNAME/habitual-ecommerce-getx
 ```
 
 **3.** Navigate to the new project directory:
@@ -43,7 +43,7 @@ cd habitual-ecommerce-getx
 **4.** Set upstream command:
 
 ```bash
-git remote add upstream https://github.com/edilsonmatola/habitual-ecommerce-getx.git
+git remote add upstream https://github.com/YOUR_GITHUB_USERNAME/habitual-ecommerce-getx.git
 ```
 
 **5.** Checkout from main to **development** branch.
