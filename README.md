@@ -76,7 +76,7 @@ The app includes the following pages:
 
 The app uses the following dependencies:
 
-- GetX for state management with [`get`](<[https](https://pub.dev/packages/get)>)
+- GetX for state management with [`get`](https://pub.dev/packages/get)
 - HTTP requests with [`http`](https://pub.dev/packages/http)
 - Persistent storage with [`shared_preferences`](https://pub.dev/packages/shared_preferences) and [`flutter_secure_storage`](https://pub.dev/packages/shared_preferences)
 - Image caching with [`cached_network_image`](https://pub.dev/packages/cached_network_image)
@@ -130,7 +130,7 @@ flutter run -d chrome --web-renderer html (to see the best output)
 
 ## **Contributing**
 
-Contributions to the app are welcome! If you'd like to contribute, please take a moment to review the **[CONTRIBUTING](./CONTRIBUTING.md)** guideline. This file outlines the guidelines and processes for contributing to Habitual.
+Contributions to the app are welcome! If you'd like to contribute, please take a moment to review the **[CONTRIBUTING](./CONTRIBUTING.md)** file. This file outlines the guidelines and processes for contributing to Habitual.
 
 If you have any questions or concerns about the contributing process, please don't hesitate to reach me out [here](https://github.com/edilsonmatola/habitual-ecommerce-getx/issues). I'm always happy to help new contributors get up to speed.
 
