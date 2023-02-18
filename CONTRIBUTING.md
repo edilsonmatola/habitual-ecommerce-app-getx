@@ -1,3 +1,13 @@
+<details>
+<summary>
+<strong> Leia este guia em Português </strong>
+</summary>
+    <ul>
+        <li><a href="./CONTRIBUTING-PT-BR.md"> Português </a></li>
+    </ul>
+
+</details>
+
 # Requirements to contribute
 
 - Basic knowledge of programming is mandatory.
@@ -103,11 +113,11 @@ git push origin YourBranchName
 
 ## Contribution checklist
 
-When opening an issue or pull request, please use this template in your comment:
+To make the contribution verification process more efficient and organized, I have created a pull request template. You can find it in the [".github"](./.github/) folder by opening the ["PULL_REQUEST_TEMPLATE.md"](./.github/pull_request_template.md) file.
 
-- [ ] I have read the contribution guidelines at [CONTRIBUTING.md](./CONTRIBUTING.md)
-- [ ] I have checked other issues/PRs to make sure this is not a duplicate
-- [ ] I agree that my contribution is subject to this project's [MIT License](./LICENSE)
+Please use this template as a guide when submitting your pull request and make sure to fill in all relevant sections. This will help me understand the changes made and how they fit into the larger context of the project.
+
+Please read the [Contribution Guidelines](#-how-to-contribute) and [Code of Conduct](./CODE_OF_CONDUCT.md) before submitting your request to ensure that your contribution aligns with our goals and values.
 
 **11.** **Congratulations!** You've made your first contribution to [**habitual-ecommerce-getx**](https://github.com/edilsonmatola/habitual-ecommerce-getx/graphs/contributors)! 🙌🏼
 
