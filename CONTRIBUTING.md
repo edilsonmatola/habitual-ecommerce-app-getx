@@ -21,7 +21,7 @@ If you'd like to add a feature or fix a bug, I'm more than happy to accept pull 
 
 - Take a look at the existing [Issues](https://github.com/edilsonmatola/habitual-ecommerce-getx/issues) or [create a new issue](https://github.com/edilsonmatola/habitual-ecommerce-getx/issues/new/choose)!
 - [Fork the Repo](https://github.com/edilsonmatola/habitual-ecommerce-getx/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
-- Create a **[Pull Request](https://github.com/edilsonmatola/habitual-ecommerce-getx/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
+- Create a **[Pull Request](https://github.com/edilsonmatola/habitual-ecommerce-getx/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by me.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes proposed in your PR.
 
 ## ⭐ HOW TO MAKE A PULL REQUEST:
