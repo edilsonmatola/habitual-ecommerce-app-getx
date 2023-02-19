@@ -19,11 +19,9 @@ O aplicativo foi projectado com uma abordagem centrada no usuário, fornecendo u
 
 ## **Screenshots/ Capturas de Tela:**
 
-![Image 1]()
+![Image 1](./.github/images/images/screenshots/screenshot-1.png)
 
-![Image 1]()
-
-![Image 1]()
+![Image 2](./.github/images/images/screenshots/screenshot-2.png)
 
 ## **Páginas Incluídas:**
 
