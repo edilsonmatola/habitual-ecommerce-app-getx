@@ -67,6 +67,7 @@ flutter:
     - assets/icons/navigation-bar/
     - assets/icons/social-media/
     - assets/icons/others/
+    - assets/images/
     - assets/images/delivery_screen/
     - assets/images/intro_screen/
     - assets/images/intro_screen/paralax-background/
