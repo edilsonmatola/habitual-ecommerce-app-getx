@@ -26,7 +26,7 @@ class AppThemes {
         fontWeight: AppFonts.loraSemiBold,
       ),
       displayMedium: TextStyle(
-        color: Colors.grey,
+        color: Colors.white,
         fontSize: 14,
         fontWeight: FontWeight.bold,
       ),
@@ -55,7 +55,7 @@ class AppThemes {
       bodySmall: TextStyle(),
       labelLarge: TextStyle(),
       labelMedium: TextStyle(
-        color: AppColors.neutral800,
+        color: Colors.white,
         fontFamily: AppFonts.interFontFamily,
         fontWeight: AppFonts.loraSemiBold,
       ),
