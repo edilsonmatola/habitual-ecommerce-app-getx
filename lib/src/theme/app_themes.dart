@@ -8,23 +8,31 @@ class AppThemes {
     useMaterial3: true,
     scaffoldBackgroundColor: AppColors.white,
     primaryColor: AppColors.yellow500,
-    splashColor: Colors.grey,
+    splashColor: AppColors.neutral100,
     // * ===== AppBar Theme ======
     appBarTheme: AppBarTheme(
       elevation: 0,
       backgroundColor: Colors.transparent,
-      systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarColor: Color.fromARGB(255, 68, 181, 30),
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppColors.white,
       ),
     ),
     // * ===== Text Theme ======
     textTheme: TextTheme(
+      //* Heading 1 (H1)
+      headlineLarge: TextStyle(),
+      //* Heading 2 (H2)
+      headlineMedium: TextStyle(),
+      //* Heading 3 (H3)
+      headlineSmall: TextStyle(),
+      //* Heading 4 (H4)
       displayLarge: TextStyle(
         fontFamily: AppFonts.loraFontFamily,
         color: AppColors.neutral900,
         fontSize: 40,
         fontWeight: AppFonts.loraSemiBold,
       ),
+      //* Heading 5 (H5)
       displayMedium: TextStyle(
         color: Colors.white,
         fontSize: 14,
@@ -40,25 +48,28 @@ class AppThemes {
         fontSize: 12,
         fontWeight: FontWeight.w300,
       ),
+      //* Heading 5 (H5)
       titleMedium: TextStyle(
         color: Color.fromARGB(255, 0, 0, 0),
         fontSize: 12,
         fontWeight: FontWeight.normal,
       ),
-      titleSmall: TextStyle(
-        color: Color.fromARGB(255, 68, 181, 30),
-        fontSize: 12,
-        fontWeight: FontWeight.w300,
-      ),
+      titleSmall: TextStyle(),
+      // * p1-r
       bodyLarge: TextStyle(),
+      // * p1-b
       bodyMedium: TextStyle(),
+      // * p2-r
       bodySmall: TextStyle(),
+      // * p2-b
       labelLarge: TextStyle(),
+      // * p3-r
       labelMedium: TextStyle(
         color: Colors.white,
         fontFamily: AppFonts.interFontFamily,
         fontWeight: AppFonts.loraSemiBold,
       ),
+      // * p3-b
       labelSmall: TextStyle(),
     ),
     // * ===== ColorScheme Theme ======
