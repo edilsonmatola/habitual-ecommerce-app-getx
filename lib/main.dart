@@ -4,7 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import 'src/core/core_export.dart';
 import 'src/routes/routes_export.dart';
-import 'src/theme/app_themes.dart';
+import 'src/theme/theme_export.dart';
 
 void main() {
   runApp(const MyApp());
