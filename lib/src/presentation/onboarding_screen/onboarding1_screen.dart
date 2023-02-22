@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../common_widgets/primary_button.dart';
-import '../../core/constants/constants_export.dart';
+import '../../core/core_export.dart';
 import '../../routes/routes_export.dart';
+import 'widgets/header_section.dart';
 
 class OnBoarding1Screen extends StatelessWidget {
   const OnBoarding1Screen({Key? key}) : super(key: key);
@@ -18,55 +19,29 @@ class OnBoarding1Screen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset(
-                    AppAssets.appLogoBlackSmall,
-                    width: 24,
-                    height: 24,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Skip',
-                      style: TextStyle(
-                        color: AppColors.neutral600,
-                        fontFamily: AppFonts.interFontFamily,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
+              HeaderSection(
+                onPressed: () {},
               ),
-              gapH56,
               SvgPicture.asset(
                 'assets/images/looking.svg',
                 width: 342,
                 height: 342,
               ),
-              gapH56,
               Text(
                 AppTitles.onboarding1Title,
-                style: TextStyle(
-                  color: AppColors.neutral800,
-                  fontSize: 32,
-                  fontFamily: AppFonts.loraFontFamily,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Get.textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               gapH16,
               Text(
                 AppTitles.onboarding1Description,
-                style: TextStyle(
+                style: Get.textTheme.displaySmall?.copyWith(
                   color: AppColors.neutral600,
-                  fontSize: 16,
-                  fontFamily: AppFonts.interFontFamily,
+                  fontWeight: AppFonts.interRegular,
                 ),
                 textAlign: TextAlign.center,
               ),
-              gapH70,
+              gapH32,
               PrimaryButton(
                 buttonLabel: 'Next',
                 color: AppColors.neutral800,
