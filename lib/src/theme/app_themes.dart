@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core/core_export.dart';
+import 'theme_export.dart';
 
 class AppThemes {
   final lightTheme = ThemeData.light().copyWith(
@@ -9,71 +10,46 @@ class AppThemes {
     scaffoldBackgroundColor: AppColors.white,
     primaryColor: AppColors.yellow500,
     splashColor: AppColors.neutral100,
-    // * ===== AppBar Theme ======
+// * ===== AppBar Theme ======
     appBarTheme: AppBarTheme(
       elevation: 0,
+      centerTitle: true,
       backgroundColor: Colors.transparent,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
       ),
+      titleTextStyle: AppStyle.heading4Style,
     ),
-    // * ===== Text Theme ======
+// * ===== Text Theme ======
     textTheme: TextTheme(
       //* Heading 1 (H1)
-      headlineLarge: TextStyle(),
+      headlineLarge: AppStyle.heading1Style,
       //* Heading 2 (H2)
-      headlineMedium: TextStyle(),
+      headlineMedium: AppStyle.heading2Style,
       //* Heading 3 (H3)
-      headlineSmall: TextStyle(),
+      headlineSmall: AppStyle.heading3Style,
       //* Heading 4 (H4)
-      displayLarge: TextStyle(
-        fontFamily: AppFonts.loraFontFamily,
-        color: AppColors.neutral900,
-        fontSize: 40,
-        fontWeight: AppFonts.loraSemiBold,
-      ),
+      displayLarge: AppStyle.heading4Style,
       //* Heading 5 (H5)
-      displayMedium: TextStyle(
-        color: Colors.white,
-        fontSize: 14,
-        fontWeight: FontWeight.bold,
-      ),
-      displaySmall: TextStyle(
-        color: Color.fromARGB(255, 68, 181, 30),
-        fontSize: 14,
-        fontWeight: FontWeight.bold,
-      ),
-      titleLarge: TextStyle(
-        color: Color.fromARGB(255, 68, 181, 30),
-        fontSize: 12,
-        fontWeight: FontWeight.w300,
-      ),
-      //* Heading 5 (H5)
-      titleMedium: TextStyle(
-        color: Color.fromARGB(255, 0, 0, 0),
-        fontSize: 12,
-        fontWeight: FontWeight.normal,
-      ),
-      titleSmall: TextStyle(),
-      // * p1-r
-      bodyLarge: TextStyle(),
-      // * p1-b
-      bodyMedium: TextStyle(),
-      // * p2-r
-      bodySmall: TextStyle(),
-      // * p2-b
-      labelLarge: TextStyle(),
-      // * p3-r
-      labelMedium: TextStyle(
-        color: Colors.white,
-        fontFamily: AppFonts.interFontFamily,
-        fontWeight: AppFonts.loraSemiBold,
-      ),
-      // * p3-b
-      labelSmall: TextStyle(),
+      displayMedium: AppStyle.heading5Style,
+// * ========= BODY (Parapgraphs) ===========
+      // * p1-b (Paragraph 1 Bold)
+      displaySmall: AppStyle.paragraph1Bold,
+      // * p2-b (Paragraph 2 Bold)
+      titleLarge: AppStyle.paragraph2Bold,
+      // * p3-b (Paragraph 3 Bold)
+      titleMedium: AppStyle.paragraph3Bold,
+// * ========= Labels ===========
+      // * l1-b (Label 1 Bold)
+      titleSmall: AppStyle.label1Bold,
+      // * l2-b (Label 2 Bold)
+      bodyLarge: AppStyle.label2Bold,
+      // * l3-b (Label 3 Bold)
+      bodyMedium: AppStyle.label3Bold,
+      // * l4-b (Label 4 Bold)
+      bodySmall: AppStyle.label4Bold,
     ),
-    // * ===== ColorScheme Theme ======
-
+// * ===== ColorScheme Theme ======
     colorScheme: const ColorScheme(
       background: Colors.black,
       brightness: Brightness.light,
@@ -91,9 +67,11 @@ class AppThemes {
   final darkTheme = ThemeData.dark().copyWith(
     useMaterial3: true,
     scaffoldBackgroundColor: AppColors.white,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       elevation: 0,
+      centerTitle: true,
       backgroundColor: Colors.transparent,
+      titleTextStyle: AppStyle.heading4Style,
     ),
     primaryColor: const Color.fromARGB(255, 68, 181, 30),
     textTheme: const TextTheme(
