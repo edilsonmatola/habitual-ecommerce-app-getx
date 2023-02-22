@@ -8,10 +8,14 @@ class PrimaryTextButton extends StatelessWidget {
     Key? key,
     this.onPressed,
     required this.buttonLabel,
+    this.buttonColor,
+    this.fontWeight,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String buttonLabel;
+  final Color? buttonColor;
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +24,8 @@ class PrimaryTextButton extends StatelessWidget {
       child: Text(
         buttonLabel,
         style: Get.textTheme.bodyMedium?.copyWith(
-          color: AppColors.neutral600,
-          fontWeight: AppFonts.interRegular,
+          color: buttonColor ?? AppColors.neutral600,
+          fontWeight: fontWeight ?? AppFonts.interRegular,
         ),
       ),
     );
