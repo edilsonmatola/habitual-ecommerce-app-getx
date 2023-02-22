@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core/constants/app_fonts.dart';
+import '../core/core_export.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
@@ -33,7 +33,8 @@ class PrimaryButton extends StatelessWidget {
         child: Text(
           buttonLabel,
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                fontWeight: AppFonts.interRegular,
+                color: AppColors.white,
+                fontWeight: FontWeight.w500,
               ),
         ),
       ),
