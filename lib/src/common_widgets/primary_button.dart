@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants/app_fonts.dart';
+
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     Key? key,
@@ -30,7 +32,9 @@ class PrimaryButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           buttonLabel,
-          style: Theme.of(context).textTheme.labelMedium,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                fontWeight: AppFonts.interRegular,
+              ),
         ),
       ),
     );
