@@ -22,7 +22,7 @@ class OnBoarding1Screen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SvgPicture.asset(
-                    AppAssets.appIconLogoBlack,
+                    AppAssets.appLogoBlackSmall,
                     width: 24,
                     height: 24,
                   ),
