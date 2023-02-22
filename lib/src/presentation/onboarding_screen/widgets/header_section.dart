@@ -5,9 +5,11 @@ import '../../../common_widgets/primary_text_button.dart';
 import '../../../core/core_export.dart';
 
 class HeaderSection extends StatelessWidget {
-  const HeaderSection({Key? key, required this.onPressed}) : super(key: key);
+  const HeaderSection({Key? key, required this.onPressed, this.buttonLabel})
+      : super(key: key);
 
   final VoidCallback onPressed;
+  final String? buttonLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class HeaderSection extends StatelessWidget {
           height: 24,
         ),
         PrimaryTextButton(
-          buttonLabel: 'Skip',
+          buttonLabel: buttonLabel ?? 'Skip',
           onPressed: onPressed,
         )
       ],
