@@ -22,7 +22,7 @@ class IntroductionScreen extends StatelessWidget {
                 children: [
                   Text(
                     AppTitles.introTitle,
-                    style: Get.theme.textTheme.displayLarge,
+                    style: Get.theme.textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),
                   gapH280,
@@ -35,7 +35,7 @@ class IntroductionScreen extends StatelessWidget {
                         onPressed: () =>
                             Get.toNamed(AppRoutes.onBoarding1Route),
                         buttonLabel: "Let's begin",
-                        color: AppColors.yellow500,
+                        color: AppColors.yellow300,
                       ),
                     ),
                   )
