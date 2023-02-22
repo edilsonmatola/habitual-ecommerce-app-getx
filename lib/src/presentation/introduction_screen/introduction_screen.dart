@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
+import '../../common_widgets/primary_text_button.dart';
 import '../../core/core_export.dart';
 import '../../routes/routes_export.dart';
 
@@ -15,6 +16,7 @@ class IntroductionScreen extends StatelessWidget {
         children: [
           Scaffold(
             body: SingleChildScrollView(
+              padding: AppDimensions.onboardingScreenPadding.copyWith(top: 0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -25,20 +27,20 @@ class IntroductionScreen extends StatelessWidget {
                     style: Get.theme.textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),
-                  gapH280,
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: AppDimensions.p24),
-                    child: SizedBox(
-                      height: 48,
-                      child: PrimaryButton(
-                        onPressed: () =>
-                            Get.toNamed(AppRoutes.onBoarding1Route),
-                        buttonLabel: "Let's begin",
-                        color: AppColors.yellow300,
-                      ),
-                    ),
-                  )
+                  gapH70,
+                  PrimaryButton(
+                    labelColor: AppColors.neutral800,
+                    onPressed: () => Get.toNamed(AppRoutes.onBoarding1Route),
+                    buttonLabel: "Let's begin",
+                    buttonColor: AppColors.yellow300,
+                  ),
+                  gapH16,
+                  PrimaryTextButton(
+                    buttonColor: AppColors.neutral800,
+                    fontWeight: FontWeight.w600,
+                    buttonLabel: 'Already have an account?',
+                    onPressed: () {},
+                  ),
                 ],
               ),
             ),
