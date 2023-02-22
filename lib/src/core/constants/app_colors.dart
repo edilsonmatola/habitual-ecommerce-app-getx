@@ -4,13 +4,14 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+///* Color Styles
 class AppColors {
   /* 
   * ========= Primary Colors ==================
    */
   static Color yellow500 = fromHex('#F9D262');
 
-  static Color yellow300 = fromHex('#FFE8B2');
+  static Color yellow300 = fromHex('#FFE393');
 
   static Color yellow100 = fromHex('#FFF8EF');
 
