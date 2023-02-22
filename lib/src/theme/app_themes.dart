@@ -66,42 +66,49 @@ class AppThemes {
   );
   final darkTheme = ThemeData.dark().copyWith(
     useMaterial3: true,
-    scaffoldBackgroundColor: AppColors.white,
+    scaffoldBackgroundColor: AppColors.white, //*TODO: Change to a darker color
+// * ===== AppBar Theme ======
     appBarTheme: AppBarTheme(
       elevation: 0,
       centerTitle: true,
       backgroundColor: Colors.transparent,
       titleTextStyle: AppStyle.heading4Style,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppColors.white,
+      ), //*TODO: Change to a darker color
     ),
-    primaryColor: const Color.fromARGB(255, 68, 181, 30),
-    textTheme: const TextTheme(
-      displayLarge: TextStyle(
-        color: Colors.white,
-        fontSize: 25,
-        fontWeight: FontWeight.bold,
-      ),
-      titleMedium: TextStyle(
-        color: Color.fromARGB(255, 68, 181, 30),
-        fontSize: 16,
-        fontWeight: FontWeight.w300,
-      ),
-      displayMedium: TextStyle(
-        color: Colors.grey,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
-      titleSmall: TextStyle(
-        color: Color.fromARGB(255, 255, 255, 255),
-        fontSize: 16,
-        fontWeight: FontWeight.normal,
-      ),
-      bodyLarge: TextStyle(),
-      bodyMedium: TextStyle(),
-      bodySmall: TextStyle(),
-      labelLarge: TextStyle(),
-      labelMedium: TextStyle(),
-      labelSmall: TextStyle(),
+    primaryColor: AppColors.yellow500,
+    splashColor: AppColors.neutral100,
+// * ===== Text Theme ======
+    textTheme: TextTheme(
+      //* Heading 1 (H1)
+      headlineLarge: AppStyle.heading1Style,
+      //* Heading 2 (H2)
+      headlineMedium: AppStyle.heading2Style,
+      //* Heading 3 (H3)
+      headlineSmall: AppStyle.heading3Style,
+      //* Heading 4 (H4)
+      displayLarge: AppStyle.heading4Style,
+      //* Heading 5 (H5)
+      displayMedium: AppStyle.heading5Style,
+// * ========= BODY (Parapgraphs) ===========
+      // * p1-b (Paragraph 1 Bold)
+      displaySmall: AppStyle.paragraph1Bold,
+      // * p2-b (Paragraph 2 Bold)
+      titleLarge: AppStyle.paragraph2Bold,
+      // * p3-b (Paragraph 3 Bold)
+      titleMedium: AppStyle.paragraph3Bold,
+// * ========= Labels ===========
+      // * l1-b (Label 1 Bold)
+      titleSmall: AppStyle.label1Bold,
+      // * l2-b (Label 2 Bold)
+      bodyLarge: AppStyle.label2Bold,
+      // * l3-b (Label 3 Bold)
+      bodyMedium: AppStyle.label3Bold,
+      // * l4-b (Label 4 Bold)
+      bodySmall: AppStyle.label4Bold,
     ),
+// * ===== ColorScheme Theme ======
     colorScheme: const ColorScheme(
       background: Colors.black,
       brightness: Brightness.light,
