@@ -22,11 +22,13 @@ class OnBoarding1Screen extends StatelessWidget {
               HeaderSection(
                 onPressed: () {},
               ),
+              gapH16,
               SvgPicture.asset(
                 'assets/images/looking.svg',
                 width: 342,
                 height: 342,
               ),
+              gapH16,
               Text(
                 AppTitles.onboarding1Title,
                 style: Get.textTheme.headlineMedium,
@@ -38,13 +40,15 @@ class OnBoarding1Screen extends StatelessWidget {
                 style: Get.textTheme.displaySmall?.copyWith(
                   color: AppColors.neutral600,
                   fontWeight: AppFonts.interRegular,
+                  height: 1.5,
+
                 ),
                 textAlign: TextAlign.center,
               ),
               gapH32,
               PrimaryButton(
                 buttonLabel: 'Next',
-                color: AppColors.neutral800,
+                buttonColor: AppColors.neutral800,
                 onPressed: () => Get.toNamed(AppRoutes.onBoarding2Route),
               ),
             ],

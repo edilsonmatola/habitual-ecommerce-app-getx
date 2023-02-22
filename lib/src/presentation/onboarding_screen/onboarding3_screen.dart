@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
-import '../../common_widgets/primary_button.dart';
-import '../../core/constants/constants_export.dart';
+import '../../common_widgets/common_widgets_export.dart';
+import '../../core/core_export.dart';
+import 'widgets/header_section.dart';
 
 class OnBoarding3Screen extends StatelessWidget {
   const OnBoarding3Screen({Key? key}) : super(key: key);
@@ -16,58 +18,36 @@ class OnBoarding3Screen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset(
-                    AppAssets.appLogoBlackSmall,
-                    width: 24,
-                    height: 24,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Skip',
-                      style: TextStyle(
-                        color: AppColors.neutral600,
-                        fontFamily: AppFonts.interFontFamily,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
+              HeaderSection(
+                buttonLabel: 'Exit',
+                onPressed: () {},
               ),
-              gapH56,
+              gapH16,
               SvgPicture.asset(
                 'assets/images/mailbox.svg',
                 width: 342,
                 height: 342,
               ),
-              gapH56,
               Text(
                 AppTitles.onboarding3Title,
-                style: TextStyle(
-                  color: AppColors.neutral800,
-                  fontSize: 32,
-                  fontFamily: AppFonts.loraFontFamily,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Get.textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               gapH16,
               Text(
                 AppTitles.onboarding3Description,
-                style: TextStyle(
+                style: Get.textTheme.displaySmall?.copyWith(
                   color: AppColors.neutral600,
-                  fontSize: 16,
-                  fontFamily: AppFonts.interFontFamily,
+                  fontWeight: AppFonts.interRegular,
+                  height: 1.5,
                 ),
                 textAlign: TextAlign.center,
               ),
-              gapH70,
+              gapH32,
               PrimaryButton(
                 buttonLabel: 'Sign me up!',
-                color: AppColors.yellow300,
+                buttonColor: AppColors.yellow300,
+                labelColor: AppColors.neutral800,
                 onPressed: () {},
               ),
             ],
