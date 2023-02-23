@@ -10,7 +10,7 @@
 
 # **Habitual - The Flutter Ecommerce App**
 
-![Habitual-Logo](.github/images/images/logo/habitual-logo.png)
+![Habitual-Logo](.github/images/logo/habitual-logo.png)
 
 Habitual is a **modern** and **intuitive** mobile shopping app that provides customers with a seamless and convenient shopping experience. This app offers fast load times, reliable performance, and smooth navigation.Habitual enables users to browse and purchase products easily.
 
@@ -20,9 +20,9 @@ The app has been designed with a user-centric approach, providing a clear and ea
 
 ## **Screenshots:**
 
-![Image 1](./.github/images/images/screenshots/screenshot-1.png)
+![Image 1](./.github/images/screenshots/screenshot-1.png)
 
-![Image 2](./.github/images/images/screenshots/screenshot-2.png)
+![Image 2](./.github/images/screenshots/screenshot-2.png)
 
 ## **Pages Included:**
 
