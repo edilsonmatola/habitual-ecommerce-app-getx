@@ -9,6 +9,15 @@ class AppAssets {
   static const appLogoYellow = 'assets/logo/logo-yellow.svg';
 
   /* 
+  * ============= Images ==============
+   */
+
+  // *Onboarding Screens
+  static const lookingImage = 'assets/images/looking.svg';
+  static const mailboxImage = 'assets/images/mailbox.svg';
+  static const productsImage = 'assets/images/looking.svg';
+
+  /* 
   * ========== Logos em forma de Icon =========
    */
   static const appLogoBlackSmall = 'assets/logo/icon-black.svg';
