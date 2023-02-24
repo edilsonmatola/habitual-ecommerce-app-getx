@@ -24,7 +24,7 @@ class OnBoarding1Screen extends StatelessWidget {
               ),
               gapH16,
               SvgPicture.asset(
-                'assets/images/looking.svg',
+                AppAssets.lookingImage,
                 width: 342,
                 height: 342,
               ),

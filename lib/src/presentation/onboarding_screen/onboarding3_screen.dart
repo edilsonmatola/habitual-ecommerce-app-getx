@@ -24,7 +24,7 @@ class OnBoarding3Screen extends StatelessWidget {
               ),
               gapH16,
               SvgPicture.asset(
-                'assets/images/mailbox.svg',
+                AppAssets.mailboxImage,
                 width: 342,
                 height: 342,
               ),
