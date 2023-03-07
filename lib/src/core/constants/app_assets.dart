@@ -15,7 +15,7 @@ class AppAssets {
   // *Onboarding Screens
   static const lookingImage = 'assets/images/looking.svg';
   static const mailboxImage = 'assets/images/mailbox.svg';
-  static const productsImage = 'assets/images/looking.svg';
+  static const productsImage = 'assets/images/products.svg';
 
   /* 
   * ========== Logos em forma de Icon =========
