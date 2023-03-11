@@ -1,3 +1,7 @@
+// ignore_for_file: avoid_classes_with_only_static_members
+
+import 'package:flutter_svg/flutter_svg.dart';
+
 ///* Imagery Styles
 class AppAssets {
   /* 
@@ -39,4 +43,35 @@ class AppAssets {
       'assets/images/intro_screen/paralax-background/image-5.svg';
   static const paralaxImage6 =
       'assets/images/intro_screen/paralax-background/image-6.svg';
+
+  static Future<void> preloadSVGs() async {
+    final assets = [
+      //* Logos
+      appLogoPrimaryPng,
+      appLogoPrimary,
+      appLogoBlack,
+      appLogoYellow,
+      // * Paralax
+      paralaxImage1,
+      paralaxImage2,
+      paralaxImage3,
+      paralaxImage4,
+      paralaxImage5,
+      paralaxImage6,
+// * Others
+      lookingImage,
+      mailboxImage,
+      productsImage,
+      appLogoBlackSmall,
+      appLogoWhiteSmall,
+      appLogoYellowSmall,
+    ];
+    for (final asset in assets) {
+      final loader = SvgAssetLoader(asset);
+      await svg.cache.putIfAbsent(
+        loader.cacheKey(null),
+        () => loader.loadBytes(null),
+      );
+    }
+  }
 }

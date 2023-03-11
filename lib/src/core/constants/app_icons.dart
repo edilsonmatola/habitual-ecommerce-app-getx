@@ -1,4 +1,8 @@
+import 'package:flutter_svg/flutter_svg.dart';
+
 ///* App Icons
+// ignore_for_file: avoid_classes_with_only_static_members
+
 class AppIcons {
   /* 
   * =========== NavBar Icons ============
@@ -41,4 +45,46 @@ class AppIcons {
   static const deleteEmptyIcon = 'assets/icons/others/trash.svg';
   static const deleteFullIcon = 'assets/icons/others/trash-2.svg';
   static const lockOpenIcon = 'assets/icons/others/unlock.svg';
+
+  static Future<void> preloadSVGs() async {
+    final assets = [
+      //* Navbar
+      favoriteIcon,
+      homeIcon,
+      searchIcon,
+      profileIcon,
+      // * Social Media
+      facebookIcon,
+      linkedInIcon,
+      instagramIcon,
+      emailIcon,
+      twitterIcon,
+      youtubeIcon,
+      githubIcon,
+// * Others
+      closeIcon,
+      leftArrowIcon,
+      circleRightArrowIcon,
+      circleLeftArrowIcon,
+      iOSLeftArrowIcon,
+      iOSRightArrowIcon,
+      eyeOffIcon,
+      eyeIcon,
+      lockIcon,
+      loginIcon,
+      logoutIcon,
+      shoppingBagIcon,
+      filterIcon,
+      deleteEmptyIcon,
+      deleteFullIcon,
+      lockOpenIcon,
+    ];
+    for (final asset in assets) {
+      final loader = SvgAssetLoader(asset);
+      await svg.cache.putIfAbsent(
+        loader.cacheKey(null),
+        () => loader.loadBytes(null),
+      );
+    }
+  }
 }
