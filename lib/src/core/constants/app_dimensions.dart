@@ -15,7 +15,7 @@ class AppDimensions {
   static const p70 = 70.0;
   static const p280 = 280.0;
 
-  static const onboardingScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 55);
+  static const onboardingScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 0);
   static const cartScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 55);
 }
 
