@@ -41,7 +41,6 @@ class OnBoarding1Screen extends StatelessWidget {
                   color: AppColors.neutral600,
                   fontWeight: AppFonts.interRegular,
                   height: 1.5,
-
                 ),
                 textAlign: TextAlign.center,
               ),
