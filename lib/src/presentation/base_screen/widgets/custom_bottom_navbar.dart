@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_fonts.dart';
 import '../../../core/constants/app_icons.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
@@ -35,6 +36,10 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       currentIndex: currentPage,
       type: BottomNavigationBarType.fixed,
       backgroundColor: AppColors.white,
+      unselectedLabelStyle: TextStyle(
+        color: AppColors.neutral400,
+        fontFamily: AppFonts.interFontFamily,
+      ),
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
