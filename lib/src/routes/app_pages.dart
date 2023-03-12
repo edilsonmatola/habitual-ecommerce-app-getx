@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_classes_with_only_static_members
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../presentation/base_screen/base_screen.dart';
@@ -17,7 +18,8 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.introRoute,
       page: () => const IntroductionScreen(),
-      transitionDuration: Duration(milliseconds: 400),
+      transitionDuration: Duration(milliseconds: 500),
+      curve: Curves.easeOut,
       transition: Transition.fadeIn,
     ),
     /* 
@@ -26,24 +28,30 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.onBoarding1Route,
       page: () => const OnBoarding1Screen(),
-      transitionDuration: Duration(milliseconds: 400),
+      transitionDuration: Duration(milliseconds: 500),
+      curve: Curves.easeOut,
       transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.onBoarding2Route,
       page: () => const OnBoarding2Screen(),
-      transitionDuration: Duration(milliseconds: 400),
+      transitionDuration: Duration(milliseconds: 500),
+      curve: Curves.easeOut,
       transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.onBoarding3Route,
       page: () => const OnBoarding3Screen(),
-      transitionDuration: Duration(milliseconds: 400),
+      transitionDuration: Duration(milliseconds: 500),
+      curve: Curves.easeOut,
       transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.baseRoute,
       page: () => const BaseScreen(),
+      transitionDuration: Duration(milliseconds: 500),
+      curve: Curves.easeOut,
+      transition: Transition.rightToLeft,
     ),
   ];
 }
