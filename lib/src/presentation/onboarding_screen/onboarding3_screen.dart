@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
 import '../../core/core_export.dart';
-import '../../routes/app_pages.dart';
+import '../../routes/routes_export.dart';
 import 'widgets/header_section.dart';
 
 class OnBoarding3Screen extends StatelessWidget {
@@ -21,7 +21,7 @@ class OnBoarding3Screen extends StatelessWidget {
             children: [
               HeaderSection(
                 buttonLabel: 'Exit',
-                onPressed: () {},
+                onPressed: () => Get.offAllNamed(AppRoutes.baseRoute),
               ),
               gapH16,
               SvgPicture.asset(
@@ -49,7 +49,7 @@ class OnBoarding3Screen extends StatelessWidget {
                 buttonLabel: 'Sign me up!',
                 buttonColor: AppColors.yellow300,
                 labelColor: AppColors.neutral800,
-                onPressed: () => Get.offAllNamed(AppRoutes.baseRoute),
+                onPressed: () {},
               ),
             ],
           ),

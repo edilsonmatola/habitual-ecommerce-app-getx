@@ -20,7 +20,7 @@ class OnBoarding2Screen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               HeaderSection(
-                onPressed: () {},
+                onPressed: () => Get.toNamed(AppRoutes.onBoarding3Route),
               ),
               gapH16,
               SvgPicture.asset(
