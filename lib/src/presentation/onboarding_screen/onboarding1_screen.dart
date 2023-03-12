@@ -15,7 +15,7 @@ class OnBoarding1Screen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          padding: AppDimensions.onboardingScreenPadding,
+          padding: onboardingScreenPadding,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
