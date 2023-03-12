@@ -17,6 +17,8 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.introRoute,
       page: () => const IntroductionScreen(),
+      transitionDuration: Duration(milliseconds: 400),
+      transition: Transition.fadeIn,
     ),
     /* 
     * ===== Onboarding Pages =====
@@ -24,14 +26,20 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.onBoarding1Route,
       page: () => const OnBoarding1Screen(),
+      transitionDuration: Duration(milliseconds: 400),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.onBoarding2Route,
       page: () => const OnBoarding2Screen(),
+      transitionDuration: Duration(milliseconds: 400),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.onBoarding3Route,
       page: () => const OnBoarding3Screen(),
+      transitionDuration: Duration(milliseconds: 400),
+      transition: Transition.fadeIn,
     ),
     GetPage(
       name: AppRoutes.homeRoute,
