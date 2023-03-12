@@ -2,7 +2,7 @@
 
 import 'package:get/get.dart';
 
-import '../presentation/home_screen/home_tab_screen.dart';
+import '../presentation/base_screen/base_screen.dart';
 import '../presentation/introduction_screen/introduction_screen.dart';
 import '../presentation/onboarding_screen/onboarding1_screen.dart';
 import '../presentation/onboarding_screen/onboarding2_screen.dart';
@@ -42,8 +42,8 @@ abstract class AppPages {
       transition: Transition.fadeIn,
     ),
     GetPage(
-      name: AppRoutes.homeRoute,
-      page: () => const HomeTabScreen(),
+      name: AppRoutes.baseRoute,
+      page: () => const BaseScreen(),
     ),
   ];
 }
@@ -58,7 +58,7 @@ abstract class AppRoutes {
   static const registration3Route = '/registration3';
   static const registration4Route = '/registration4';
   static const registrationCompleteRoute = '/registrationComplete';
-  static const homeRoute = '/home';
+  static const baseRoute = '/';
   static const cartRoute = '/cart';
   static const categoriesRoute = '/categories';
   static const checkoutRoute = '/checkout';
