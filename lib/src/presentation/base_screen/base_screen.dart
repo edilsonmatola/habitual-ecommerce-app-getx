@@ -4,6 +4,7 @@ import '../home_screen/home_tab_screen.dart';
 import '../profile_screen/profile_tab_screen.dart';
 import '../search_screen/search_tab_screen.dart';
 import '../wishlist_screen/wishlist_tab_screen.dart';
+import 'widgets/custom_bottom_navbar.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -25,6 +26,9 @@ class _BaseScreenState extends State<BaseScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: CustomBottomNavBar(
+          screenController: pageController,
+        ),
         body: PageView(
           controller: pageController,
           physics: const NeverScrollableScrollPhysics(),
