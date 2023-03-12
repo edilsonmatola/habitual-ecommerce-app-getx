@@ -1,4 +1,7 @@
-class AppTitles {
+abstract class AppTitles {
+  /* 
+  * ====== AppBar Screen Titles ======
+   */
   static const introTitle = "Welcome to the world's largest you store.";
   static const appTitle = 'Habitual';
   static const whishlistTitle = 'Wishlist';
@@ -9,7 +12,7 @@ class AppTitles {
   static const orderTitle = 'Orders';
 
   /* 
-  * ========== Onboarding Titles ================================
+  * ======== Onboarding Titles ==========
    */
   static const onboarding1Title = 'Irrelevant results again?';
   static const onboarding1Description =
@@ -22,7 +25,7 @@ class AppTitles {
       "No fees, free shipping and amazing customer service. We'll get you your package within 2 business days no questions asked!";
 
   /* 
-  * ========== Registration Titles ================================
+  * ======== Registration Titles ========
    */
   static const registrationStep1Title = 'Add a photo.';
   static const registrationStep1Description =
