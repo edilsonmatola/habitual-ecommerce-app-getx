@@ -14,10 +14,15 @@ class AppDimensions {
   static const p64 = 64.0;
   static const p70 = 70.0;
   static const p280 = 280.0;
-
-  static const onboardingScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 0);
-  static const cartScreenPadding = EdgeInsets.fromLTRB(24, 48, 24, 55);
 }
+
+/// OnBoarding Screen Padding
+const onboardingScreenPadding = EdgeInsets.fromLTRB(
+    AppDimensions.p24, AppDimensions.p48, AppDimensions.p24, AppDimensions.p56);
+
+/// Cart Screen Padding
+const cartScreenPadding = EdgeInsets.fromLTRB(
+    AppDimensions.p24, AppDimensions.p48, AppDimensions.p24, AppDimensions.p56);
 
 /// Constant gap widths
 const gapW4 = SizedBox(width: AppDimensions.p4);
