@@ -5,8 +5,11 @@ import '../../../common_widgets/primary_text_button.dart';
 import '../../../core/core_export.dart';
 
 class HeaderSection extends StatelessWidget {
-  const HeaderSection({Key? key, required this.onPressed, this.buttonLabel})
-      : super(key: key);
+  const HeaderSection({
+    Key? key,
+    required this.onPressed,
+    this.buttonLabel,
+  }) : super(key: key);
 
   final VoidCallback onPressed;
   final String? buttonLabel;
@@ -24,7 +27,7 @@ class HeaderSection extends StatelessWidget {
         PrimaryTextButton(
           buttonLabel: buttonLabel ?? 'Skip',
           onPressed: onPressed,
-        )
+        ),
       ],
     );
   }
