@@ -18,11 +18,11 @@ class AppDimensions {
 
 /// OnBoarding Screen Padding
 const onboardingScreenPadding = EdgeInsets.fromLTRB(
-    AppDimensions.p24, AppDimensions.p48, AppDimensions.p24, AppDimensions.p56);
+    AppDimensions.p24, AppDimensions.p32, AppDimensions.p24, AppDimensions.p56);
 
 /// Cart Screen Padding
 const cartScreenPadding = EdgeInsets.fromLTRB(
-    AppDimensions.p24, AppDimensions.p48, AppDimensions.p24, AppDimensions.p56);
+    AppDimensions.p24, AppDimensions.p32, AppDimensions.p24, AppDimensions.p56);
 
 /// Constant gap widths
 const gapW4 = SizedBox(width: AppDimensions.p4);
