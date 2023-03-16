@@ -24,6 +24,10 @@ The app has been designed with a user-centric approach, providing a clear and ea
 
 ![Image 2](./.github/images/screenshots/screenshot-2.png)
 
+![Image 3](./.github/images/screenshots/screenshot-3.png)
+
+![Image 4](./.github/images/screenshots/screenshot-4.png)
+
 ## **Pages Included:**
 
 The app includes the following pages:
