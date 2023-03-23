@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/like_button_widget.dart';
 
 import '../../../core/core_export.dart';
 
@@ -81,6 +82,13 @@ class MainCard extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+          top: 16,
+          right: 16,
+          child: LikeButtonWidget(
+            onPressed: () {},
+          ),
+        )
       ],
     );
   }
