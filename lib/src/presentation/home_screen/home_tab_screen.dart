@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../core/core_export.dart';
@@ -21,7 +22,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           children: [
             // * AppBar
             Padding(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: AppDimensions.p24,
                 vertical: AppDimensions.p16,
               ),
@@ -31,19 +32,32 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               ),
             ),
             gapH32,
-            // * Products Cards
+            // * Just For You
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: AppDimensions.p24,
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Trending',
-                    style: Theme.of(context).textTheme.headlineSmall,
+                  Expanded(
+                    child: Text(
+                      'Trending',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
                   ),
-                  Text('> <')
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.iOSLeftArrowIcon,
+                    ),
+                  ),
+                  gapW4,
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.iOSRightArrowIcon,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -52,28 +66,57 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               height: Get.size.height * .45,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.symmetric(horizontal: AppDimensions.p24),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: AppDimensions.p24),
                 physics: const BouncingScrollPhysics(),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
-                itemBuilder: (context, index) => MainCard(),
+                itemBuilder: (context, index) => const MainCard(),
               ),
             ),
             gapH32,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppDimensions.p24,
+                vertical: AppDimensions.p16,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Deals',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.iOSLeftArrowIcon,
+                    ),
+                  ),
+                  gapW4,
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.iOSRightArrowIcon,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            gapH16,
             SizedBox(
               height: Get.size.height * .30,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
-                padding: EdgeInsets.symmetric(horizontal: AppDimensions.p24),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: AppDimensions.p24),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
-                itemBuilder: (context, index) => SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Card(
-                    color: AppColors.red300,
-                  ),
+                itemBuilder: (context, index) => const MainCard(
+                  width: 163,
+                  height: 218,
                 ),
               ),
             ),
