@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 /// Constant sizes to be used in the app (paddings, gaps, rounded corners etc.)
 class AppDimensions {
+  static const p2 = 2.0;
   static const p4 = 4.0;
   static const p8 = 8.0;
   static const p12 = 12.0;
@@ -25,6 +26,7 @@ const cartScreenPadding = EdgeInsets.fromLTRB(
     AppDimensions.p24, AppDimensions.p32, AppDimensions.p24, AppDimensions.p56);
 
 /// Constant gap widths
+const gapW2 = SizedBox(width: AppDimensions.p2);
 const gapW4 = SizedBox(width: AppDimensions.p4);
 const gapW8 = SizedBox(width: AppDimensions.p8);
 const gapW12 = SizedBox(width: AppDimensions.p12);
@@ -39,6 +41,7 @@ const gapW70 = SizedBox(width: AppDimensions.p70);
 const gapW280 = SizedBox(height: AppDimensions.p280);
 
 /// Constant gap heights
+const gapH2 = SizedBox(height: AppDimensions.p2);
 const gapH4 = SizedBox(height: AppDimensions.p4);
 const gapH8 = SizedBox(height: AppDimensions.p8);
 const gapH12 = SizedBox(height: AppDimensions.p12);
