@@ -27,7 +27,7 @@ class AppIcons {
   * =============== Icons =======================
    */
   static const closeIcon = 'assets/icons/x.svg';
-  static const leftArrowIcon = 'assets/icons/arrow-left.svg';
+  static const leftArrowIcon = 'assets/icons/others/arrow-left.svg';
   static const circleRightArrowIcon =
       'assets/icons/others/arrow-right-circle.svg';
   static const circleLeftArrowIcon =
