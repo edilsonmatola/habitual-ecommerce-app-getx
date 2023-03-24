@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 
 import '../../core/core_export.dart';
 import 'widgets/custom_app_bar.dart';
@@ -117,10 +118,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 ),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
-                itemBuilder: (context, index) => const MainCard(
-                  width: 163,
-                  height: 218,
-                ),
+                itemBuilder: (context, index) => const DealsCard(),
               ),
             ),
             gapH32,
