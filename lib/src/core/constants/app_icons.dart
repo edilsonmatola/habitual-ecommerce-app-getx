@@ -36,6 +36,7 @@ class AppIcons {
   static const iOSRightArrowIcon = 'assets/icons/others/chevron-right.svg';
   static const eyeOffIcon = 'assets/icons/others/eye-off.svg';
   static const eyeIcon = 'assets/icons/others/eye.svg';
+  static const starIcon = 'assets/icons/others/star.svg';
   static const lockIcon = 'assets/icons/others/lock.svg';
   static const loginIcon = 'assets/icons/others/log-in.svg';
   static const logoutIcon = 'assets/icons/others/log-out.svg';
