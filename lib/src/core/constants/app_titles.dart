@@ -42,4 +42,9 @@ abstract class AppTitles {
   static const registrationCompleteTitle = 'Woohoo!';
   static const registrationCompleteDescription =
       'Registration complete! Get ready to have the best shopping experiences of your life.';
+
+  static const categoryCard1Title = 'Shopping habits and interests';
+  static const categoryCard2Title = "Today's trending items";
+  static const categoryCard3Title = "Incoming! Flash deals";
+  static const categoryCard4Title = 'Browse our categories';
 }
