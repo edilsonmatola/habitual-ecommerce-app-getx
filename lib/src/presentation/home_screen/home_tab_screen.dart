@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 
 import '../../core/core_export.dart';
 import 'widgets/custom_app_bar.dart';
@@ -66,8 +67,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               height: Get.size.height * .45,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: AppDimensions.p24),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppDimensions.p24,
+                ),
                 physics: const BouncingScrollPhysics(),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
@@ -110,8 +112,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: AppDimensions.p24),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppDimensions.p24,
+                ),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
                 itemBuilder: (context, index) => const MainCard(
@@ -121,6 +124,52 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               ),
             ),
             gapH32,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppDimensions.p24,
+                vertical: AppDimensions.p16,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: CategoryCard(
+                          title: AppTitles.categoryCard1Title,
+                          onPressed: () {},
+                        ),
+                      ),
+                      Expanded(
+                        child: CategoryCard(
+                          title: AppTitles.categoryCard2Title,
+                          color: AppColors.red300,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH16,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: CategoryCard(
+                          title: AppTitles.categoryCard3Title,
+                          color: AppColors.blue300,
+                          onPressed: () {},
+                        ),
+                      ),
+                      Expanded(
+                        child: CategoryCard(
+                          title: AppTitles.categoryCard4Title,
+                          color: AppColors.green300,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
