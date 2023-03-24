@@ -61,7 +61,7 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH4,
                       Text(
-                        'Franz Kafka',
+                        'Converse',
                         style: Get.textTheme.bodySmall?.copyWith(
                           fontWeight: AppFonts.interRegular,
                         ),
@@ -83,8 +83,8 @@ class MainCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 16,
-          right: 16,
+          top: AppDimensions.p4,
+          right: AppDimensions.p12,
           child: LikeButtonWidget(
             onPressed: () {},
           ),
