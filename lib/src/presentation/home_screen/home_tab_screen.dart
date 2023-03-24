@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/primary_icon_button.dart';
+import 'package:habitual/src/common_widgets/primary_text_button.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 
@@ -42,23 +43,19 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               child: Row(
                 children: [
                   Expanded(
+                    flex: 2,
                     child: Text(
                       'Trending',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
-                  IconButton(
+                  PrimaryIconButton(
+                    icon: AppIcons.iOSLeftArrowIcon,
                     onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.iOSLeftArrowIcon,
-                    ),
                   ),
-                  gapW4,
-                  IconButton(
+                  PrimaryIconButton(
+                    icon: AppIcons.iOSRightArrowIcon,
                     onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.iOSRightArrowIcon,
-                    ),
                   ),
                 ],
               ),
@@ -91,19 +88,10 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
-                  IconButton(
+                  PrimaryTextButton(
+                    buttonLabel: 'View all',
                     onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.iOSLeftArrowIcon,
-                    ),
-                  ),
-                  gapW4,
-                  IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.iOSRightArrowIcon,
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),
