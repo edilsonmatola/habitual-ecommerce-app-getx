@@ -17,6 +17,8 @@ class HomeTabScreen extends StatefulWidget {
 }
 
 class _HomeTabScreenState extends State<HomeTabScreen> {
+  final deviceWidth = Get.size.width;
+  final deviceHeight = Get.size.height;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,12 +123,16 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     children: [
                       Expanded(
                         child: CategoryCard(
+                          width: deviceWidth * .50,
+                          height: deviceHeight * .20,
                           title: AppTitles.categoryCard1Title,
                           onPressed: () {},
                         ),
                       ),
                       Expanded(
                         child: CategoryCard(
+                          width: deviceWidth * .50,
+                          height: deviceHeight * .20,
                           title: AppTitles.categoryCard2Title,
                           color: AppColors.red300,
                           onPressed: () {},
@@ -139,6 +145,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     children: [
                       Expanded(
                         child: CategoryCard(
+                          width: deviceWidth * .50,
+                          height: deviceHeight * .20,
                           title: AppTitles.categoryCard3Title,
                           color: AppColors.blue300,
                           onPressed: () {},
@@ -146,6 +154,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       ),
                       Expanded(
                         child: CategoryCard(
+                          width: deviceWidth * .50,
+                          height: deviceHeight * .20,
                           title: AppTitles.categoryCard4Title,
                           color: AppColors.green300,
                           onPressed: () {},
