@@ -97,7 +97,7 @@ class DealsCard extends StatelessWidget {
         ),
         Positioned(
           top: AppDimensions.p4,
-          right: AppDimensions.p12,
+          right: AppDimensions.p16,
           child: LikeButtonWidget(
             onPressed: () {},
           ),
