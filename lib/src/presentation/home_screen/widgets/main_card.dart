@@ -27,19 +27,19 @@ class MainCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(10),
+                Radius.circular(AppDimensions.p10),
               ),
             ),
             color: color ?? AppColors.blue300,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(10),
+                Radius.circular(AppDimensions.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(AppDimensions.p10),
                 child: Padding(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(AppDimensions.p16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

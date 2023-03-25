@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../core/constants/app_colors.dart';
-import '../../../core/constants/app_icons.dart';
+import 'package:habitual/src/core/core_export.dart';
 
 class LikeButtonWidget extends StatelessWidget {
   const LikeButtonWidget({
@@ -24,8 +22,8 @@ class LikeButtonWidget extends StatelessWidget {
       onPressed: onPressed,
       icon: SvgPicture.asset(
         AppIcons.favoriteIcon,
-        width: width ?? 20,
-        height: height ?? 20,
+        width: width ?? AppDimensions.p20,
+        height: height ?? AppDimensions.p20,
         color: color ?? AppColors.neutral800,
       ),
     );

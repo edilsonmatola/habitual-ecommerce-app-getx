@@ -22,14 +22,14 @@ class CustomAppBar extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AppAssets.appLogoBlackSmall,
-          width: 24,
-          height: 24,
+          width: AppDimensions.p24,
+          height: AppDimensions.p24,
         ),
         IconButton(
           icon: SvgPicture.asset(
             iconButton,
-            width: 20,
-            height: 20,
+            width: AppDimensions.p20,
+            height: AppDimensions.p20,
             color: color ?? AppColors.neutral800,
           ),
           onPressed: onPressed,
