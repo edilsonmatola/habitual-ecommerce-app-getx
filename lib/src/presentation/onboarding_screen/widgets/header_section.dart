@@ -21,8 +21,8 @@ class HeaderSection extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AppAssets.appLogoBlackSmall,
-          width: 24,
-          height: 24,
+          width: AppSizes.p24,
+          height: AppSizes.p24,
         ),
         PrimaryTextButton(
           buttonLabel: buttonLabel ?? 'Skip',
