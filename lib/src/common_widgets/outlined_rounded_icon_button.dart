@@ -17,7 +17,7 @@ class OutlinedRoundedIconButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        padding: const EdgeInsets.all(AppDimensions.p10),
+        padding: const EdgeInsets.all(AppSizes.p10),
         width: 36,
         height: 36,
         decoration: BoxDecoration(
@@ -30,8 +30,8 @@ class OutlinedRoundedIconButton extends StatelessWidget {
         child: Ink(
           child: SvgPicture.asset(
             icon,
-            width: AppDimensions.p16,
-            height: AppDimensions.p16,
+            width: AppSizes.p16,
+            height: AppSizes.p16,
             color: AppColors.neutral800,
           ),
         ),

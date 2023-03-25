@@ -31,20 +31,20 @@ class CategoryCard extends StatelessWidget {
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(
-                  AppDimensions.p10,
+                  AppSizes.p10,
                 ),
               ),
             ),
             color: color ?? AppColors.purple300,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppDimensions.p10),
+                Radius.circular(AppSizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppDimensions.p10),
+                borderRadius: BorderRadius.circular(AppSizes.p10),
                 child: Padding(
-                  padding: const EdgeInsets.all(AppDimensions.p16),
+                  padding: const EdgeInsets.all(AppSizes.p16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -61,8 +61,8 @@ class CategoryCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: AppDimensions.p24,
-          bottom: AppDimensions.p16,
+          right: AppSizes.p24,
+          bottom: AppSizes.p16,
           child: OutlinedRoundedIconButton(
             icon: AppIcons.iOSRightArrowIcon,
             onPressed: () {},

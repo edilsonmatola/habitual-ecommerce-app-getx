@@ -17,7 +17,7 @@ class IntroductionScreen extends StatelessWidget {
           Scaffold(
             body: SingleChildScrollView(
               padding: onboardingScreenPadding.copyWith(
-                top: AppDimensions.p280,
+                top: AppSizes.p280,
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,

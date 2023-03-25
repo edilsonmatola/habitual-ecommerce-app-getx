@@ -26,23 +26,23 @@ class DealsCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(AppDimensions.p10),
+                Radius.circular(AppSizes.p10),
               ),
             ),
             color: AppColors.neutral100,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppDimensions.p10),
+                Radius.circular(AppSizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppDimensions.p10),
+                borderRadius: BorderRadius.circular(AppSizes.p10),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    AppDimensions.p12,
-                    AppDimensions.p28,
-                    AppDimensions.p12,
-                    AppDimensions.p12,
+                    AppSizes.p12,
+                    AppSizes.p28,
+                    AppSizes.p12,
+                    AppSizes.p12,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,8 +71,8 @@ class DealsCard extends StatelessWidget {
                         children: [
                           SvgPicture.asset(
                             AppIcons.starIcon,
-                            width: AppDimensions.p10,
-                            height: AppDimensions.p10,
+                            width: AppSizes.p10,
+                            height: AppSizes.p10,
                           ),
                           gapW4,
                           Text(
@@ -96,8 +96,8 @@ class DealsCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: AppDimensions.p4,
-          right: AppDimensions.p16,
+          top: AppSizes.p4,
+          right: AppSizes.p16,
           child: LikeButtonWidget(
             onPressed: () {},
           ),

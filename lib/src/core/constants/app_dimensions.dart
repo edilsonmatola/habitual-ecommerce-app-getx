@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Constant sizes to be used in the app (paddings, gaps, rounded corners etc.)
-class AppDimensions {
+class AppSizes {
   static const p2 = 2.0;
   static const p4 = 4.0;
   static const p8 = 8.0;
@@ -21,45 +21,45 @@ class AppDimensions {
 }
 
 /// OnBoarding Screen Padding
-const onboardingScreenPadding = EdgeInsets.fromLTRB(
-    AppDimensions.p24, AppDimensions.p32, AppDimensions.p24, AppDimensions.p56);
+const onboardingScreenPadding =
+    EdgeInsets.fromLTRB(AppSizes.p24, AppSizes.p32, AppSizes.p24, AppSizes.p56);
 
 /// Cart Screen Padding
-const cartScreenPadding = EdgeInsets.fromLTRB(
-    AppDimensions.p24, AppDimensions.p32, AppDimensions.p24, AppDimensions.p56);
+const cartScreenPadding =
+    EdgeInsets.fromLTRB(AppSizes.p24, AppSizes.p32, AppSizes.p24, AppSizes.p56);
 
 /// Constant gap widths
-const gapW2 = SizedBox(width: AppDimensions.p2);
-const gapW4 = SizedBox(width: AppDimensions.p4);
-const gapW8 = SizedBox(width: AppDimensions.p8);
-const gapW10 = SizedBox(width: AppDimensions.p10);
-const gapW12 = SizedBox(width: AppDimensions.p12);
-const gapW16 = SizedBox(width: AppDimensions.p16);
-const gapW20 = SizedBox(width: AppDimensions.p20);
-const gapW24 = SizedBox(width: AppDimensions.p24);
-const gapW28 = SizedBox(width: AppDimensions.p28);
-const gapW32 = SizedBox(width: AppDimensions.p32);
-const gapW48 = SizedBox(width: AppDimensions.p48);
-const gapW56 = SizedBox(width: AppDimensions.p56);
-const gapW64 = SizedBox(width: AppDimensions.p64);
-const gapW70 = SizedBox(width: AppDimensions.p70);
-const gapW100 = SizedBox(width: AppDimensions.p100);
-const gapW280 = SizedBox(height: AppDimensions.p280);
+const gapW2 = SizedBox(width: AppSizes.p2);
+const gapW4 = SizedBox(width: AppSizes.p4);
+const gapW8 = SizedBox(width: AppSizes.p8);
+const gapW10 = SizedBox(width: AppSizes.p10);
+const gapW12 = SizedBox(width: AppSizes.p12);
+const gapW16 = SizedBox(width: AppSizes.p16);
+const gapW20 = SizedBox(width: AppSizes.p20);
+const gapW24 = SizedBox(width: AppSizes.p24);
+const gapW28 = SizedBox(width: AppSizes.p28);
+const gapW32 = SizedBox(width: AppSizes.p32);
+const gapW48 = SizedBox(width: AppSizes.p48);
+const gapW56 = SizedBox(width: AppSizes.p56);
+const gapW64 = SizedBox(width: AppSizes.p64);
+const gapW70 = SizedBox(width: AppSizes.p70);
+const gapW100 = SizedBox(width: AppSizes.p100);
+const gapW280 = SizedBox(height: AppSizes.p280);
 
 /// Constant gap heights
-const gapH2 = SizedBox(height: AppDimensions.p2);
-const gapH4 = SizedBox(height: AppDimensions.p4);
-const gapH8 = SizedBox(height: AppDimensions.p8);
-const gapH10 = SizedBox(height: AppDimensions.p10);
-const gapH12 = SizedBox(height: AppDimensions.p12);
-const gapH16 = SizedBox(height: AppDimensions.p16);
-const gapH20 = SizedBox(height: AppDimensions.p20);
-const gapH24 = SizedBox(height: AppDimensions.p24);
-const gapH28 = SizedBox(height: AppDimensions.p28);
-const gapH32 = SizedBox(height: AppDimensions.p32);
-const gapH48 = SizedBox(height: AppDimensions.p48);
-const gapH56 = SizedBox(height: AppDimensions.p56);
-const gapH64 = SizedBox(height: AppDimensions.p64);
-const gapH70 = SizedBox(height: AppDimensions.p70);
-const gapH100 = SizedBox(height: AppDimensions.p100);
-const gapH280 = SizedBox(height: AppDimensions.p280);
+const gapH2 = SizedBox(height: AppSizes.p2);
+const gapH4 = SizedBox(height: AppSizes.p4);
+const gapH8 = SizedBox(height: AppSizes.p8);
+const gapH10 = SizedBox(height: AppSizes.p10);
+const gapH12 = SizedBox(height: AppSizes.p12);
+const gapH16 = SizedBox(height: AppSizes.p16);
+const gapH20 = SizedBox(height: AppSizes.p20);
+const gapH24 = SizedBox(height: AppSizes.p24);
+const gapH28 = SizedBox(height: AppSizes.p28);
+const gapH32 = SizedBox(height: AppSizes.p32);
+const gapH48 = SizedBox(height: AppSizes.p48);
+const gapH56 = SizedBox(height: AppSizes.p56);
+const gapH64 = SizedBox(height: AppSizes.p64);
+const gapH70 = SizedBox(height: AppSizes.p70);
+const gapH100 = SizedBox(height: AppSizes.p100);
+const gapH280 = SizedBox(height: AppSizes.p280);

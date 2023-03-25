@@ -28,8 +28,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             // * AppBar
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: AppDimensions.p24,
-                vertical: AppDimensions.p16,
+                horizontal: AppSizes.p24,
+                vertical: AppSizes.p16,
               ),
               child: CustomAppBar(
                 onPressed: () {},
@@ -40,7 +40,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             // * Just For You
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: AppDimensions.p24,
+                horizontal: AppSizes.p24,
               ),
               child: Row(
                 children: [
@@ -68,7 +68,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: AppDimensions.p24,
+                  horizontal: AppSizes.p24,
                 ),
                 physics: const BouncingScrollPhysics(),
                 itemCount: 10,
@@ -79,8 +79,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             gapH32,
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: AppDimensions.p24,
-                vertical: AppDimensions.p16,
+                horizontal: AppSizes.p24,
+                vertical: AppSizes.p16,
               ),
               child: Row(
                 children: [
@@ -104,7 +104,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
                 padding: const EdgeInsets.symmetric(
-                  horizontal: AppDimensions.p24,
+                  horizontal: AppSizes.p24,
                 ),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
@@ -114,8 +114,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             gapH32,
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: AppDimensions.p24,
-                vertical: AppDimensions.p16,
+                horizontal: AppSizes.p24,
+                vertical: AppSizes.p16,
               ),
               child: Column(
                 children: [

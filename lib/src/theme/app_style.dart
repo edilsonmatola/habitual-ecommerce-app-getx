@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../core/core_export.dart';
 
-// ignore: avoid_classes_with_only_static_members
 ///* Typography Styles
 class AppStyle {
   // * ========== HEADINGS ================
