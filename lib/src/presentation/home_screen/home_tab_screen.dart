@@ -23,6 +23,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             // * AppBar
@@ -126,7 +127,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                           width: deviceWidth * .50,
                           height: deviceHeight * .20,
                           title: AppTitles.categoryCard1Title,
-                          onPressed: () {},
+                          buttonPressed: () {},
+                          cardPressed: () {},
                         ),
                       ),
                       Expanded(
@@ -135,7 +137,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                           height: deviceHeight * .20,
                           title: AppTitles.categoryCard2Title,
                           color: AppColors.red300,
-                          onPressed: () {},
+                          buttonPressed: () {},
+                          cardPressed: () {},
                         ),
                       ),
                     ],
@@ -149,7 +152,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                           height: deviceHeight * .20,
                           title: AppTitles.categoryCard3Title,
                           color: AppColors.blue300,
-                          onPressed: () {},
+                          buttonPressed: () {},
+                          cardPressed: () {},
                         ),
                       ),
                       Expanded(
@@ -158,7 +162,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                           height: deviceHeight * .20,
                           title: AppTitles.categoryCard4Title,
                           color: AppColors.green300,
-                          onPressed: () {},
+                          buttonPressed: () {},
+                          cardPressed: () {},
                         ),
                       ),
                     ],
