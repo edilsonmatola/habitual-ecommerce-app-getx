@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class AppSizes {
   static const p2 = 2.0;
   static const p4 = 4.0;
+  static const p6 = 6.0;
   static const p8 = 8.0;
   static const p10 = 10.0;
   static const p12 = 12.0;
@@ -31,6 +32,7 @@ const cartScreenPadding =
 /// Constant gap widths
 const gapW2 = SizedBox(width: AppSizes.p2);
 const gapW4 = SizedBox(width: AppSizes.p4);
+const gapW6 = SizedBox(width: AppSizes.p6);
 const gapW8 = SizedBox(width: AppSizes.p8);
 const gapW10 = SizedBox(width: AppSizes.p10);
 const gapW12 = SizedBox(width: AppSizes.p12);
@@ -49,6 +51,7 @@ const gapW280 = SizedBox(height: AppSizes.p280);
 /// Constant gap heights
 const gapH2 = SizedBox(height: AppSizes.p2);
 const gapH4 = SizedBox(height: AppSizes.p4);
+const gapH6 = SizedBox(height: AppSizes.p6);
 const gapH8 = SizedBox(height: AppSizes.p8);
 const gapH10 = SizedBox(height: AppSizes.p10);
 const gapH12 = SizedBox(height: AppSizes.p12);
