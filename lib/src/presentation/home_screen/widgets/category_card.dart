@@ -6,19 +6,21 @@ import '../../../core/core_export.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
-    super.key,
+    Key? key,
     this.width,
     this.height,
     this.color,
     required this.title,
-    required this.onPressed,
-  });
+    required this.buttonPressed,
+    required this.cardPressed,
+  }) : super(key: key);
 
   final double? width;
   final double? height;
   final Color? color;
   final String title;
-  final VoidCallback onPressed;
+  final VoidCallback buttonPressed;
+  final VoidCallback cardPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class CategoryCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(AppSizes.p10),
               ),
-              onTap: () {},
+              onTap: cardPressed,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(AppSizes.p10),
                 child: Padding(
@@ -65,7 +67,7 @@ class CategoryCard extends StatelessWidget {
           bottom: AppSizes.p16,
           child: PrimaryOutlinedButton(
             isText: false,
-            onPressed: () {},
+            onPressed: buttonPressed,
           ),
         ),
       ],
