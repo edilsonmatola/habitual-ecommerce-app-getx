@@ -63,8 +63,8 @@ class CategoryCard extends StatelessWidget {
         Positioned(
           right: AppSizes.p24,
           bottom: AppSizes.p16,
-          child: OutlinedRoundedIconButton(
-            icon: AppIcons.iOSRightArrowIcon,
+          child: PrimaryOutlinedButton(
+            isText: false,
             onPressed: () {},
           ),
         ),
