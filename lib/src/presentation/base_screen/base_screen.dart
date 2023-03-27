@@ -16,10 +16,10 @@ class BaseScreen extends StatefulWidget {
 class _BaseScreenState extends State<BaseScreen> {
   final pageController = PageController();
   final screens = [
-    HomeTabScreen(),
-    WishlistTabScreen(),
-    ProfileTabScreen(),
-    SearchTabScreen(),
+    const HomeTabScreen(),
+    const WishlistTabScreen(),
+    const ProfileTabScreen(),
+    const SearchTabScreen(),
   ];
 
   @override
