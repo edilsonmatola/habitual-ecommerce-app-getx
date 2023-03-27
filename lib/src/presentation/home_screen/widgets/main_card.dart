@@ -43,12 +43,17 @@ class MainCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Expanded(
-                        child: Image(
-                          image: CachedNetworkImageProvider(
-                            'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                      Expanded(
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                          placeholder: (context, url) => Center(
+                            child: CircularProgressIndicator.adaptive(
+                              valueColor: AlwaysStoppedAnimation(
+                                AppColors.neutral800,
+                              ),
+                            ),
                           ),
-                          fit: BoxFit.contain,
                         ),
                       ),
                       gapH12,

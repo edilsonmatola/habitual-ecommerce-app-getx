@@ -48,13 +48,11 @@ class DealsCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       gapH12,
-                      const Expanded(
+                      Expanded(
                         child: Center(
-                          child: Image(
-                            image: CachedNetworkImageProvider(
-                              'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
-                            ),
-                            fit: BoxFit.contain,
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
                           ),
                         ),
                       ),
