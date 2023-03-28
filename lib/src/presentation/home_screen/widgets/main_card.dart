@@ -75,7 +75,7 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH16,
                       Text(
-                        r'$12.99',
+                        r'$70.99',
                         style: Get.textTheme.bodyLarge?.copyWith(
                           fontWeight: AppFonts.interRegular,
                         ),
