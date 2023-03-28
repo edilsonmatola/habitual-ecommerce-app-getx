@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/primary_icon_button.dart';
 import 'package:habitual/src/common_widgets/primary_text_button.dart';
@@ -6,7 +7,6 @@ import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 
 import '../../core/core_export.dart';
-import 'widgets/custom_app_bar.dart';
 import 'widgets/main_card.dart';
 
 class HomeTabScreen extends StatefulWidget {
@@ -22,156 +22,175 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            // * AppBar
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSizes.p24,
-                vertical: AppSizes.p16,
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              leading: Padding(
+                padding: const EdgeInsets.only(
+                  left: 24,
+                  top: 15,
+                  bottom: 15,
+                ),
+                child: SvgPicture.asset(
+                  AppAssets.appLogoBlackSmall,
+                ),
               ),
-              child: CustomAppBar(
-                onPressed: () {},
-                iconButton: AppIcons.shoppingCartIcon,
-              ),
-            ),
-            gapH32,
-            // * Just For You
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSizes.p24,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Text(
-                      'Trending',
-                      style: Theme.of(context).textTheme.headlineSmall,
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    right: 24,
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      AppIcons.shoppingCartIcon,
                     ),
                   ),
-                  PrimaryIconButton(
-                    icon: AppIcons.iOSLeftArrowIcon,
-                    onPressed: () {},
-                  ),
-                  PrimaryIconButton(
-                    icon: AppIcons.iOSRightArrowIcon,
-                    onPressed: () {},
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            gapH16,
-            SizedBox(
-              height: Get.size.height * .45,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
+          ];
+        },
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              gapH32,
+              // * Just For You
+              Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppSizes.p24,
                 ),
-                physics: const BouncingScrollPhysics(),
-                itemCount: 10,
-                separatorBuilder: (context, index) => gapW16,
-                itemBuilder: (context, index) => const MainCard(),
-              ),
-            ),
-            gapH32,
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSizes.p24,
-                vertical: AppSizes.p16,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      'Deals',
-                      style: Theme.of(context).textTheme.headlineSmall,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        'Trending',
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
                     ),
-                  ),
-                  PrimaryTextButton(
-                    buttonLabel: 'View all',
-                    onPressed: () {},
-                  )
-                ],
+                    PrimaryIconButton(
+                      icon: AppIcons.iOSLeftArrowIcon,
+                      onPressed: () {},
+                    ),
+                    PrimaryIconButton(
+                      icon: AppIcons.iOSRightArrowIcon,
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               ),
-            ),
-            gapH16,
-            SizedBox(
-              height: Get.size.height * .30,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
+              gapH16,
+              SizedBox(
+                height: Get.size.height * .45,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSizes.p24,
+                  ),
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 10,
+                  separatorBuilder: (context, index) => gapW16,
+                  itemBuilder: (context, index) => const MainCard(),
+                ),
+              ),
+              gapH32,
+              Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: AppSizes.p24,
+                  vertical: AppSizes.p16,
                 ),
-                itemCount: 10,
-                separatorBuilder: (context, index) => gapW16,
-                itemBuilder: (context, index) => const DealsCard(),
-              ),
-            ),
-            gapH32,
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSizes.p24,
-                vertical: AppSizes.p16,
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CategoryCard(
-                          width: deviceWidth * .50,
-                          height: deviceHeight * .20,
-                          title: AppTitles.categoryCard1Title,
-                          buttonPressed: () {},
-                          cardPressed: () {},
-                        ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Deals',
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
-                      Expanded(
-                        child: CategoryCard(
-                          width: deviceWidth * .50,
-                          height: deviceHeight * .20,
-                          title: AppTitles.categoryCard2Title,
-                          color: AppColors.red300,
-                          buttonPressed: () {},
-                          cardPressed: () {},
-                        ),
-                      ),
-                    ],
+                    ),
+                    PrimaryTextButton(
+                      buttonLabel: 'View all',
+                      onPressed: () {},
+                    )
+                  ],
+                ),
+              ),
+              gapH16,
+              SizedBox(
+                height: Get.size.height * .30,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSizes.p24,
                   ),
-                  gapH16,
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CategoryCard(
-                          width: deviceWidth * .50,
-                          height: deviceHeight * .20,
-                          title: AppTitles.categoryCard3Title,
-                          color: AppColors.blue300,
-                          buttonPressed: () {},
-                          cardPressed: () {},
-                        ),
-                      ),
-                      Expanded(
-                        child: CategoryCard(
-                          width: deviceWidth * .50,
-                          height: deviceHeight * .20,
-                          title: AppTitles.categoryCard4Title,
-                          color: AppColors.green300,
-                          buttonPressed: () {},
-                          cardPressed: () {},
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                  itemCount: 10,
+                  separatorBuilder: (context, index) => gapW16,
+                  itemBuilder: (context, index) => const DealsCard(),
+                ),
               ),
-            ),
-          ],
+              gapH32,
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSizes.p24,
+                  vertical: AppSizes.p16,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: CategoryCard(
+                            width: deviceWidth * .50,
+                            height: deviceHeight * .20,
+                            title: AppTitles.categoryCard1Title,
+                            buttonPressed: () {},
+                            cardPressed: () {},
+                          ),
+                        ),
+                        Expanded(
+                          child: CategoryCard(
+                            width: deviceWidth * .50,
+                            height: deviceHeight * .20,
+                            title: AppTitles.categoryCard2Title,
+                            color: AppColors.red300,
+                            buttonPressed: () {},
+                            cardPressed: () {},
+                          ),
+                        ),
+                      ],
+                    ),
+                    gapH16,
+                    Row(
+                      children: [
+                        Expanded(
+                          child: CategoryCard(
+                            width: deviceWidth * .50,
+                            height: deviceHeight * .20,
+                            title: AppTitles.categoryCard3Title,
+                            color: AppColors.blue300,
+                            buttonPressed: () {},
+                            cardPressed: () {},
+                          ),
+                        ),
+                        Expanded(
+                          child: CategoryCard(
+                            width: deviceWidth * .50,
+                            height: deviceHeight * .20,
+                            title: AppTitles.categoryCard4Title,
+                            color: AppColors.green300,
+                            buttonPressed: () {},
+                            cardPressed: () {},
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
