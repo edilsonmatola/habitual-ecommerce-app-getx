@@ -14,7 +14,10 @@ class AppThemes {
     appBarTheme: AppBarTheme(
       elevation: 0,
       centerTitle: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.white,
+      foregroundColor: AppColors.white,
+      shadowColor: Colors.transparent,
+      surfaceTintColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
       ),
