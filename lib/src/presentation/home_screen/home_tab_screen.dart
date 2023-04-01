@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/common_widgets/primary_icon_button.dart';
-import 'package:habitual/src/common_widgets/primary_text_button.dart';
+import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 

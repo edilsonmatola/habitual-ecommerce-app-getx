@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../common_widgets/primary_button.dart';
+import '../../common_widgets/common_widgets_export.dart';
 import '../../core/core_export.dart';
 import '../../routes/routes_export.dart';
 import 'widgets/header_section.dart';
