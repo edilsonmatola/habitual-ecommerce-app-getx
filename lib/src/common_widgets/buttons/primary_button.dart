@@ -9,8 +9,8 @@ class PrimaryButton extends StatelessWidget {
     this.onPressed,
     required this.buttonLabel,
     this.buttonColor,
-    this.buttonWidth = 342,
-    this.buttonHeight = 48,
+    this.buttonWidth,
+    this.buttonHeight,
     this.labelColor,
   }) : super(key: key);
 
@@ -22,8 +22,8 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: buttonWidth,
-      height: buttonHeight,
+      width: buttonWidth ?? 342,
+      height: buttonHeight ?? 48,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: buttonColor,
