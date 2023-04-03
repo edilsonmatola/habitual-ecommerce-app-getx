@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
-import '../../common_widgets/buttons/primary_text_button.dart';
 import '../../core/core_export.dart';
 import '../../routes/routes_export.dart';
 
