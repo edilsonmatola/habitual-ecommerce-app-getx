@@ -15,7 +15,7 @@ class ApiClient extends GetConnect implements GetxService {
   }) async {
     final baseUrl = Uri.parse(endpoint);
     final queryParameters = queryParams?.cast<String, dynamic>() ?? {};
-    final contentType = 'application/json';
+    const contentType = 'application/json';
     //* Headers da requisicao
     final defaultHeaders = headers?.cast<String, String>() ?? {}
       ..addAll({
