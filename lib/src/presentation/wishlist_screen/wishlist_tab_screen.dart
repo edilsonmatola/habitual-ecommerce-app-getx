@@ -5,6 +5,7 @@ import 'package:habitual/src/core/constants/constants_export.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
 import '../home_screen/widgets/custom_app_bar.dart';
+import '../home_screen/widgets/main_card.dart';
 
 class WishlistTabScreen extends StatefulWidget {
   const WishlistTabScreen({super.key});
@@ -75,6 +76,36 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            gapH32,
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    'Trending',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                ),
+                PrimaryTextButton(
+                  buttonLabel: 'View all',
+                  onPressed: () {},
+                )
+              ],
+            ),
+            gapH16,
+            SizedBox(
+              height: Get.size.height * .45,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSizes.p16,
+                ),
+                physics: const BouncingScrollPhysics(),
+                itemCount: 10,
+                separatorBuilder: (context, index) => gapW16,
+                itemBuilder: (context, index) => const MainCard(),
               ),
             ),
           ],
