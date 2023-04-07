@@ -43,11 +43,11 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
               ),
               decoration: BoxDecoration(
                 color: AppColors.purple300,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(AppSizes.p10),
                 // boxShadow: AppShadows.cardShadowLarge,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(AppSizes.p16),
                 child: Column(
                   children: [
                     const SizedBox(
@@ -99,15 +99,16 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
               height: Get.size.height * .45,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.p16,
-                ),
+                // padding: const EdgeInsets.symmetric(
+                //   horizontal: AppSizes.p16,
+                // ),
                 physics: const BouncingScrollPhysics(),
                 itemCount: 10,
                 separatorBuilder: (context, index) => gapW16,
                 itemBuilder: (context, index) => const MainCard(),
               ),
             ),
+            gapH32,
           ],
         ),
       ),
