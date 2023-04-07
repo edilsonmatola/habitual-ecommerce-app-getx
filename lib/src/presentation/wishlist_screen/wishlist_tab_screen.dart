@@ -26,6 +26,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
           left: AppSizes.p16,
           right: AppSizes.p16,
           top: AppSizes.p56,
+          bottom: AppSizes.p32,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -108,7 +109,6 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                 itemBuilder: (context, index) => const MainCard(),
               ),
             ),
-            gapH32,
           ],
         ),
       ),
