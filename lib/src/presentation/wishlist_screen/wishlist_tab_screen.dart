@@ -66,36 +66,30 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                   ),
                   // boxShadow: AppShadows.cardShadowLarge,
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(AppSizes.p16),
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 24,
-                      ),
-                      SvgPicture.asset(
-                        'assets/images/wishlist_screen/products-empty.svg',
-                        width: 145,
-                        height: 145,
-                      ),
-                      gapH24,
-                      Text(
-                        'Uh Oh! You have no saved products.',
-                        style: Get.textTheme.headlineSmall,
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      PrimaryButton(
-                        buttonColor: AppColors.white,
-                        labelColor: AppColors.neutral800,
-                        buttonLabel: '+ Create a wishlist',
-                        onPressed: () {},
-                        // iconLeft: Icons.add,
-                      ),
-                    ],
-                  ),
+                child: Column(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/images/wishlist_screen/products-empty.svg',
+                      width: 145,
+                      height: 145,
+                    ),
+                    gapH24,
+                    Text(
+                      'Uh Oh! You have no saved products.',
+                      style: Get.textTheme.headlineSmall,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    PrimaryButton(
+                      buttonColor: AppColors.white,
+                      labelColor: AppColors.neutral800,
+                      buttonLabel: '+ Create a wishlist',
+                      onPressed: () {},
+                      // iconLeft: Icons.add,
+                    ),
+                  ],
                 ),
               ),
               gapH32,
