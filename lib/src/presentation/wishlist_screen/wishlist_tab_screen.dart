@@ -20,32 +20,29 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              centerTitle: false,
-              title: Text(
-                AppTitles.whishlistTitle,
-                style: Get.textTheme.headlineSmall,
-              ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    right: 24,
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.shoppingCartIcon,
-                    ),
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          SliverAppBar(
+            centerTitle: false,
+            title: Text(
+              AppTitles.whishlistTitle,
+              style: Get.textTheme.headlineSmall,
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: AppSizes.p24,
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    AppIcons.shoppingCartIcon,
                   ),
                 ),
-              ],
-            ),
-          ];
-        },
+              ),
+            ],
+          ),
+        ],
         body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(
             horizontal: AppSizes.p16,
             vertical: AppSizes.p32,
@@ -113,9 +110,6 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                 height: Get.size.height * .45,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
-                  // padding: const EdgeInsets.symmetric(
-                  //   horizontal: AppSizes.p16,
-                  // ),
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
                   separatorBuilder: (context, index) => gapW16,
