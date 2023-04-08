@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../core/core_export.dart';
 
@@ -13,16 +15,37 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.only(
-          left: AppSizes.p24,
-          right: AppSizes.p24,
-          top: AppSizes.p56,
-          bottom: AppSizes.p32,
-        ),
-        child: Column(
-          children:  [],
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          SliverAppBar(
+            centerTitle: false,
+            title: Text(
+              AppTitles.profileTitle,
+              style: Get.textTheme.headlineSmall,
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 24,
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    AppIcons.shoppingCartIcon,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSizes.p24,
+            vertical: AppSizes.p32,
+          ),
+          child: Column(
+            children: const [],
+          ),
         ),
       ),
     );
