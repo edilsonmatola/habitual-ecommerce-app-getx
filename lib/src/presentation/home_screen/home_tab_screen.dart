@@ -22,35 +22,34 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              leading: Padding(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>
+            [
+          SliverAppBar(
+            leading: Padding(
+              padding: const EdgeInsets.only(
+                left: 24,
+                top: 15,
+                bottom: 15,
+              ),
+              child: SvgPicture.asset(
+                AppAssets.appLogoBlackSmall,
+              ),
+            ),
+            actions: [
+              Padding(
                 padding: const EdgeInsets.only(
-                  left: 24,
-                  top: 15,
-                  bottom: 15,
+                  right: 24,
                 ),
-                child: SvgPicture.asset(
-                  AppAssets.appLogoBlackSmall,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    AppIcons.shoppingCartIcon,
+                  ),
                 ),
               ),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    right: 24,
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      AppIcons.shoppingCartIcon,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ];
-        },
+            ],
+          ),
+        ],
         body: SingleChildScrollView(
           child: Column(
             children: [
