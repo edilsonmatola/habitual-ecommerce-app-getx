@@ -23,29 +23,33 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverAppBar(
             centerTitle: false,
-            title: Text(
-              AppTitles.whishlistTitle,
-              style: Get.textTheme.headlineSmall,
+            title: Padding(
+              padding: const EdgeInsets.only(
+                left: AppSizes.p8,
+              ),
+              child: Text(
+                AppTitles.whishlistTitle,
+                style: Get.textTheme.headlineSmall,
+              ),
             ),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
                   right: AppSizes.p24,
                 ),
-                child: IconButton(
+                child: PrimaryIconButton(
+                  icon: AppIcons.shoppingCartIcon,
                   onPressed: () {},
-                  icon: SvgPicture.asset(
-                    AppIcons.shoppingCartIcon,
-                  ),
                 ),
               ),
             ],
           ),
         ],
         body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSizes.p16,
-            vertical: AppSizes.p32,
+          padding: const EdgeInsets.only(
+            left: AppSizes.p24,
+            right: AppSizes.p24,
+            bottom: AppSizes.p32,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -76,9 +80,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                       style: Get.textTheme.headlineSmall,
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(
-                      height: 16,
-                    ),
+                    gapH16,
                     PrimaryButton(
                       buttonColor: AppColors.white,
                       labelColor: AppColors.neutral800,
