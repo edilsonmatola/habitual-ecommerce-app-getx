@@ -23,7 +23,7 @@ class AppSizes {
 
 /// OnBoarding Screen Padding
 const onboardingScreenPadding =
-    EdgeInsets.fromLTRB(AppSizes.p24, AppSizes.p32, AppSizes.p24, AppSizes.p56);
+    EdgeInsets.fromLTRB(AppSizes.p24, 0, AppSizes.p24, 0);
 
 /// Cart Screen Padding
 const cartScreenPadding =
