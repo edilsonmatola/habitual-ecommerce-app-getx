@@ -26,8 +26,7 @@ const onboardingScreenPadding =
     EdgeInsets.fromLTRB(AppSizes.p24, 0, AppSizes.p24, 0);
 
 /// Cart Screen Padding
-const cartScreenPadding =
-    EdgeInsets.fromLTRB(AppSizes.p24, AppSizes.p32, AppSizes.p24, AppSizes.p56);
+const cartScreenPadding = EdgeInsets.fromLTRB(AppSizes.p24, 0, AppSizes.p24, 0);
 
 /// Constant gap widths
 const gapW2 = SizedBox(width: AppSizes.p2);
