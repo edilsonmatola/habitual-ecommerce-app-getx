@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_classes_with_only_static_members
-
 import 'package:flutter_svg/flutter_svg.dart';
 
 ///* Imagery Styles
@@ -29,6 +27,14 @@ class AppAssets {
   static const appLogoYellowSmall = 'assets/logo/icon-yellow.svg';
 
   /* 
+  * ==== Empty State Images ====
+   */
+  static const wishlistEmpty =
+      'assets/images/wishlist_screen/products-empty.svg';
+
+  static const profileEmpty = 'assets/images/profile_screen/profile-empty.svg';
+
+  /* 
   * ==== Paralax Background Images ====
    */
   static const paralaxImage1 =
@@ -51,6 +57,9 @@ class AppAssets {
       appLogoPrimary,
       appLogoBlack,
       appLogoYellow,
+      //* Empty state
+      wishlistEmpty,
+      profileEmpty,
       // * Paralax
       paralaxImage1,
       paralaxImage2,
