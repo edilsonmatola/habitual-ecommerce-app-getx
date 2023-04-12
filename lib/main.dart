@@ -6,7 +6,9 @@ import 'src/core/core_export.dart';
 import 'src/routes/routes_export.dart';
 import 'src/theme/theme_export.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
