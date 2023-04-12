@@ -17,7 +17,7 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
   @override
   Widget build(BuildContext context) {
     final deviceWidth = Get.size.width;
-    final deviceHeight = Get.size.height;
+    // final deviceHeight = Get.size.height;
     return Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
