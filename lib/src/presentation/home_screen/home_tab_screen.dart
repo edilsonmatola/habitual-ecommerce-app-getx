@@ -38,7 +38,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
-                  right: 24,
+                  right: AppSizes.p24,
                 ),
                 child: PrimaryIconButton(
                   icon: AppIcons.shoppingCartIcon,
