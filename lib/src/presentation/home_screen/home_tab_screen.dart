@@ -27,9 +27,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           SliverAppBar(
             leading: Padding(
               padding: const EdgeInsets.only(
-                left: 24,
-                top: 15,
-                bottom: 15,
+                left: AppSizes.p24,
+                top: AppSizes.p16,
+                bottom: AppSizes.p16,
               ),
               child: SvgPicture.asset(
                 AppAssets.appLogoBlackSmall,
@@ -40,11 +40,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 padding: const EdgeInsets.only(
                   right: 24,
                 ),
-                child: IconButton(
+                child: PrimaryIconButton(
+                  icon: AppIcons.shoppingCartIcon,
                   onPressed: () {},
-                  icon: SvgPicture.asset(
-                    AppIcons.shoppingCartIcon,
-                  ),
                 ),
               ),
             ],
