@@ -70,7 +70,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                 child: Column(
                   children: [
                     SvgPicture.asset(
-                      'assets/images/wishlist_screen/products-empty.svg',
+                      AppAssets.wishlistEmpty,
                       width: 145,
                       height: 145,
                     ),
