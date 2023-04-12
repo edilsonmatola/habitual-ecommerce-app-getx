@@ -116,7 +116,7 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                 child: Column(
                   children: [
                     SvgPicture.asset(
-                      'assets/images/profile_screen/profile-empty.svg',
+                      AppAssets.profileEmpty,
                       width: 145,
                       height: 145,
                     ),
