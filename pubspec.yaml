@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.1
   responsive_framework: ^0.2.0
   cached_network_image: ^3.2.3
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:
