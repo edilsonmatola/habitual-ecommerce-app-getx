@@ -20,6 +20,8 @@ class AppThemes {
       surfaceTintColor: AppColors.white,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
       ),
       titleTextStyle: AppStyle.heading4Style,
     ),
@@ -78,6 +80,8 @@ class AppThemes {
       titleTextStyle: AppStyle.heading4Style,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
       ), //*TODO: Change to a darker color
     ),
     primaryColor: AppColors.yellow500,
