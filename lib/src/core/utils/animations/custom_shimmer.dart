@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitual/src/core/core_export.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomShimmer extends StatelessWidget {
@@ -24,11 +25,11 @@ class CustomShimmer extends StatelessWidget {
       width: width,
       height: height,
       child: Shimmer.fromColors(
-        baseColor: baseColor ?? Colors.grey.shade800,
-        highlightColor: highlightColor ?? Colors.grey.shade500,
+        baseColor: baseColor ?? AppColors.neutral800,
+        highlightColor: highlightColor ?? AppColors.neutral300,
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white.withAlpha(50),
+            color: AppColors.white.withAlpha(50),
             borderRadius: borderRadius ??
                 BorderRadius.circular(
                   isRounded ? height / 2 : 0,
