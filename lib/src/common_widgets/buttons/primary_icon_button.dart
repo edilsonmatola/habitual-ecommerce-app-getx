@@ -12,6 +12,7 @@ class PrimaryIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      highlightColor: AppColors.neutral300,
       onPressed: onPressed,
       icon: SvgPicture.asset(
         icon,
