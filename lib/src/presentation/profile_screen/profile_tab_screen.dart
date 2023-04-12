@@ -23,20 +23,23 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverAppBar(
             centerTitle: false,
-            title: Text(
-              AppTitles.profileTitle,
-              style: Get.textTheme.headlineSmall,
+            title: Padding(
+              padding: const EdgeInsets.only(
+                left: AppSizes.p8,
+              ),
+              child: Text(
+                AppTitles.profileTitle,
+                style: Get.textTheme.headlineSmall,
+              ),
             ),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
-                  right: 24,
+                  right: AppSizes.p24,
                 ),
-                child: IconButton(
+                child: PrimaryIconButton(
+                  icon: AppIcons.shoppingCartIcon,
                   onPressed: () {},
-                  icon: SvgPicture.asset(
-                    AppIcons.shoppingCartIcon,
-                  ),
                 ),
               ),
             ],
