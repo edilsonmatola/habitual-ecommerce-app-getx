@@ -39,6 +39,9 @@ dependencies:
   responsive_framework: ^0.2.0
   cached_network_image: ^3.2.3
   shimmer: ^2.0.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_test:
