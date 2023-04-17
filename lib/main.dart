@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
+import 'package:habitual/l10n/string_hardcoded.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import 'l10n/l10n.dart';
 import 'src/core/core_export.dart';
 import 'src/routes/routes_export.dart';
 import 'src/theme/theme_export.dart';
@@ -19,6 +23,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        // AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: L10n.all,
+      onGenerateTitle: (context) => 'My App'.hardcoded,
       theme: AppThemes().lightTheme,
       darkTheme: AppThemes().darkTheme,
       title: AppTitles.appTitle,
