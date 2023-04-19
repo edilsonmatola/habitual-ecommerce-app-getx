@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitual/src/presentation/search_screen/widgets/search_bar.dart';
 
 class SearchTabScreen extends StatefulWidget {
   const SearchTabScreen({super.key});
@@ -10,6 +11,14 @@ class SearchTabScreen extends StatefulWidget {
 class _SearchTabScreenState extends State<SearchTabScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            SearchBar(),
+          ],
+        ),
+      ),
+    );
   }
 }
