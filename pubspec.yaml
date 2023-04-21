@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   flutter_svg: ^2.0.1
-  responsive_framework: ^0.2.0
+  responsive_framework: ^1.0.0
   cached_network_image: ^3.2.3
   shimmer: ^2.0.0
   flutter_localizations:
