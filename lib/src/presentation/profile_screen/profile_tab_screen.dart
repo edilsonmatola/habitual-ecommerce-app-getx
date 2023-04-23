@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
 import '../../core/core_export.dart';
@@ -167,6 +168,16 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                 ],
               ),
               gapH16,
+              SizedBox(
+                height: Get.size.height * .15,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 10,
+                  separatorBuilder: (context, index) => gapW16,
+                  itemBuilder: (context, index) => const AccountCard(),
+                ),
+              ),
             ],
           ),
         ),
