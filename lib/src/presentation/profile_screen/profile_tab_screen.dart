@@ -85,14 +85,19 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                     ),
                   ),
                   const Expanded(
-                    child: Center(
-                      child: SizedBox(
-                        width: 73,
-                        height: 73,
-                        child: CircleAvatar(
-                          radius: 100,
-                          backgroundImage: CachedNetworkImageProvider(
-                            'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80',
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        bottom: AppSizes.p48,
+                      ),
+                      child: Center(
+                        child: SizedBox(
+                          width: 73,
+                          height: 73,
+                          child: CircleAvatar(
+                            radius: 100,
+                            backgroundImage: CachedNetworkImageProvider(
+                              'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80',
+                            ),
                           ),
                         ),
                       ),
