@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/core/constants/app_colors.dart';
 import 'package:habitual/src/core/constants/app_fonts.dart';
 import 'package:habitual/src/core/constants/app_icons.dart';
@@ -20,6 +21,11 @@ class SearchBar extends StatelessWidget {
           child: SvgPicture.asset(
             AppIcons.searchIcon,
           ),
+        ),
+        suffixIcon: PrimaryTextButton(
+          buttonLabel: 'Done',
+          fontWeight: AppFonts.interSemiBold,
+          onPressed: () {},
         ),
         hintText: 'Search by keyword or categories',
         hintStyle: Get.textTheme.displaySmall?.copyWith(
