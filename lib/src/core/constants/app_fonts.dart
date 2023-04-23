@@ -9,6 +9,7 @@ class AppFonts {
   static const interFontFamily = 'Inter';
   static const interRegular = FontWeight.w400;
   static const interMedium = FontWeight.w500;
+  static const interSemiBold = FontWeight.w600;
   // Description Font: Inter
   // Weight: 400
   // Weight: 500
