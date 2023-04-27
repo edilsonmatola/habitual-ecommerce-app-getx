@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/cards/empty_state_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
@@ -107,50 +107,15 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                 ],
               ),
               gapH24,
-              Container(
-                width: deviceWidth * .50,
-                padding: const EdgeInsets.all(
-                  AppSizes.p32,
-                ),
-                decoration: BoxDecoration(
-                  color: AppColors.red300,
-                  borderRadius: BorderRadius.circular(
-                    AppSizes.p10,
-                  ),
-                  // boxShadow: AppShadows.cardShadowLarge,
-                ),
-                child: Column(
-                  children: [
-                    SvgPicture.asset(
-                      AppAssets.profileEmpty,
-                      width: 145,
-                      height: 145,
-                    ),
-                    gapH24,
-                    Text(
-                      'What interests you!',
-                      style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH8,
-                    Text(
-                      "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
-                      style: Get.textTheme.titleLarge?.copyWith(
-                        color: AppColors.neutral700,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH24,
-                    PrimaryButton(
-                      buttonColor: AppColors.white,
-                      labelColor: AppColors.neutral800,
-                      buttonLabel: '+ Add my interests',
-                      onPressed: () {},
-                      // iconLeft: Icons.add,
-                    ),
-                    gapH24,
-                  ],
-                ),
+              EmptyStateCard(
+                hasDescription: true,
+                cardImage: AppAssets.profileEmpty,
+                cardTitle: 'What interests you!',
+                cardDescription:
+                    "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
+                cardColor: AppColors.red300,
+                buttonText: '+ Add my interests',
+                buttonPressed: () {},
               ),
               Row(
                 children: [
