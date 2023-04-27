@@ -14,7 +14,7 @@ class EmptyStateCard extends StatelessWidget {
     this.cardDescription,
     this.cardColor,
     required this.cardImage,
-    this.hasDescription = true,
+    required this.hasDescription,
     this.cardDescriptionColor,
   });
 
