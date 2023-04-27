@@ -33,7 +33,9 @@ class PrimaryOutlinedButton extends StatelessWidget {
         width: 36,
         height: 36,
         child: OutlinedButton(
-          style: OutlinedButton.styleFrom(padding: const EdgeInsets.all(0)),
+          style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.all(0),
+          ),
           onPressed: onPressed,
           child: SvgPicture.asset(
             AppIcons.iOSRightArrowIcon,
