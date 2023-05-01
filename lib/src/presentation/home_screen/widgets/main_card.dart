@@ -58,9 +58,9 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH12,
                       Text(
-                        'Chuck 70 Hi Sneakers',
+                        'Chuck 70 Hi Sneakers Chuck 70 Hi Sneakers',
                         style: Get.textTheme.displayLarge,
-                        maxLines: 2,
+                        maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         // textAlign: TextAlign.center,
                       ),
