@@ -47,7 +47,6 @@ class DealsCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      gapH12,
                       Expanded(
                         child: Center(
                           child: CachedNetworkImage(
@@ -67,9 +66,8 @@ class DealsCard extends StatelessWidget {
                       Text(
                         'Bose Noise Cancellation',
                         style: Get.textTheme.displayMedium,
-                        maxLines: 1,
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        // textAlign: TextAlign.center,
                       ),
                       gapH4,
                       Row(
