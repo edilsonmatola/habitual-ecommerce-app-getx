@@ -1,8 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/common_widgets/cards/empty_state_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
+import 'package:habitual/src/presentation/profile_screen/widgets/profile_biography_field.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
 import '../../core/core_export.dart';
@@ -17,8 +16,6 @@ class ProfileTabScreen extends StatefulWidget {
 class _ProfileTabScreenState extends State<ProfileTabScreen> {
   @override
   Widget build(BuildContext context) {
-    final deviceWidth = Get.size.width;
-    // final deviceHeight = Get.size.height;
     return Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
@@ -55,56 +52,11 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Leslie Flores',
-                          style: Get.textTheme.displayLarge,
-                        ),
-                        gapH8,
-                        Text(
-                          'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.',
-                          style: Get.textTheme.titleLarge?.copyWith(
-                            fontWeight: AppFonts.interRegular,
-                          ),
-                        ),
-                        gapH8,
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: PrimaryOutlinedButton(
-                            isText: true,
-                            title: 'Edit',
-                            onPressed: () {},
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                        bottom: AppSizes.p48,
-                      ),
-                      child: Center(
-                        child: SizedBox(
-                          width: 73,
-                          height: 73,
-                          child: CircleAvatar(
-                            radius: 100,
-                            backgroundImage: CachedNetworkImageProvider(
-                              'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80',
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+              ProfileBiography(
+                userName: 'Leslie Flores',
+                userBiography:
+                    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.',
+                editFunction: () {},
               ),
               gapH24,
               EmptyStateCard(
