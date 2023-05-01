@@ -12,7 +12,10 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchController = TextEditingController();
     return TextFormField(
+      controller: searchController,
+      onChanged: (value) {},
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: const EdgeInsets.all(
@@ -25,7 +28,10 @@ class SearchBar extends StatelessWidget {
         suffixIcon: PrimaryTextButton(
           buttonLabel: 'Done',
           fontWeight: AppFonts.interSemiBold,
-          onPressed: () {},
+          onPressed: () {
+            searchController.clear();
+            FocusScope.of(context).unfocus();
+          },
         ),
         hintText: 'Search by keyword or categories',
         hintStyle: Get.textTheme.displaySmall?.copyWith(
