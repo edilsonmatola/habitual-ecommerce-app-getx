@@ -28,23 +28,23 @@ class AccountCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
             ),
             color: AppColors.neutral100,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.p10),
+                borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    AppSizes.p12,
-                    AppSizes.p24,
-                    AppSizes.p12,
-                    AppSizes.p12,
+                    Sizes.p12,
+                    Sizes.p24,
+                    Sizes.p12,
+                    Sizes.p12,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

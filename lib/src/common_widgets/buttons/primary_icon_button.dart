@@ -19,8 +19,8 @@ class PrimaryIconButton extends StatelessWidget {
       onPressed: onPressed,
       icon: SvgPicture.asset(
         icon,
-        width: AppSizes.p20,
-        height: AppSizes.p20,
+        width: Sizes.p20,
+        height: Sizes.p20,
       ),
     );
   }

@@ -24,7 +24,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
             centerTitle: false,
             title: Padding(
               padding: const EdgeInsets.only(
-                left: AppSizes.p8,
+                left: Sizes.p8,
               ),
               child: Text(
                 AppTitles.whishlistTitle,
@@ -34,7 +34,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
-                  right: AppSizes.p24,
+                  right: Sizes.p24,
                 ),
                 child: PrimaryIconButton(
                   icon: AppIcons.shoppingCartIcon,
@@ -46,9 +46,9 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
         ],
         body: SingleChildScrollView(
           padding: const EdgeInsets.only(
-            left: AppSizes.p24,
-            right: AppSizes.p24,
-            bottom: AppSizes.p32,
+            left: Sizes.p24,
+            right: Sizes.p24,
+            bottom: Sizes.p32,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,

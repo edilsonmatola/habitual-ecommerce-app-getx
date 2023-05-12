@@ -26,23 +26,23 @@ class DealsCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
             ),
             color: AppColors.neutral100,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.p10),
+                borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(
-                    AppSizes.p12,
-                    AppSizes.p28,
-                    AppSizes.p12,
-                    AppSizes.p12,
+                    Sizes.p12,
+                    Sizes.p28,
+                    Sizes.p12,
+                    Sizes.p12,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,8 +74,8 @@ class DealsCard extends StatelessWidget {
                         children: [
                           SvgPicture.asset(
                             AppIcons.starIcon,
-                            width: AppSizes.p10,
-                            height: AppSizes.p10,
+                            width: Sizes.p10,
+                            height: Sizes.p10,
                           ),
                           gapW4,
                           Text(
@@ -99,8 +99,8 @@ class DealsCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: AppSizes.p4,
-          right: AppSizes.p16,
+          top: Sizes.p4,
+          right: Sizes.p16,
           child: LikeButtonWidget(
             onPressed: () {},
           ),

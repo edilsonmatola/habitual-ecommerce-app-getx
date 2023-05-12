@@ -22,8 +22,8 @@ class LikeButtonWidget extends StatelessWidget {
       onPressed: onPressed,
       icon: SvgPicture.asset(
         AppIcons.favoriteIcon,
-        width: width ?? AppSizes.p20,
-        height: height ?? AppSizes.p20,
+        width: width ?? Sizes.p20,
+        height: height ?? Sizes.p20,
         color: color ?? AppColors.neutral800,
       ),
     );

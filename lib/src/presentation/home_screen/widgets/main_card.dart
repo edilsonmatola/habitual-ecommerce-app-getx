@@ -27,19 +27,19 @@ class MainCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
             ),
             color: color ?? AppColors.blue300,
             child: InkWell(
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.p10),
+                borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
-                  padding: const EdgeInsets.all(AppSizes.p16),
+                  padding: const EdgeInsets.all(Sizes.p16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -88,8 +88,8 @@ class MainCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: AppSizes.p4,
-          right: AppSizes.p16,
+          top: Sizes.p4,
+          right: Sizes.p16,
           child: LikeButtonWidget(
             onPressed: () {},
           ),

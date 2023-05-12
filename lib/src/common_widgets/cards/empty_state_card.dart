@@ -33,12 +33,12 @@ class EmptyStateCard extends StatelessWidget {
     return Container(
       width: deviceWidth * .50,
       padding: const EdgeInsets.all(
-        AppSizes.p32,
+        Sizes.p32,
       ),
       decoration: BoxDecoration(
         color: cardColor ?? AppColors.purple300,
         borderRadius: BorderRadius.circular(
-          AppSizes.p10,
+          Sizes.p10,
         ),
         // boxShadow: AppShadows.cardShadowLarge,
       ),

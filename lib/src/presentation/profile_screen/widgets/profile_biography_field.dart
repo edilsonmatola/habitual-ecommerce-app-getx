@@ -58,8 +58,8 @@ class ProfileBiography extends StatelessWidget {
             padding: EdgeInsets.only(
               // bottom: AppSizes.p48,
               bottom: (userBiography.length < 20 && userName.length < 10)
-                  ? AppSizes.p28
-                  : AppSizes.p70,
+                  ? Sizes.p28
+                  : Sizes.p70,
             ),
             child: const ProfilePicture(),
           ),

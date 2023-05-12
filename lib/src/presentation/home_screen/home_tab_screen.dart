@@ -27,9 +27,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           SliverAppBar(
             leading: Padding(
               padding: const EdgeInsets.only(
-                left: AppSizes.p24,
-                top: AppSizes.p16,
-                bottom: AppSizes.p16,
+                left: Sizes.p24,
+                top: Sizes.p16,
+                bottom: Sizes.p16,
               ),
               child: SvgPicture.asset(
                 AppAssets.appLogoBlackSmall,
@@ -38,7 +38,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
-                  right: AppSizes.p24,
+                  right: Sizes.p24,
                 ),
                 child: PrimaryIconButton(
                   icon: AppIcons.shoppingCartIcon,
@@ -49,13 +49,15 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
           ),
         ],
         body: SingleChildScrollView(
+          padding: const EdgeInsets.only(
+            top: Sizes.p32,
+          ),
           child: Column(
             children: [
-              gapH32,
               // * Just For You
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.p24,
+                  horizontal: Sizes.p24,
                 ),
                 child: Row(
                   children: [
@@ -83,7 +85,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(
-                    horizontal: AppSizes.p24,
+                    horizontal: Sizes.p24,
                   ),
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
@@ -94,8 +96,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               gapH32,
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.p24,
-                  vertical: AppSizes.p16,
+                  horizontal: Sizes.p24,
+                  vertical: Sizes.p16,
                 ),
                 child: Row(
                   children: [
@@ -119,7 +121,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
                   padding: const EdgeInsets.symmetric(
-                    horizontal: AppSizes.p24,
+                    horizontal: Sizes.p24,
                   ),
                   itemCount: 10,
                   separatorBuilder: (context, index) => gapW16,
@@ -129,8 +131,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               gapH32,
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: AppSizes.p24,
-                  vertical: AppSizes.p16,
+                  horizontal: Sizes.p24,
+                  vertical: Sizes.p16,
                 ),
                 child: Column(
                   children: [

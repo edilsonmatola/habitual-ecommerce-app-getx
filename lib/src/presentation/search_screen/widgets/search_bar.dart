@@ -19,7 +19,7 @@ class SearchBar extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: const EdgeInsets.all(
-            AppSizes.p20,
+            Sizes.p20,
           ),
           child: SvgPicture.asset(
             AppIcons.searchIcon,
