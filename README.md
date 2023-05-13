@@ -16,10 +16,6 @@
   - [**Dependencies:**](#dependencies)
   - [**System Requirements**](#system-requirements)
   - [**Installation**](#installation)
-        - [1. Clone the repository](#1-clone-the-repository)
-        - [2. Move to the desired folder](#2-move-to-the-desired-folder)
-        - [3. Create Android, iOS \& Web Apps](#3-create-android-ios--web-apps)
-        - [4. To run the app, simply write the following commands:](#4-to-run-the-app-simply-write-the-following-commands)
   - [**Contributing**](#contributing)
   - [**License**](#license)
 
