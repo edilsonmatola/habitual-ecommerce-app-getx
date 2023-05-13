@@ -8,6 +8,21 @@
 
 </details>
 
+### **Table of Contents**
+
+- [**Habitual - The Flutter Ecommerce App**](#habitual---the-flutter-ecommerce-app)
+  - [**Screenshots:**](#screenshots)
+  - [**Pages Included:**](#pages-included)
+  - [**Dependencies:**](#dependencies)
+  - [**System Requirements**](#system-requirements)
+  - [**Installation**](#installation)
+        - [1. Clone the repository](#1-clone-the-repository)
+        - [2. Move to the desired folder](#2-move-to-the-desired-folder)
+        - [3. Create Android, iOS \& Web Apps](#3-create-android-ios--web-apps)
+        - [4. To run the app, simply write the following commands:](#4-to-run-the-app-simply-write-the-following-commands)
+  - [**Contributing**](#contributing)
+  - [**License**](#license)
+
 # **Habitual - The Flutter Ecommerce App**
 
 ![Habitual-Logo](.github/images/logo/habitual-logo.png)
@@ -136,6 +151,6 @@ Contributions to the app are welcome! If you'd like to contribute, please take a
 
 If you have any questions or concerns about the contributing process, please don't hesitate to reach me out [here](https://github.com/edilsonmatola/habitual-ecommerce-getx/issues). I'm always happy to help new contributors get up to speed.
 
-# **License**
+## **License**
 
 This project is licensed under the **MIT License**. See the **[LICENSE](./LICENSE)** file for details.
