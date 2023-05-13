@@ -7,6 +7,19 @@
     </ul>
 </detalhes>
 
+- [**Habitual - O Aplicativo de Comércio Eletrônico em Flutter**](#habitual---o-aplicativo-de-comércio-eletrônico-em-flutter)
+  - [**Screenshots/ Capturas de Tela:**](#screenshots-capturas-de-tela)
+  - [**Páginas Incluídas:**](#páginas-incluídas)
+  - [**Dependências:**](#dependências)
+  - [**Requisitos do sistema**](#requisitos-do-sistema)
+  - [**Instalação**](#instalação)
+        - [1. Clone o repositório](#1-clone-o-repositório)
+        - [2. Navegue até a pasta desejada](#2-navegue-até-a-pasta-desejada)
+        - [3. Crie os aplicativos para Android, iOS e Web](#3-crie-os-aplicativos-para-android-ios-e-web)
+        - [4. Para executar o aplicativo, basta escrever os seguintes comandos:](#4-para-executar-o-aplicativo-basta-escrever-os-seguintes-comandos)
+  - [**Contribuindo**](#contribuindo)
+  - [**Licença**](#licença)
+
 # **Habitual - O Aplicativo de Comércio Eletrônico em Flutter**
 
 ![Habitual-Logo](.github/images/logo/habitual-logo.png)
