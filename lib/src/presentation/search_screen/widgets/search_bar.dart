@@ -7,8 +7,8 @@ import 'package:habitual/src/core/constants/app_fonts.dart';
 import 'package:habitual/src/core/constants/app_icons.dart';
 import 'package:habitual/src/core/constants/app_sizes.dart';
 
-class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+class CustomSearchBar extends StatelessWidget {
+  const CustomSearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
