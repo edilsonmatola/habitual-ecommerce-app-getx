@@ -32,6 +32,7 @@ class MainCard extends StatelessWidget {
             ),
             color: color ?? AppColors.blue300,
             child: InkWell(
+              highlightColor: AppColors.neutral300.withOpacity(.9),
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
