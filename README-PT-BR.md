@@ -18,7 +18,7 @@
 
 # **Habitual - O Aplicativo de Comércio Eletrônico em Flutter**
 
-![Habitual-Logo](.github/images/logo/habitual-logo.png)
+![Habitual-Logo](.github/images/logo/habitual-logo.jpg)
 
 Habitual é um aplicativo de compras móveis moderno e intuitivo que oferece aos clientes uma experiência de compra fluida e conveniente. Este aplicativo oferece tempos de carregamento rápidos, desempenho confiável e navegação suave. Habitual permite que os usuários naveguem e comprem produtos facilmente.
 
