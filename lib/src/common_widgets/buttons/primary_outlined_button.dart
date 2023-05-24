@@ -22,7 +22,7 @@ class PrimaryOutlinedButton extends StatelessWidget {
         style: OutlinedButton.styleFrom(
           textStyle: Get.textTheme.bodyMedium,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSizes.p6),
+            borderRadius: BorderRadius.circular(Sizes.p6),
           ),
         ),
         onPressed: onPressed,
@@ -33,12 +33,14 @@ class PrimaryOutlinedButton extends StatelessWidget {
         width: 36,
         height: 36,
         child: OutlinedButton(
-          style: OutlinedButton.styleFrom(padding: const EdgeInsets.all(0)),
+          style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.all(0),
+          ),
           onPressed: onPressed,
           child: SvgPicture.asset(
             AppIcons.iOSRightArrowIcon,
-            width: AppSizes.p16,
-            height: AppSizes.p16,
+            width: Sizes.p16,
+            height: Sizes.p16,
             color: AppColors.neutral800,
           ),
         ),

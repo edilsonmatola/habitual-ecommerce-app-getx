@@ -3,8 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:habitual/src/core/core_export.dart';
 
 class PrimaryIconButton extends StatelessWidget {
-  const PrimaryIconButton(
-      {super.key, required this.icon, required this.onPressed});
+  const PrimaryIconButton({
+    super.key,
+    required this.icon,
+    required this.onPressed,
+  });
 
   final String icon;
   final VoidCallback onPressed;
@@ -16,8 +19,8 @@ class PrimaryIconButton extends StatelessWidget {
       onPressed: onPressed,
       icon: SvgPicture.asset(
         icon,
-        width: AppSizes.p20,
-        height: AppSizes.p20,
+        width: Sizes.p20,
+        height: Sizes.p20,
       ),
     );
   }

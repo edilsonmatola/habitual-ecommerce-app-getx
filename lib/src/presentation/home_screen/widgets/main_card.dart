@@ -27,19 +27,20 @@ class MainCard extends StatelessWidget {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
             ),
             color: color ?? AppColors.blue300,
             child: InkWell(
+              highlightColor: AppColors.neutral300.withOpacity(.9),
               borderRadius: const BorderRadius.all(
-                Radius.circular(AppSizes.p10),
+                Radius.circular(Sizes.p10),
               ),
               onTap: () {},
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.p10),
+                borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
-                  padding: const EdgeInsets.all(AppSizes.p16),
+                  padding: const EdgeInsets.all(Sizes.p16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -58,9 +59,9 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH12,
                       Text(
-                        'Chuck 70 Hi Sneakers',
+                        'Chuck 70 Hi Sneakers Chuck 70 Hi Sneakers',
                         style: Get.textTheme.displayLarge,
-                        maxLines: 2,
+                        maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         // textAlign: TextAlign.center,
                       ),
@@ -88,8 +89,8 @@ class MainCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: AppSizes.p4,
-          right: AppSizes.p16,
+          top: Sizes.p4,
+          right: Sizes.p16,
           child: LikeButtonWidget(
             onPressed: () {},
           ),

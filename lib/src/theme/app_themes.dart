@@ -118,7 +118,7 @@ class AppThemes {
 // * ===== ColorScheme Theme ======
     colorScheme: const ColorScheme(
       background: Colors.black,
-      brightness: Brightness.light,
+      brightness: Brightness.dark,
       error: Colors.red, //* Cores das bordas do form ao dar erro
       onError: Colors.red,
       primary: Colors.black, //* Cores dos textos nos botoes e splash dos botoes

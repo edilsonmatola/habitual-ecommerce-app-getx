@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/constants/constants_export.dart';
 
@@ -25,7 +24,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
             centerTitle: false,
             title: Padding(
               padding: const EdgeInsets.only(
-                left: AppSizes.p8,
+                left: Sizes.p8,
               ),
               child: Text(
                 AppTitles.whishlistTitle,
@@ -35,7 +34,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
             actions: [
               Padding(
                 padding: const EdgeInsets.only(
-                  right: AppSizes.p24,
+                  right: Sizes.p24,
                 ),
                 child: PrimaryIconButton(
                   icon: AppIcons.shoppingCartIcon,
@@ -47,49 +46,21 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
         ],
         body: SingleChildScrollView(
           padding: const EdgeInsets.only(
-            left: AppSizes.p24,
-            right: AppSizes.p24,
-            bottom: AppSizes.p32,
+            left: Sizes.p24,
+            right: Sizes.p24,
+            bottom: Sizes.p32,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                width: deviceWidth * .50,
-                padding: const EdgeInsets.all(
-                  AppSizes.p32,
-                ),
-                decoration: BoxDecoration(
-                  color: AppColors.purple300,
-                  borderRadius: BorderRadius.circular(
-                    AppSizes.p10,
-                  ),
-                  // boxShadow: AppShadows.cardShadowLarge,
-                ),
-                child: Column(
-                  children: [
-                    SvgPicture.asset(
-                      AppAssets.wishlistEmpty,
-                      width: 145,
-                      height: 145,
-                    ),
-                    gapH24,
-                    Text(
-                      'Uh Oh! You have no saved products.',
-                      style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH16,
-                    PrimaryButton(
-                      buttonColor: AppColors.white,
-                      labelColor: AppColors.neutral800,
-                      buttonLabel: '+ Create a wishlist',
-                      onPressed: () {},
-                      // iconLeft: Icons.add,
-                    ),
-                  ],
-                ),
+              EmptyStateCard(
+                hasDescription: false,
+                cardImage: AppAssets.wishlistEmpty,
+                cardTitle: 'Uh Oh! You have no saved products.',
+                cardColor: AppColors.purple300,
+                buttonText: '+ Create a wishlist',
+                buttonPressed: () {},
               ),
               gapH32,
               Row(
