@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/option_card.dart';
-import 'package:habitual/src/presentation/product_details_screen/widgets/product_review.dart';
+import 'package:habitual/src/presentation/product_details_screen/widgets/product_reviewer_card.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/rating_long.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
@@ -226,7 +226,7 @@ class ProductDetailsScreen extends StatelessWidget {
                           style: Get.theme.textTheme.displayLarge,
                         ),
                         gapH24,
-                        const ProductReview(
+                        const ProductReviewerCard(
                           title: 'Consectetur tellus volutpat.',
                           dateTime: 'January 1, 2023',
                         ),
