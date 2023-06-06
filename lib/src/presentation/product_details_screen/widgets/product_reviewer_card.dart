@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 
 import '../../../core/core_export.dart';
 
-class ProductReview extends StatelessWidget {
-  const ProductReview({super.key, required this.title, required this.dateTime});
+class ProductReviewerCard extends StatelessWidget {
+  const ProductReviewerCard(
+      {super.key, required this.title, required this.dateTime});
 
   final String title;
   final String dateTime;
