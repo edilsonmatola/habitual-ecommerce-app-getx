@@ -11,11 +11,13 @@ class MainCard extends StatelessWidget {
     this.width,
     this.height,
     this.color,
+    this.onPressed,
   });
 
   final double? width;
   final double? height;
   final Color? color;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +38,10 @@ class MainCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
-              onTap: () {},
+              onTap: onPressed,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(Sizes.p10),
-                child: Padding(
+                child: Padding( 
                   padding: const EdgeInsets.all(Sizes.p16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +71,7 @@ class MainCard extends StatelessWidget {
                       Text(
                         'Converse',
                         style: Get.textTheme.bodySmall?.copyWith(
-                          fontWeight: AppFonts.interRegular,
+                          fontWeight: Fonts.interRegular,
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -78,7 +80,7 @@ class MainCard extends StatelessWidget {
                       Text(
                         r'$70.99',
                         style: Get.textTheme.bodyLarge?.copyWith(
-                          fontWeight: AppFonts.interRegular,
+                          fontWeight: Fonts.interRegular,
                         ),
                       ),
                     ],

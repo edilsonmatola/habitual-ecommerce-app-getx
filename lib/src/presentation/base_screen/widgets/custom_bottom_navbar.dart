@@ -36,7 +36,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       backgroundColor: AppColors.white,
       unselectedLabelStyle: TextStyle(
         color: AppColors.neutral400,
-        fontFamily: AppFonts.interFontFamily,
+        fontFamily: Fonts.interFontFamily,
       ),
       items: [
         BottomNavigationBarItem(

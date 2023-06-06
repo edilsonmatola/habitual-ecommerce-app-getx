@@ -27,7 +27,7 @@ class CustomSearchBar extends StatelessWidget {
         ),
         suffixIcon: PrimaryTextButton(
           buttonLabel: 'Done',
-          fontWeight: AppFonts.interSemiBold,
+          fontWeight: Fonts.interSemiBold,
           onPressed: () {
             searchController.clear();
             FocusScope.of(context).unfocus();
@@ -36,7 +36,7 @@ class CustomSearchBar extends StatelessWidget {
         hintText: 'Search by keyword or categories',
         hintStyle: Get.textTheme.displaySmall?.copyWith(
           color: AppColors.neutral400,
-          fontWeight: AppFonts.interRegular,
+          fontWeight: Fonts.interRegular,
         ),
         isDense: true,
         border: const OutlineInputBorder(

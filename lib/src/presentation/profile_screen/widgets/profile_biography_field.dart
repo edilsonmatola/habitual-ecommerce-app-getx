@@ -36,7 +36,7 @@ class ProfileBiography extends StatelessWidget {
               Text(
                 userBiography,
                 style: Get.textTheme.titleLarge?.copyWith(
-                  fontWeight: AppFonts.interRegular,
+                  fontWeight: Fonts.interRegular,
                 ),
                 maxLines: 6,
                 overflow: TextOverflow.ellipsis,

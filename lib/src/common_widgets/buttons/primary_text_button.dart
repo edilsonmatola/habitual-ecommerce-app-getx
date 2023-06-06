@@ -25,7 +25,7 @@ class PrimaryTextButton extends StatelessWidget {
         buttonLabel,
         style: Get.textTheme.bodyMedium?.copyWith(
           color: buttonColor ?? AppColors.neutral600,
-          fontWeight: fontWeight ?? AppFonts.interRegular,
+          fontWeight: fontWeight ?? Fonts.interRegular,
         ),
       ),
     );

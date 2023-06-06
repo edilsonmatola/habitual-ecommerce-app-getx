@@ -38,7 +38,7 @@ class OnBoarding2Screen extends StatelessWidget {
                 AppTitles.onboarding2Description,
                 style: Get.textTheme.displaySmall?.copyWith(
                   color: AppColors.neutral600,
-                  fontWeight: AppFonts.interRegular,
+                  fontWeight: Fonts.interRegular,
                   height: 1.5,
                 ),
                 textAlign: TextAlign.center,

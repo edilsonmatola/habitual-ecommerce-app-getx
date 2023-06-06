@@ -61,7 +61,7 @@ class AccountCard extends StatelessWidget {
                       Text(
                         'Orders',
                         style: Get.textTheme.bodyMedium?.copyWith(
-                          fontWeight: AppFonts.interSemiBold,
+                          fontWeight: Fonts.interSemiBold,
                         ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,

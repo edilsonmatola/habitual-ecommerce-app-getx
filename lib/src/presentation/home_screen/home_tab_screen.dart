@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
+import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../core/core_export.dart';
 import 'widgets/main_card.dart';
@@ -89,8 +90,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                   ),
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
-                  separatorBuilder: (context, index) => gapW16,
-                  itemBuilder: (context, index) => const MainCard(),
+                  separatorBuilder: (_, index) => gapW16,
+                  itemBuilder: (_, index) => MainCard(
+                    onPressed: () => Get.toNamed(
+                      AppRoutes.productDetailsRoute,
+                    ),
+                  ),
                 ),
               ),
               gapH32,
