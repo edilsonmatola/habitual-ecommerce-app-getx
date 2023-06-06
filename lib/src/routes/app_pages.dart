@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/product_details_screen/view/view_product_details.dart';
 
 import '../presentation/base_screen/base_screen.dart';
 import '../presentation/introduction_screen/introduction_screen.dart';
@@ -50,6 +51,13 @@ abstract class AppPages {
       transitionDuration: const Duration(milliseconds: 500),
       curve: Curves.easeOut,
       transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.productDetailsRoute,
+      page: () => const ProductDetailsScreen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+      transition: Transition.downToUp,
     ),
   ];
 }
