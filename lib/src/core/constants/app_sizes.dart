@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 /// Constant sizes to be used in the app (paddings, gaps, rounded corners etc.)
 class Sizes {
@@ -19,6 +20,9 @@ class Sizes {
   static const p70 = 70.0;
   static const p100 = 100.0;
   static const p280 = 280.0;
+
+  static final deviceWidth = Get.width;
+  static final deviceHeight = Get.height;
 }
 
 /// OnBoarding Screen Padding
