@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/option_card.dart';
+import 'package:habitual/src/presentation/product_details_screen/widgets/product_review.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/rating_long.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
@@ -162,16 +163,15 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: Sizes.p16,
-                      vertical: Sizes.p24,
+                    padding: const EdgeInsets.all(
+                      Sizes.p24,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'DualSense Wireless Controller',
-                          style: Get.theme.textTheme.headlineLarge,
+                          style: Get.theme.textTheme.headlineMedium,
                         ),
                         gapH8,
                         Text(
@@ -195,17 +195,40 @@ class ProductDetailsScreen extends StatelessWidget {
                         SizedBox(
                           height: Sizes.deviceHeight * .18,
                           child: ListView.separated(
+                            itemCount: 3,
                             scrollDirection: Axis.horizontal,
+                            separatorBuilder: (_, index) => gapW16,
                             itemBuilder: (_, index) => OptionCard(
                               isActive: true,
-                              onTap: () {},
-                              price: 79.99,
                               inStock: true,
+                              price: 79.99,
                               colorName: 'Black',
+                              onTap: () {},
                             ),
-                            separatorBuilder: (_, index) => gapW16,
-                            itemCount: 3,
                           ),
+                        ),
+                        gapH32,
+                        Text(
+                          'Description',
+                          style: Get.theme.textTheme.displayLarge,
+                        ),
+                        gapH12,
+                        Text(
+                          'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation ven',
+                          style: Get.theme.textTheme.displaySmall?.copyWith(
+                            color: AppColors.neutral600,
+                            fontWeight: Fonts.interRegular,
+                          ),
+                        ),
+                        gapH32,
+                        Text(
+                          'Reviews',
+                          style: Get.theme.textTheme.displayLarge,
+                        ),
+                        gapH24,
+                        const ProductReview(
+                          title: 'Consectetur tellus volutpat.',
+                          dateTime: 'January 1, 2023',
                         ),
                       ],
                     ),
@@ -214,139 +237,6 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
           ),
-          // slivers: [
-          //   SliverFillRemaining(
-          //     hasScrollBody: false,
-          //     child: Column(
-          //       children: [
-          //         Container(
-          //           height: Sizes.deviceHeight * .90,
-          //           color: AppColors.blue100,
-          //           child: Stack(
-          //             alignment: Alignment.center,
-          //             children: [
-          //               Padding(
-          //                 padding: const EdgeInsets.symmetric(
-          //                   horizontal: Sizes.p24,
-          //                 ),
-          //                 child: Column(
-          //                   children: [
-          //                     SizedBox(
-          //                       height: Sizes.deviceHeight * 50,
-          //                     ),
-          //                     Row(
-          //                       mainAxisAlignment: MainAxisAlignment.end,
-          //                       children: [
-          //                         PrimaryIconButton(
-          //                           icon: AppIcons.leftArrowIcon,
-          //                           onPressed: () => Get.back(),
-          //                         ),
-          //                         // GestureDetector(
-          //                         //   onTap: () {
-          //                         //     Get.back();
-          //                         //     Navigator.of(context).pop();
-          //                         //     Get.back();
-          //                         //   },
-          //                         //   child: IconButton(
-          //                         //     onPressed: () {
-          //                         //       Get.back();
-          //                         //       Navigator.of(context).pop();
-          //                         //       Get.back();
-          //                         //     },
-          //                         //     icon: const Icon(
-          //                         //       Icons.arrow_back,
-          //                         //       color: AppColors.uiGray_80,
-          //                         //     ),
-          //                         //   ),
-          //                         // ),
-          //                         SvgPicture.asset(
-          //                           AppIcons.shoppingCartIcon,
-          //                           width: Sizes.p20,
-          //                           height: Sizes.p20,
-          //                         ),
-          //                       ],
-          //                     )
-          //                   ],
-          //                 ),
-          //               ),
-          //               PageView.builder(
-          //                 onPageChanged: (value) {
-          //                   // productController.currentPage = value;
-          //                 },
-          //                 itemCount: 3,
-          //                 itemBuilder: (context, index) => Container(
-          //                   color: AppColors.green300,
-          //                 ),
-          //                 // itemBuilder: (_, index) => product.image != null
-          //                 //     ? Image.network(product.image!)
-          //                 //     : Icon(
-          //                 //         Icons.image,
-          //                 //         color: AppColors.uiGray_40,
-          //                 //         size: 50.r,
-          //                 //       ),
-          //               ),
-          //               // Positioned(
-          //               //   bottom: 24.h,
-          //               //   child: PageDotsSecondary(
-          //               //     controller: productController,
-          //               //     count: 3,
-          //               //   ),
-          //               // )
-          //             ],
-          //           ),
-          //         ),
-          //         Stack(
-          //           children: [
-          //             Container(
-          //               height: Sizes.deviceHeight * .10,
-          //               color: AppColors.blue100,
-          //             ),
-          //             Container(
-          //               width: double.infinity,
-          //               alignment: Alignment.topLeft,
-          //               decoration: BoxDecoration(
-          //                 borderRadius: const BorderRadius.only(
-          //                   topRight: Radius.circular(Sizes.p16),
-          //                   topLeft: Radius.circular(Sizes.p16),
-          //                 ),
-          //                 color: AppColors.white,
-          //               ),
-          //               child: Padding(
-          //                 padding: const EdgeInsets.all(Sizes.p24),
-          //                 child: Column(
-          //                   crossAxisAlignment: CrossAxisAlignment.start,
-          //                   children: [
-          //                     Text(
-          //                       'product.name',
-          //                       style: Get.theme.textTheme.headlineLarge,
-          //                     ),
-          //                     gapH8,
-          //                     // RatingLong(value: product.rating ?? 0),
-          //                     // SizedBox(
-          //                     //   height: 32.h,
-          //                     // ),
-          //                     Text(
-          //                       "DESCRIÇÃO",
-          //                       style: Get.theme.textTheme.displayLarge,
-          //                     ),
-
-          //                     gapH16,
-          //                     Text(
-          //                       'product.description',
-          //                       style: Get.theme.textTheme.bodyLarge?.copyWith(
-          //                         fontWeight: FontWeight.w400,
-          //                       ),
-          //                     ),
-          //                   ],
-          //                 ),
-          //               ),
-          //             ),
-          //           ],
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ],
         ),
       ),
     );
