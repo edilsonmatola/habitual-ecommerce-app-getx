@@ -18,6 +18,10 @@ class AppThemes {
       foregroundColor: AppColors.white,
       shadowColor: Colors.transparent,
       surfaceTintColor: AppColors.white,
+      actionsIconTheme: const IconThemeData(),
+      iconTheme: IconThemeData(
+        color: AppColors.neutral800,
+      ),
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
         statusBarIconBrightness: Brightness.dark,
