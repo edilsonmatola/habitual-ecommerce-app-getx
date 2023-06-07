@@ -37,7 +37,7 @@ class IntroductionScreen extends StatelessWidget {
                   ),
                   gapH16,
                   PrimaryTextButton(
-                    buttonColor: AppColors.neutral800,
+                    textColor: AppColors.neutral800,
                     fontWeight: FontWeight.w600,
                     buttonLabel: 'Already have an account?',
                     onPressed: () {},

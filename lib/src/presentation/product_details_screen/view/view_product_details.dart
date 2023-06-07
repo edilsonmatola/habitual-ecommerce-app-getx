@@ -5,6 +5,7 @@ import 'package:habitual/src/presentation/product_details_screen/widgets/option_
 import 'package:habitual/src/presentation/product_details_screen/widgets/page_dots_secondary.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/product_reviewer_card.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/rating_long.dart';
+import 'package:habitual/src/presentation/product_details_screen/widgets/text_cropping_widget.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
@@ -217,12 +218,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           style: Get.theme.textTheme.displayLarge,
                         ),
                         gapH12,
-                        Text(
-                          'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation ven',
-                          style: Get.textTheme.displaySmall?.copyWith(
-                            color: AppColors.neutral600,
-                            fontWeight: Fonts.interRegular,
-                          ),
+                        const TextCroppingWidget(
+                          text:
+                              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
                         ),
                         gapH32,
                         Text(
