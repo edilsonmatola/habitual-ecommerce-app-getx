@@ -8,11 +8,11 @@ import 'package:habitual/src/core/constants/app_icons.dart';
 import 'package:habitual/src/core/constants/app_sizes.dart';
 
 class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({Key? key}) : super(key: key);
+  CustomSearchBar({Key? key}) : super(key: key);
 
+  final searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final searchController = TextEditingController();
     return TextFormField(
       controller: searchController,
       onChanged: (value) {},

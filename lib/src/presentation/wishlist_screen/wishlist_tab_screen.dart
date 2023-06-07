@@ -13,8 +13,6 @@ class WishlistTabScreen extends StatefulWidget {
 }
 
 class _WishlistTabScreenState extends State<WishlistTabScreen> {
-  final deviceWidth = Get.size.width;
-  final deviceHeight = Get.size.height;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +67,7 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                     flex: 2,
                     child: Text(
                       'Trending',
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      style: Get.textTheme.headlineSmall,
                     ),
                   ),
                   PrimaryTextButton(
@@ -80,13 +78,13 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
               ),
               gapH16,
               SizedBox(
-                height: Get.size.height * .45,
+                height: Sizes.deviceHeight * .45,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
-                  separatorBuilder: (context, index) => gapW16,
-                  itemBuilder: (context, index) => const MainCard(),
+                  separatorBuilder: (_, index) => gapW16,
+                  itemBuilder: (_, index) => const MainCard(),
                 ),
               ),
             ],
