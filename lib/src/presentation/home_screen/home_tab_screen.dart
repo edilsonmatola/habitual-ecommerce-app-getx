@@ -17,8 +17,6 @@ class HomeTabScreen extends StatefulWidget {
 }
 
 class _HomeTabScreenState extends State<HomeTabScreen> {
-  final deviceWidth = Get.size.width;
-  final deviceHeight = Get.size.height;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +80,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               ),
               gapH16,
               SizedBox(
-                height: Get.size.height * .45,
+                height: Sizes.deviceHeight * .45,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(
@@ -121,7 +119,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               ),
               gapH16,
               SizedBox(
-                height: Get.size.height * .30,
+                height: Sizes.deviceHeight * .30,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
@@ -145,8 +143,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       children: [
                         Expanded(
                           child: CategoryCard(
-                            width: deviceWidth * .50,
-                            height: deviceHeight * .20,
+                            width: Sizes.deviceWidth * .50,
+                            height: Sizes.deviceHeight * .20,
                             title: AppTitles.categoryCard1Title,
                             buttonPressed: () {},
                             cardPressed: () {},
@@ -154,8 +152,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                         ),
                         Expanded(
                           child: CategoryCard(
-                            width: deviceWidth * .50,
-                            height: deviceHeight * .20,
+                            width: Sizes.deviceWidth * .50,
+                            height: Sizes.deviceHeight * .20,
                             title: AppTitles.categoryCard2Title,
                             color: AppColors.red300,
                             buttonPressed: () {},
@@ -169,8 +167,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       children: [
                         Expanded(
                           child: CategoryCard(
-                            width: deviceWidth * .50,
-                            height: deviceHeight * .20,
+                            width: Sizes.deviceWidth * .50,
+                            height: Sizes.deviceHeight * .20,
                             title: AppTitles.categoryCard3Title,
                             color: AppColors.blue300,
                             buttonPressed: () {},
@@ -179,8 +177,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                         ),
                         Expanded(
                           child: CategoryCard(
-                            width: deviceWidth * .50,
-                            height: deviceHeight * .20,
+                            width: Sizes.deviceWidth * .50,
+                            height: Sizes.deviceHeight * .20,
                             title: AppTitles.categoryCard4Title,
                             color: AppColors.green300,
                             buttonPressed: () {},
