@@ -8,9 +8,11 @@ class TextCroppingWidget extends StatefulWidget {
     super.key,
     required this.text,
     this.maxLength = 100,
+    this.fontSize,
   });
   final String text;
   final int maxLength;
+  final double? fontSize;
 
   @override
   TextCroppingWidgetState createState() => TextCroppingWidgetState();
@@ -54,6 +56,7 @@ class TextCroppingWidgetState extends State<TextCroppingWidget> {
                         isExpanded ? 'Read less' : 'Read more',
                         style: Get.textTheme.bodyLarge?.copyWith(
                           fontWeight: Fonts.interSemiBold,
+                          fontSize: widget.fontSize ?? 16,
                         ),
                       ),
                       onTap: () {
