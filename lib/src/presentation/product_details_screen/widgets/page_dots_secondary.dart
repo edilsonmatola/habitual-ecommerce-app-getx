@@ -5,21 +5,23 @@ import '../../../core/core_export.dart';
 class PageDotsSecondary extends StatelessWidget {
   const PageDotsSecondary({
     super.key,
-    required this.controller,
+    required this.currentIndex,
+    required this.countLength,
   });
 
-  final PageController controller;
+  final int currentIndex;
+  final int countLength;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
-        6,
+        countLength,
         (index) => AnimatedContainer(
           duration: const Duration(milliseconds: 135),
           height: 6,
-          width: controller.initialPage == index ? 20 : 6,
+          width: currentIndex == index ? 20 : 6,
           margin: const EdgeInsets.only(
             right: Sizes.p4,
           ),
@@ -27,7 +29,7 @@ class PageDotsSecondary extends StatelessWidget {
             borderRadius: BorderRadius.circular(
               Sizes.p8,
             ),
-            color: controller.initialPage == index
+            color: currentIndex == index
                 ? AppColors.neutral800
                 : AppColors.neutral600.withOpacity(0.5),
           ),
