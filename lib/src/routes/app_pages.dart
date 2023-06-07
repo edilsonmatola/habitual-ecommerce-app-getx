@@ -54,7 +54,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: AppRoutes.productDetailsRoute,
-      page: () => ProductDetailsScreen(),
+      page: () => const ProductDetailsScreen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       transition: Transition.downToUp,
