@@ -66,7 +66,7 @@ class CategoryCard extends StatelessWidget {
           right: Sizes.p24,
           bottom: Sizes.p16,
           child: PrimaryOutlinedButton(
-            isText: false,
+            hasText: false,
             onPressed: buttonPressed,
           ),
         ),
