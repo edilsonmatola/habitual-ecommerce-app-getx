@@ -2,14 +2,25 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/option_card.dart';
+import 'package:habitual/src/presentation/product_details_screen/widgets/page_dots_secondary.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/product_reviewer_card.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/rating_long.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
+import '../../home_screen/widgets/main_card.dart';
 
-class ProductDetailsScreen extends StatelessWidget {
+class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key});
+
+  @override
+  State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
+}
+
+class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+  final currentIndex = 0.obs;
+
+  final pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +40,7 @@ class ProductDetailsScreen extends StatelessWidget {
             key: const ValueKey<int>(0),
             padding: const EdgeInsets.fromLTRB(
               Sizes.p24,
-              Sizes.p4,
+              0,
               Sizes.p24,
               0,
             ),
@@ -62,60 +73,33 @@ class ProductDetailsScreen extends StatelessWidget {
                               '\$79.99',
                               style: Get.theme.textTheme.titleSmall,
                             ),
-                            // SizedBox(
-                            //   width: 8.w,
-                            // ),
+                            // TODO: isProductDiscount?
+                            gapW8,
 
                             /// ACTUAL PRICE
                             // if (product.discount != 0)
-                            //   Text(
-                            //     "\$${product.actualPrice.toStringAsFixed(2)}",
-                            //     style: AppTextStyles.strikeSmall.copyWith(
-                            //       color:
-                            //           AppColors.textGray_80.withOpacity(0.75),
-                            //       fontWeight: FontWeight.w700,
-                            //     ),
-                            //   ),
+                            Text(
+                              "\$99.99",
+                              style: Get.theme.textTheme.bodyMedium?.copyWith(
+                                color: AppColors.neutral600,
+                                fontWeight: Fonts.interRegular,
+                                decoration: TextDecoration.lineThrough,
+                              ),
+                            ),
                           ],
                         ),
-                        gapW24,
-                        PrimaryButton(
-                          buttonWidth: 216,
-                          buttonHeight: 50,
-                          buttonColor: AppColors.neutral800,
-                          buttonLabel: 'Add to cart',
-                          onPressed: () {},
-                        )
-                        // SizedBox(
-                        //   width: 8.w,
-                        // ),
-
-                        ///* DISCOUNT
-                        // if (product.discount != 0)
-                        //   DiscountPillSecondary(
-                        //     discountPercentage: product.discount,
-                        //   ),
                       ],
                     ),
                   ],
                 ),
-                // CircleAvatar(
-                //   radius: 24.r,
-                //   backgroundColor: AppColors.bgWhite,
-                //   child: IconButton(
-                //     color: AppColors.uiGray_80,
-                //     padding: const EdgeInsets.all(0),
-                //     iconSize: 24.r,
-                //     icon: const Icon(
-                //       Icons.arrow_forward_rounded,
-                //       color: AppColors.uiGray_80,
-                //     ),
-                //     onPressed: () {
-                //       bool status = cartController.addProductToCart(product);
-                //       if (status) productController.isProductInCart = true;
-                //     },
-                //   ),
-                // ),
+                gapW24,
+                PrimaryButton(
+                  buttonWidth: 150,
+                  buttonHeight: 50,
+                  buttonColor: AppColors.neutral800,
+                  buttonLabel: 'Add to cart',
+                  onPressed: () {},
+                ),
               ],
             ),
           ),
@@ -143,25 +127,45 @@ class ProductDetailsScreen extends StatelessWidget {
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   //* Product Image
-                  Container(
-                    height: Sizes.deviceHeight * .50,
-                    color: AppColors.blue300,
-                    child: PageView.builder(
-                      itemCount: 6,
-                      itemBuilder: (_, index) => Container(
+                  Stack(
+                    children: [
+                      Container(
+                        height: Sizes.deviceHeight * .50,
                         color: AppColors.blue300,
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              'https://scufgaming.com/media/prismic/ODMwZTBlYzgtMDYzZi00ZGNmLWE3MTctNjZjMDUyMjA2YjRm_7a716d11-edb0-4a68-83a1-cdefacd9b8a5_reflex_compare_model_base_black_front_850x600.png',
-                          placeholder: (_, url) => const Center(
-                            child: CircularProgressIndicator.adaptive(),
+                        child: PageView.builder(
+                          controller: pageController,
+                          itemCount: 6,
+                          onPageChanged: (value) => setState(() {
+                            currentIndex.value = value;
+                          }),
+                          itemBuilder: (_, index) => Container(
+                            color: AppColors.blue300,
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  'https://scufgaming.com/media/prismic/ODMwZTBlYzgtMDYzZi00ZGNmLWE3MTctNjZjMDUyMjA2YjRm_7a716d11-edb0-4a68-83a1-cdefacd9b8a5_reflex_compare_model_base_black_front_850x600.png',
+                              placeholder: (_, url) => const Center(
+                                child: CircularProgressIndicator.adaptive(),
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
+                      //* Page dots
+                      Positioned(
+                        bottom: 5,
+                        left: 0,
+                        right: 0,
+                        child: PageDotsSecondary(
+                          currentIndex: currentIndex.value,
+                          countLength: 6,
+                        ),
+                      ),
+                    ],
                   ),
+                  //* Product Title
                   Padding(
                     padding: const EdgeInsets.all(
                       Sizes.p24,
@@ -215,7 +219,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         gapH12,
                         Text(
                           'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation ven',
-                          style: Get.theme.textTheme.displaySmall?.copyWith(
+                          style: Get.textTheme.displaySmall?.copyWith(
                             color: AppColors.neutral600,
                             fontWeight: Fonts.interRegular,
                           ),
@@ -223,12 +227,51 @@ class ProductDetailsScreen extends StatelessWidget {
                         gapH32,
                         Text(
                           'Reviews',
-                          style: Get.theme.textTheme.displayLarge,
+                          style: Get.textTheme.displayLarge,
                         ),
                         gapH24,
                         const ProductReviewerCard(
                           title: 'Consectetur tellus volutpat.',
                           dateTime: 'January 1, 2023',
+                        ),
+                        gapH24,
+                        Row(
+                          children: [
+                            Expanded(
+                              child: PrimaryOutlinedButton(
+                                title: 'Show all reviews',
+                                hasText: true,
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
+                        ),
+                        gapH32,
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: Text(
+                                'Just for you',
+                                style: Get.textTheme.displayLarge,
+                              ),
+                            ),
+                            PrimaryTextButton(
+                              buttonLabel: 'View all',
+                              onPressed: () {},
+                            )
+                          ],
+                        ),
+                        gapH16,
+                        SizedBox(
+                          height: Get.size.height * .45,
+                          child: ListView.separated(
+                            scrollDirection: Axis.horizontal,
+                            physics: const BouncingScrollPhysics(),
+                            itemCount: 10,
+                            separatorBuilder: (context, index) => gapW16,
+                            itemBuilder: (context, index) => const MainCard(),
+                          ),
                         ),
                       ],
                     ),
