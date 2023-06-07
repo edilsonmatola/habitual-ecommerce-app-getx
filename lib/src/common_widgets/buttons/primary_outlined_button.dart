@@ -28,7 +28,7 @@ class PrimaryOutlinedButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title!,
-          style: Get.theme.textTheme.bodyLarge,
+          style: Get.textTheme.bodyLarge,
         ),
       );
     } else {

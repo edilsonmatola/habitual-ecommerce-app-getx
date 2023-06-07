@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../core/core_export.dart';
-
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
@@ -28,16 +28,16 @@ class PrimaryButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: buttonColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(6),
+            borderRadius: BorderRadius.circular(Sizes.p6),
           ),
         ),
         onPressed: onPressed,
         child: Text(
           buttonLabel,
-          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: labelColor ?? AppColors.white,
-                fontWeight: FontWeight.w500,
-              ),
+          style: Get.textTheme.bodyLarge?.copyWith(
+            color: labelColor ?? AppColors.white,
+            fontWeight: Fonts.interMedium,
+          ),
         ),
       ),
     );

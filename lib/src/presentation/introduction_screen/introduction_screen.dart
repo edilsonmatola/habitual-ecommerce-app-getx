@@ -25,7 +25,7 @@ class IntroductionScreen extends StatelessWidget {
                 children: [
                   Text(
                     AppTitles.introTitle,
-                    style: Get.theme.textTheme.headlineLarge,
+                    style: Get.textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),
                   gapH70,

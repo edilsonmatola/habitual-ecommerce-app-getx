@@ -66,7 +66,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       flex: 2,
                       child: Text(
                         'Trending',
-                        style: Theme.of(context).textTheme.headlineSmall,
+                        style: Get.textTheme.headlineSmall,
                       ),
                     ),
                     PrimaryIconButton(
@@ -109,7 +109,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     Expanded(
                       child: Text(
                         'Deals',
-                        style: Theme.of(context).textTheme.headlineSmall,
+                        style: Get.textTheme.headlineSmall,
                       ),
                     ),
                     PrimaryTextButton(
@@ -129,8 +129,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     horizontal: Sizes.p24,
                   ),
                   itemCount: 10,
-                  separatorBuilder: (context, index) => gapW16,
-                  itemBuilder: (context, index) => const DealsCard(),
+                  separatorBuilder: (_, index) => gapW16,
+                  itemBuilder: (_, index) => const DealsCard(),
                 ),
               ),
               gapH32,

@@ -58,7 +58,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   children: [
                     Text(
                       'With your options',
-                      style: Get.theme.textTheme.titleLarge,
+                      style: Get.textTheme.titleLarge,
                     ),
                     gapH4,
 
@@ -72,7 +72,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             /// SELLING PRICE
                             Text(
                               '\$79.99',
-                              style: Get.theme.textTheme.titleSmall,
+                              style: Get.textTheme.titleSmall,
                             ),
                             // TODO: isProductDiscount?
                             gapW8,
@@ -81,7 +81,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             // if (product.discount != 0)
                             Text(
                               "\$99.99",
-                              style: Get.theme.textTheme.bodyMedium?.copyWith(
+                              style: Get.textTheme.bodyMedium?.copyWith(
                                 color: AppColors.neutral600,
                                 fontWeight: Fonts.interRegular,
                                 decoration: TextDecoration.lineThrough,
@@ -176,12 +176,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       children: [
                         Text(
                           'DualSense Wireless Controller',
-                          style: Get.theme.textTheme.headlineMedium,
+                          style: Get.textTheme.headlineMedium,
                         ),
                         gapH8,
                         Text(
                           'Sony',
-                          style: Get.theme.textTheme.titleLarge?.copyWith(
+                          style: Get.textTheme.titleLarge?.copyWith(
                             color: AppColors.neutral600,
                             fontWeight: Fonts.interRegular,
                           ),
@@ -193,7 +193,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         gapH24,
                         Text(
                           'Options',
-                          style: Get.theme.textTheme.titleLarge,
+                          style: Get.textTheme.titleLarge,
                         ),
                         gapH8,
                         //* Available Colors
@@ -215,7 +215,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         gapH32,
                         Text(
                           'Description',
-                          style: Get.theme.textTheme.displayLarge,
+                          style: Get.textTheme.displayLarge,
                         ),
                         gapH12,
                         const TextCroppingWidget(
@@ -262,7 +262,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
                         gapH16,
                         SizedBox(
-                          height: Get.size.height * .45,
+                          height: Sizes.deviceHeight * .45,
                           child: ListView.separated(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
