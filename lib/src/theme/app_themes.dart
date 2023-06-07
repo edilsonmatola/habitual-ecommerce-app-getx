@@ -24,7 +24,7 @@ class AppThemes {
       ),
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.white,
-        statusBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.light,
       ),
       titleTextStyle: AppStyle.heading4Style,
@@ -83,9 +83,9 @@ class AppThemes {
       backgroundColor: Colors.transparent,
       titleTextStyle: AppStyle.heading4Style,
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: AppColors.white,
+        statusBarColor: AppColors.neutral800,
         statusBarIconBrightness: Brightness.dark,
-        statusBarBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
       ), //*TODO: Change to a darker color
     ),
     primaryColor: AppColors.yellow500,
