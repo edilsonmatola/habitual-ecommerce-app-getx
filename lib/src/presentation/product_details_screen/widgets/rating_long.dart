@@ -30,7 +30,7 @@ class RatingLong extends StatelessWidget {
         gapW4,
         Text(
           '12 Reviews',
-          style: Get.theme.textTheme.bodySmall?.copyWith(
+          style: Get.textTheme.bodySmall?.copyWith(
             color: AppColors.neutral400,
           ),
         )

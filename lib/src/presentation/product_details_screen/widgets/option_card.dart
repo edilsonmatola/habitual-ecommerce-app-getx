@@ -48,8 +48,7 @@ class OptionCard extends StatelessWidget {
                 ),
                 child: Text(
                   colorName,
-                  style: Get.theme.textTheme.titleLarge,
-                  // Get.theme.textTheme.bodyMedium (Color)
+                  style: Get.textTheme.titleLarge,
                 ),
               ),
               gapH12,
@@ -65,16 +64,16 @@ class OptionCard extends StatelessWidget {
                   children: [
                     Text(
                       '\$${price.toStringAsFixed(2)}',
-                      style: Get.theme.textTheme.bodyLarge,
+                      style: Get.textTheme.bodyLarge,
                     ),
                     gapH4,
                     Text(
                       inStock ? 'In Stock' : 'Out of Stock',
                       style: inStock
-                          ? Get.theme.textTheme.titleMedium?.copyWith(
+                          ? Get.textTheme.titleMedium?.copyWith(
                               color: AppColors.green700,
                             )
-                          : Get.theme.textTheme.titleMedium?.copyWith(
+                          : Get.textTheme.titleMedium?.copyWith(
                               color: AppColors.red500,
                             ),
                     ),

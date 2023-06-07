@@ -27,7 +27,7 @@ class ProductReviewerCard extends StatelessWidget {
                 flex: 2,
                 child: Text(
                   title,
-                  style: Get.theme.textTheme.bodyLarge,
+                  style: Get.textTheme.bodyLarge,
                 ),
               ),
               Expanded(
@@ -42,7 +42,7 @@ class ProductReviewerCard extends StatelessWidget {
           gapH8,
           Text(
             dateTime,
-            style: Get.theme.textTheme.titleMedium?.copyWith(
+            style: Get.textTheme.titleMedium?.copyWith(
               color: AppColors.neutral400,
               fontWeight: Fonts.interRegular,
             ),
@@ -50,7 +50,7 @@ class ProductReviewerCard extends StatelessWidget {
           gapH8,
           Text(
             'Massa morbi id lorem ultricies. Aliquet eu dolor cras ipsum hendrerit id ut habitant nisi. Lectus ipsum faucibus sed fringilla at tempor.',
-            style: Get.theme.textTheme.titleMedium?.copyWith(
+            style: Get.textTheme.titleMedium?.copyWith(
               color: AppColors.neutral600,
               fontWeight: Fonts.interRegular,
             ),
@@ -68,7 +68,7 @@ class ProductReviewerCard extends StatelessWidget {
               gapW8,
               Text(
                 'Brooklyn Simmons',
-                style: Get.theme.textTheme.titleMedium?.copyWith(
+                style: Get.textTheme.titleMedium?.copyWith(
                   color: AppColors.neutral600,
                 ),
               )
