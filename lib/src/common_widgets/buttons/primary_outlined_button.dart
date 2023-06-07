@@ -8,16 +8,16 @@ class PrimaryOutlinedButton extends StatelessWidget {
     Key? key,
     this.onPressed,
     this.title,
-    required this.isText,
+    required this.hasText,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String? title;
-  final bool isText;
+  final bool hasText;
 
   @override
   Widget build(BuildContext context) {
-    if (isText) {
+    if (hasText) {
       return OutlinedButton(
         style: OutlinedButton.styleFrom(
           textStyle: Get.textTheme.bodyMedium,
@@ -26,7 +26,10 @@ class PrimaryOutlinedButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(title!),
+        child: Text(
+          title!,
+          style: Get.theme.textTheme.bodyLarge,
+        ),
       );
     } else {
       return SizedBox(
