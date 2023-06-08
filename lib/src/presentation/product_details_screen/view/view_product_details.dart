@@ -198,7 +198,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         gapH8,
                         //* Available Colors
                         SizedBox(
-                          height: Sizes.deviceHeight * .18,
+                          height: Sizes.deviceHeight * .15,
                           child: ListView.separated(
                             itemCount: 3,
                             scrollDirection: Axis.horizontal,
@@ -255,6 +255,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               ),
                             ),
                             PrimaryTextButton(
+                              defaultTextStyle: true,
                               buttonLabel: 'View all',
                               onPressed: () {},
                             )
