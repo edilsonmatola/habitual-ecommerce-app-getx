@@ -19,8 +19,8 @@ class CategoryCard extends StatelessWidget {
   final double? height;
   final Color? color;
   final String title;
-  final VoidCallback buttonPressed;
-  final VoidCallback cardPressed;
+  final VoidCallback? buttonPressed;
+  final VoidCallback? cardPressed;
 
   @override
   Widget build(BuildContext context) {

@@ -11,10 +11,14 @@ class DealsCard extends StatelessWidget {
     super.key,
     this.width,
     this.height,
+    this.onLikeTap,
+    this.onCardTap,
   });
 
   final double? width;
   final double? height;
+  final VoidCallback? onLikeTap;
+  final VoidCallback? onCardTap;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,7 @@ class DealsCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
-              onTap: () {},
+              onTap: onCardTap,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
@@ -102,7 +106,7 @@ class DealsCard extends StatelessWidget {
           top: Sizes.p4,
           right: Sizes.p16,
           child: LikeButtonWidget(
-            onPressed: () {},
+            onPressed: onLikeTap,
           ),
         )
       ],

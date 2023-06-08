@@ -14,7 +14,7 @@ class LikeButtonWidget extends StatelessWidget {
   final double? width;
   final double? height;
   final Color? color;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
