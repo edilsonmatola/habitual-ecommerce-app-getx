@@ -21,7 +21,9 @@ class OnBoarding3Screen extends StatelessWidget {
             children: [
               HeaderSection(
                 buttonLabel: 'Exit',
-                onPressed: () => Get.offAllNamed(AppRoutes.baseRoute),
+                onPressed: () => Get.offAllNamed(
+                  AppRoutes.baseRoute,
+                ),
               ),
               gapH16,
               SvgPicture.asset(
