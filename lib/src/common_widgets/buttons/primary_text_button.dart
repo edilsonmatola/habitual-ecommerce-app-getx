@@ -10,7 +10,7 @@ class PrimaryTextButton extends StatelessWidget {
     required this.buttonLabel,
     this.textColor,
     this.fontWeight,
-    this.defaultTextStyle = false,
+    this.defaultTextStyle = true,
     this.style,
   }) : super(key: key);
 
