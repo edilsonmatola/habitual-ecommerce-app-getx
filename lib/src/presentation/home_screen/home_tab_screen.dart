@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/my_interests_card.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../core/core_export.dart';
@@ -19,6 +20,7 @@ class HomeTabScreen extends StatefulWidget {
 class _HomeTabScreenState extends State<HomeTabScreen> {
   @override
   Widget build(BuildContext context) {
+    const isLoggedIn = true;
     return Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>
@@ -119,7 +121,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
               ),
               gapH16,
               SizedBox(
-                height: Sizes.deviceHeight * .30,
+                height: Sizes.deviceHeight * .25,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
@@ -128,10 +130,14 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                   ),
                   itemCount: 10,
                   separatorBuilder: (_, index) => gapW16,
-                  itemBuilder: (_, index) => const DealsCard(),
+                  itemBuilder: (_, index) => DealsCard(
+                    onCardTap: () {},
+                    onLikeTap: () {},
+                  ),
                 ),
               ),
               gapH32,
+              if (isLoggedIn) const MyInterestsCard(),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Sizes.p24,
