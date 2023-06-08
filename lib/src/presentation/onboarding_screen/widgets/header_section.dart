@@ -27,6 +27,7 @@ class HeaderSection extends StatelessWidget {
         PrimaryTextButton(
           buttonLabel: buttonLabel ?? 'Skip',
           onPressed: onPressed,
+          defaultTextStyle: true,
         ),
       ],
     );
