@@ -68,22 +68,22 @@ class _MyInterestsCardState extends State<MyInterestsCard>
                 ],
               ),
               TabBar(
-                physics: const BouncingScrollPhysics(),
+                tabs: interestsCategoriesList,
+                isScrollable: true,
                 controller: _tabController,
+                physics: const BouncingScrollPhysics(),
                 dividerColor: Colors.transparent,
                 labelColor: AppColors.neutral800,
-                isScrollable: true,
                 labelPadding: const EdgeInsets.only(right: Sizes.p32),
-                indicatorColor: Colors.black,
-                unselectedLabelColor: AppColors.neutral300,
-                unselectedLabelStyle: const TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Lato',
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                ),
+                indicatorColor: AppColors.neutral800,
+                // unselectedLabelColor: AppColors.neutral300,
+                // unselectedLabelStyle: const TextStyle(
+                //   color: Colors.black,
+                //   fontFamily: 'Lato',
+                //   fontSize: 16,
+                //   fontWeight: FontWeight.w400,
+                // ),
                 labelStyle: Get.textTheme.bodyLarge?.copyWith(),
-                tabs: interestsCategoriesList,
               ),
               Expanded(
                 child: TabBarView(
