@@ -11,12 +11,14 @@ class MyInterestsProductCard extends StatelessWidget {
     required this.brand,
     required this.price,
     required this.imageUrl,
+    this.onPressed,
   });
 
   final String name;
   final String imageUrl;
   final String brand;
-  final int price;
+  final double price;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class MyInterestsProductCard extends StatelessWidget {
       width: Sizes.deviceWidth,
       height: Sizes.deviceHeight * .12,
       child: InkWell(
+        onTap: onPressed,
         child: Row(
           children: [
             CachedNetworkImage(
@@ -51,7 +54,7 @@ class MyInterestsProductCard extends StatelessWidget {
                     ),
                     gapH4,
                     Text(
-                      '\$${price.toStringAsFixed(3)}',
+                      '\$${price.toStringAsFixed(2)}',
                       style: Get.textTheme.bodyMedium,
                     ),
                   ],
@@ -60,7 +63,6 @@ class MyInterestsProductCard extends StatelessWidget {
             )
           ],
         ),
-        onTap: () {},
       ),
     );
   }
