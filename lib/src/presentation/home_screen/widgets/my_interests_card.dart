@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/core_export.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/my_interests_product_card.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 
@@ -96,64 +96,30 @@ class _MyInterestsCardState extends State<MyInterestsCard>
                       ),
                       child: Column(
                         children: [
-                          SizedBox(
-                            width: Sizes.deviceWidth,
-                            height: Sizes.deviceHeight * .12,
-                            child: InkWell(
-                              child: Row(
-                                children: [
-                                  CachedNetworkImage(
-                                    imageUrl:
-                                        'https://media.croma.com/image/upload/v1685969095/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256605_li76nl.png',
-                                    width: 80,
-                                    height: 80,
-                                  ),
-                                  gapW16,
-                                  Row(
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Macbook Pro 13"',
-                                            style: Get.textTheme.displayMedium,
-                                          ),
-                                          Text(
-                                            'Apple',
-                                            style: Get.textTheme.titleMedium
-                                                ?.copyWith(
-                                              color: AppColors.neutral700,
-                                              fontWeight: Fonts.interRegular,
-                                            ),
-                                          ),
-                                          gapH4,
-                                          Text(
-                                            '\$1934.99',
-                                            style: Get.textTheme.bodyMedium,
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                              onTap: () {},
-                            ),
+                          MyInterestsProductCard(
+                            onPressed: () {},
+                            name: 'Macbook Pro 13"',
+                            brand: 'Apple',
+                            price: 1934.99,
+                            imageUrl:
+                                'https://media.croma.com/image/upload/v1685969095/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256605_li76nl.png',
                           ),
                           gapH8,
-                          Container(
-                            width: Sizes.deviceWidth,
-                            height: Sizes.deviceHeight * .12,
-                            color: AppColors.yellow500,
+                          MyInterestsProductCard(
+                            onPressed: () {},
+                            name: 'DualSense Wireless Controller',
+                            brand: 'Sony',
+                            price: 79.99,
+                            imageUrl:
+                                'https://static0.xdaimages.com/wordpress/wp-content/uploads/2023/03/playstation-dualsense-edge-wireless-controller.png',
                           ),
-                          gapH8,
-                          Container(
-                            width: Sizes.deviceWidth,
-                            height: Sizes.deviceHeight * .12,
-                            color: AppColors.red500,
+                          MyInterestsProductCard(
+                            onPressed: () {},
+                            name: 'Alienware 38” Curved Monitor ',
+                            brand: 'Dell',
+                            price: 2454.99,
+                            imageUrl:
+                                'https://res.cloudinary.com/dev-and-gear/image/upload/w_1920,q_auto,f_auto//v1641829496/Alienware_34_Curved_QD-OLED_Gaming_Monitor-AW3423DW_bkf9jp',
                           ),
                           gapH16,
                           PrimaryButton(
