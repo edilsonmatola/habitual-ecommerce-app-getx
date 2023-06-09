@@ -1,21 +1,67 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../core/core_export.dart';
 
 class MyInterestsProductCard extends StatelessWidget {
-  const MyInterestsProductCard({super.key});
+  const MyInterestsProductCard({
+    super.key,
+    required this.name,
+    required this.brand,
+    required this.price,
+    required this.imageUrl,
+  });
+
+  final String name;
+  final String imageUrl;
+  final String brand;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SizedBox(
-        width: 80,
-        height: 80,
-        child: CachedNetworkImage(
-          imageUrl:
-              'https://media.croma.com/image/upload/v1685969130/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256606_ufqgl3.png',
+    return SizedBox(
+      width: Sizes.deviceWidth,
+      height: Sizes.deviceHeight * .12,
+      child: InkWell(
+        child: Row(
+          children: [
+            CachedNetworkImage(
+              imageUrl: imageUrl,
+              width: 80,
+              height: 80,
+            ),
+            gapW16,
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      name,
+                      style: Get.textTheme.displayMedium,
+                    ),
+                    Text(
+                      brand,
+                      style: Get.textTheme.titleMedium?.copyWith(
+                        color: AppColors.neutral700,
+                        fontWeight: Fonts.interRegular,
+                      ),
+                    ),
+                    gapH4,
+                    Text(
+                      '\$${price.toStringAsFixed(3)}',
+                      style: Get.textTheme.bodyMedium,
+                    ),
+                  ],
+                )
+              ],
+            )
+          ],
         ),
+        onTap: () {},
       ),
-      onTap: () {},
     );
   }
 }
