@@ -26,7 +26,7 @@ class PrimaryButton extends StatelessWidget {
       height: buttonHeight ?? 48,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: buttonColor,
+          backgroundColor: buttonColor ?? AppColors.yellow300,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Sizes.p6),
           ),
@@ -35,7 +35,7 @@ class PrimaryButton extends StatelessWidget {
         child: Text(
           buttonLabel,
           style: Get.textTheme.bodyLarge?.copyWith(
-            color: labelColor ?? AppColors.white,
+            color: labelColor ?? AppColors.neutral800,
             fontWeight: Fonts.interMedium,
           ),
         ),
