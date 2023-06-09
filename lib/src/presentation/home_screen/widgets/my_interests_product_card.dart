@@ -29,37 +29,42 @@ class MyInterestsProductCard extends StatelessWidget {
         onTap: onPressed,
         child: Row(
           children: [
-            CachedNetworkImage(
-              imageUrl: imageUrl,
-              width: 80,
-              height: 80,
+            Expanded(
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                width: 80,
+                height: 80,
+              ),
             ),
             gapW16,
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      name,
-                      style: Get.textTheme.displayMedium,
-                    ),
-                    Text(
-                      brand,
-                      style: Get.textTheme.titleMedium?.copyWith(
-                        color: AppColors.neutral700,
-                        fontWeight: Fonts.interRegular,
+            Expanded(
+              flex: 3,
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        name,
+                        style: Get.textTheme.displayMedium,
                       ),
-                    ),
-                    gapH4,
-                    Text(
-                      '\$${price.toStringAsFixed(2)}',
-                      style: Get.textTheme.bodyMedium,
-                    ),
-                  ],
-                )
-              ],
+                      Text(
+                        brand,
+                        style: Get.textTheme.titleMedium?.copyWith(
+                          color: AppColors.neutral700,
+                          fontWeight: Fonts.interRegular,
+                        ),
+                      ),
+                      gapH4,
+                      Text(
+                        '\$${price.toStringAsFixed(2)}',
+                        style: Get.textTheme.bodyMedium,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
