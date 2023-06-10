@@ -26,6 +26,7 @@ class MyInterestsProductCard extends StatelessWidget {
       width: Sizes.deviceWidth,
       height: Sizes.deviceHeight * .12,
       child: InkWell(
+        borderRadius: BorderRadius.circular(Sizes.p8),
         onTap: onPressed,
         child: Row(
           children: [
@@ -39,29 +40,31 @@ class MyInterestsProductCard extends StatelessWidget {
             gapW16,
             Expanded(
               flex: 3,
-              child: Row(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        name,
-                        style: Get.textTheme.displayMedium,
-                      ),
-                      Text(
-                        brand,
-                        style: Get.textTheme.titleMedium?.copyWith(
-                          color: AppColors.neutral700,
-                          fontWeight: Fonts.interRegular,
-                        ),
-                      ),
-                      gapH4,
-                      Text(
-                        '\$${price.toStringAsFixed(2)}',
-                        style: Get.textTheme.bodyMedium,
-                      ),
-                    ],
+                  Text(
+                    name,
+                    style: Get.textTheme.displayMedium,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                  Text(
+                    brand,
+                    style: Get.textTheme.titleMedium?.copyWith(
+                      color: AppColors.neutral700,
+                      fontWeight: Fonts.interRegular,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                  gapH4,
+                  Text(
+                    '\$${price.toStringAsFixed(2)}',
+                    style: Get.textTheme.bodyMedium,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                   )
                 ],
               ),
