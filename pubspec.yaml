@@ -42,6 +42,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  flutter_slidable: ^3.0.0
 
 dev_dependencies:
   flutter_test:
