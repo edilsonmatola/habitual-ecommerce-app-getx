@@ -32,6 +32,9 @@ class MyInterestsProductCard extends StatelessWidget {
           children: [
             Expanded(
               child: CachedNetworkImage(
+                placeholder: (_, url) => const Center(
+                  child: CircularProgressIndicator.adaptive(),
+                ),
                 imageUrl: imageUrl,
                 width: 80,
                 height: 80,
