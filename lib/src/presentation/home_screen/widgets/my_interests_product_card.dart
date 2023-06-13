@@ -71,7 +71,7 @@ class MyInterestsProductCard extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
