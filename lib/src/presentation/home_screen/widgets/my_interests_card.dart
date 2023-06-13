@@ -65,14 +65,17 @@ class _MyInterestsCardState extends State<MyInterestsCard>
                   PrimaryTextButton(
                     buttonLabel: 'View all',
                     onPressed: () {},
-                  )
+                )
                 ],
               ),
               TabBar(
+                isScrollable: true,
                 controller: _tabController,
                 tabs: interestsCategoriesList,
                 physics: const AlwaysScrollableScrollPhysics(),
-                isScrollable: true,
+                overlayColor: MaterialStatePropertyAll(
+                  AppColors.neutral400.withOpacity(.15),
+                ),
                 dividerColor: Colors.transparent,
                 indicatorSize: TabBarIndicatorSize.label,
                 labelColor: AppColors.neutral800,
