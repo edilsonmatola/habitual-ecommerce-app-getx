@@ -9,11 +9,15 @@ class PrimaryOutlinedButton extends StatelessWidget {
     this.onPressed,
     this.title,
     required this.hasText,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String? title;
   final bool hasText;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +37,8 @@ class PrimaryOutlinedButton extends StatelessWidget {
       );
     } else {
       return SizedBox(
-        width: 36,
-        height: 36,
+        width: width ?? 36,
+        height: height ?? 36,
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
             padding: const EdgeInsets.all(0),
