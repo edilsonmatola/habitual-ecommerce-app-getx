@@ -22,6 +22,7 @@ class _CheckoutConfirmationScreenState
     duration: const Duration(milliseconds: 300),
   );
 
+  // TODO: Checkout controller
   @override
   void initState() {
     confettiController.play();
