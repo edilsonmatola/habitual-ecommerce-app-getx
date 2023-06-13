@@ -65,7 +65,7 @@ abstract class AppPages {
       page: () => const CheckoutScreen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
-      transition: Transition.downToUp,
+      transition: Transition.rightToLeft,
     ),
   ];
 }
