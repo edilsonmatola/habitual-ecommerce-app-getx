@@ -11,27 +11,34 @@ class PromoCodeTextField extends StatelessWidget {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        hintText: 'Promo code',
-        hintStyle: Get.textTheme.displaySmall?.copyWith(
-          color: AppColors.neutral400,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColors.green300,
+          hintText: 'Promo code',
+          hintStyle: Get.textTheme.displaySmall?.copyWith(
+            color: AppColors.neutral400,
           ),
-          borderRadius: BorderRadius.circular(
-            Sizes.p6,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.neutral300,
+            ),
+            borderRadius: BorderRadius.circular(
+              Sizes.p6,
+            ),
           ),
-        ),
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColors.green300,
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.neutral300,
+            ),
+            borderRadius: BorderRadius.circular(
+              Sizes.p6,
+            ),
           ),
-          borderRadius: BorderRadius.circular(
-            Sizes.p6,
-          ),
-        ),
-      ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.neutral300,
+            ),
+            borderRadius: BorderRadius.circular(
+              Sizes.p6,
+            ),
+          )),
     );
   }
 }
