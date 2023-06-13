@@ -6,6 +6,7 @@ import 'package:habitual/src/presentation/product_details_screen/widgets/page_do
 import 'package:habitual/src/presentation/product_details_screen/widgets/product_reviewer_card.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/rating_long.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/text_cropping_widget.dart';
+import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
@@ -99,7 +100,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   buttonHeight: 50,
                   buttonColor: AppColors.neutral800,
                   buttonLabel: 'Add to cart',
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(
+                    AppRoutes.checkoutRoute,
+                  ),
                 ),
               ],
             ),
