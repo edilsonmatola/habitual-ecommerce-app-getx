@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/checkout_screen/view/checkout_confirmation_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_screen.dart';
 import 'package:habitual/src/presentation/product_details_screen/view/view_product_details.dart';
 
@@ -67,6 +68,12 @@ abstract class AppPages {
       curve: Curves.easeOut,
       transition: Transition.rightToLeft,
     ),
+    GetPage(
+      name: AppRoutes.checkoutConfirmationRoute,
+      page: () => const CheckoutConfirmationScreen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+    ),
   ];
 }
 
@@ -85,7 +92,7 @@ abstract class AppRoutes {
   static const categoriesRoute = '/categories';
   static const checkoutRoute = '/checkout';
   static const myInterestsRoute = '/myInterests';
-  static const orderConfirmationRoute = '/orderConfirmation';
+  static const checkoutConfirmationRoute = '/checkoutConfirmation';
   static const productDetailsRoute = '/productDetails';
   static const profileRoute = '/profile';
   static const searchRoute = '/search';
