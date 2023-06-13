@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/custom_divider.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/option_card.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/page_dots_secondary.dart';
 import 'package:habitual/src/presentation/product_details_screen/widgets/product_reviewer_card.dart';
@@ -8,6 +9,7 @@ import 'package:habitual/src/presentation/product_details_screen/widgets/rating_
 import 'package:habitual/src/presentation/product_details_screen/widgets/text_cropping_widget.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
+import '../../../common_widgets/cart/widgets/cart_product_card.dart';
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
 import '../../home_screen/widgets/main_card.dart';
@@ -24,6 +26,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   final pageController = PageController(initialPage: 0);
 
+  final itemCount = 4;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -77,9 +80,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             ),
                             // TODO: isProductDiscount?
                             gapW8,
-
-                            /// ACTUAL PRICE
-                            // if (product.discount != 0)
                             Text(
                               "\$99.99",
                               style: Get.textTheme.bodyMedium?.copyWith(
@@ -100,8 +100,123 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   buttonHeight: 50,
                   buttonColor: AppColors.neutral800,
                   buttonLabel: 'Add to cart',
-                  onPressed: () => Get.toNamed(
-                    AppRoutes.checkoutRoute,
+                  onPressed: () => showModalBottomSheet<void>(
+                    // isScrollControlled: true,
+                    isDismissible: true,
+                    enableDrag: true, isScrollControlled: true,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(Sizes.p16),
+                        topRight: Radius.circular(Sizes.p16),
+                      ),
+                    ),
+                    backgroundColor: AppColors.white,
+                    context: context,
+                    builder: (BuildContext context) {
+                      return DraggableScrollableSheet(
+                        expand: false,
+                        maxChildSize: 1,
+                        initialChildSize: itemCount <= 3 ? .4 : .75,
+                        minChildSize: itemCount >= 3 ? .3 : .4,
+                        builder: (context, scrollController) => Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: Sizes.p24,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: Sizes.p24,
+                                ),
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        IconButton(
+                                          onPressed: () => Get.back(),
+                                          icon: const Icon(
+                                            Icons.close,
+                                          ),
+                                          color: AppColors.neutral800,
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Cart',
+                                      style: Get.textTheme.displayLarge,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              const CustomDivider(),
+                              Expanded(
+                                flex: itemCount <= 3 ? 2 : 7,
+                                child: ListView.separated(
+                                  physics:
+                                      const AlwaysScrollableScrollPhysics(),
+                                  itemBuilder: (_, index) =>
+                                      const CartProductCard(),
+                                  separatorBuilder: (context, index) => gapH8,
+                                  itemCount: itemCount,
+                                ),
+                              ),
+                              gapH12,
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: Sizes.p24,
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              'Cart total',
+                                              style: Get.textTheme.bodyMedium
+                                                  ?.copyWith(
+                                                color: AppColors.neutral600,
+                                              ),
+                                            ),
+                                            gapH4,
+                                            Text(
+                                              '\$85.98',
+                                              style: Get.textTheme.titleSmall
+                                                  ?.copyWith(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      gapW24,
+                                      Expanded(
+                                        flex: 3,
+                                        child: PrimaryButton(
+                                          buttonColor: AppColors.neutral800,
+                                          buttonLabel: 'Checkout',
+                                          onPressed: () => Get.toNamed(
+                                            AppRoutes.checkoutRoute,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
