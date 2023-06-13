@@ -26,6 +26,7 @@ class PrimaryButton extends StatelessWidget {
       height: buttonHeight ?? 48,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(Sizes.p2),
           backgroundColor: buttonColor ?? AppColors.yellow300,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Sizes.p6),
