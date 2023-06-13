@@ -73,6 +73,7 @@ abstract class AppPages {
       page: () => const CheckoutConfirmationScreen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
+      transition: Transition.rightToLeft,
     ),
   ];
 }
