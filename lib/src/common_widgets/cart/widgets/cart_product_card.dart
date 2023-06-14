@@ -22,7 +22,10 @@ class CartProductCard extends StatelessWidget {
           motion: const ScrollMotion(),
           children: [
             SlidableAction(
-              onPressed: (context) {},
+              onPressed: (context) {
+                // TODO: Remove product from cart function
+                print('Product removed');
+              },
               backgroundColor: AppColors.red400,
               foregroundColor: Colors.white,
               icon: Icons.delete,
