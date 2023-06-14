@@ -123,7 +123,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 ),
                 gapH16,
                 SizedBox(
-                  height: Sizes.deviceHeight * .25,
+                  height: Sizes.deviceHeight * .33,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     physics: const BouncingScrollPhysics(),
