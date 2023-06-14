@@ -26,9 +26,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   final pageController = PageController(initialPage: 0);
 
-  final itemCount = 4;
   @override
   Widget build(BuildContext context) {
+    final itemCount = 10.obs;
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: AnimatedSwitcher(
@@ -65,29 +65,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       style: Get.textTheme.titleLarge,
                     ),
                     gapH4,
-
-                    /// PRICE
+                    // PRICE
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            /// SELLING PRICE
+                            //* SELLING PRICE
                             Text(
                               '\$79.99',
-                              style: Get.textTheme.titleSmall,
-                            ),
-                            // TODO: isProductDiscount?
-                            gapW8,
-                            Text(
-                              "\$99.99",
-                              style: Get.textTheme.bodyMedium?.copyWith(
-                                color: AppColors.neutral600,
-                                fontWeight: Fonts.interRegular,
-                                decoration: TextDecoration.lineThrough,
+                              style: Get.textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
+                            // TODO: isProductDiscount?
+                            // gapW8,
+                            // Text(
+                            //   "\$99.99",
+                            //   style: Get.textTheme.bodyMedium?.copyWith(
+                            //     color: AppColors.neutral600,
+                            //     fontWeight: Fonts.interRegular,
+                            //     decoration: TextDecoration.lineThrough,
+                            //   ),
+                            // ),
                           ],
                         ),
                       ],
@@ -162,7 +163,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   itemBuilder: (_, index) =>
                                       const CartProductCard(),
                                   separatorBuilder: (context, index) => gapH8,
-                                  itemCount: itemCount,
+                                  itemCount: itemCount.value,
                                 ),
                               ),
                               gapH12,
@@ -387,7 +388,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             physics: const BouncingScrollPhysics(),
                             itemCount: 10,
                             separatorBuilder: (_, index) => gapW16,
-                            itemBuilder: (_, index) => const MainCard(),
+                            itemBuilder: (_, index) => MainCard(
+                              onPressed: () {},
+                            ),
                           ),
                         ),
                       ],
