@@ -6,11 +6,8 @@ import 'package:habitual/src/presentation/product_details_screen/view/view_produ
 
 import '../presentation/base_screen/base_screen.dart';
 import '../presentation/introduction_screen/introduction_screen.dart';
-import '../presentation/onboarding_screen/onboarding1_screen.dart';
-import '../presentation/onboarding_screen/onboarding2_screen.dart';
-import '../presentation/onboarding_screen/onboarding3_screen.dart';
-
-// part 'app_routes.dart';
+import '../presentation/onboarding_screen/view/onboarding1_screen.dart';
+import '../presentation/onboarding_screen/view/onboarding2_screen.dart';
 
 abstract class AppPages {
   static const initial = AppRoutes.introRoute;
@@ -42,7 +39,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: AppRoutes.onBoarding3Route,
-      page: () => const OnBoarding3Screen(),
+      page: () => const OnBoarding1Screen(),
       transitionDuration: const Duration(milliseconds: 500),
       curve: Curves.easeOut,
       transition: Transition.fadeIn,
