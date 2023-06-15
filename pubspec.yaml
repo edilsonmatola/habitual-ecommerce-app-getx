@@ -44,6 +44,7 @@ dependencies:
   intl: any
   flutter_slidable: ^3.0.0
   confetti: ^0.7.0
+  linear_progress_bar: ^1.1.0
 
 dev_dependencies:
   flutter_test:
