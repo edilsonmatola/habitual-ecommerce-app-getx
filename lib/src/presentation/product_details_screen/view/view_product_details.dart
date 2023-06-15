@@ -154,7 +154,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   ],
                                 ),
                               ),
-                              const CustomDivider(),
+                              const CustomDivider(
+                                hasText: false,
+                              ),
                               Expanded(
                                 flex: itemCount <= 3 ? 2 : 7,
                                 child: ListView.separated(
