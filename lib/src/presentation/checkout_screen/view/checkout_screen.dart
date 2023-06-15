@@ -56,7 +56,7 @@ class CheckoutScreen extends StatelessWidget {
                     color: AppColors.blue500,
                   ),
                   gapH24,
-                  const CustomDivider(),
+                  const CustomDivider(hasText: false),
                   gapH24,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +91,7 @@ class CheckoutScreen extends StatelessWidget {
                     ],
                   ),
                   gapH24,
-                  const CustomDivider(),
+                  const CustomDivider(hasText: false),
                   gapH24,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -112,7 +112,7 @@ class CheckoutScreen extends StatelessWidget {
                     ],
                   ),
                   gapH24,
-                  const CustomDivider(),
+                  const CustomDivider(hasText: false),
                   gapH24,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -148,11 +148,13 @@ class CheckoutScreen extends StatelessWidget {
                     ],
                   ),
                   gapH24,
-                  const CustomDivider(),
+                  const CustomDivider(hasText: false),
                   PrimaryButton(
                     buttonColor: AppColors.neutral800,
                     buttonLabel: 'Pay now',
-                    onPressed: () => Get.offAllNamed(AppRoutes.checkoutConfirmationRoute,),
+                    onPressed: () => Get.offAllNamed(
+                      AppRoutes.checkoutConfirmationRoute,
+                    ),
                   ),
                   gapH16,
                 ],
