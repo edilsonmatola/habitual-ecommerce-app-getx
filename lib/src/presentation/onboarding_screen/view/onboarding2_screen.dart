@@ -49,7 +49,9 @@ class OnBoarding2Screen extends StatelessWidget {
               PrimaryButton(
                 buttonLabel: 'Next',
                 buttonColor: AppColors.neutral800,
-                onPressed: () => Get.toNamed(AppRoutes.onBoarding3Route),
+                onPressed: () => Get.toNamed(
+                  AppRoutes.onBoarding3Route,
+                ),
               ),
             ],
           ),
