@@ -9,9 +9,9 @@ import 'package:habitual/src/presentation/product_details_screen/widgets/rating_
 import 'package:habitual/src/presentation/product_details_screen/widgets/text_cropping_widget.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
-import '../../../common_widgets/cart/widgets/cart_product_card.dart';
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
+import '../../cart_screen/widgets/cart_product_card.dart';
 import '../../home_screen/widgets/main_card.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -127,7 +127,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Padding( 
+                              Padding(
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: Sizes.p24,
                                 ),
@@ -150,8 +150,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     Text(
                                       'Cart',
                                       style: Get.textTheme.displayLarge,
-                                    ),
-                                  ], 
+                                    )
+                                  ],
                                 ),
                               ),
                               const CustomDivider(
