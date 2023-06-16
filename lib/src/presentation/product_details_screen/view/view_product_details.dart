@@ -127,7 +127,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Padding(
+                              Padding( 
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: Sizes.p24,
                                 ),
@@ -150,8 +150,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     Text(
                                       'Cart',
                                       style: Get.textTheme.displayLarge,
-                                    )
-                                  ],
+                                    ),
+                                  ], 
                                 ),
                               ),
                               const CustomDivider(
