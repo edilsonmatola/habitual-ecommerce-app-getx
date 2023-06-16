@@ -30,6 +30,7 @@ class SignUpScreen extends StatelessWidget {
                   horizontal: Sizes.p24,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
                       'Create account',
@@ -46,10 +47,10 @@ class SignUpScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     gapH40,
-                    Container(
-                      width: 200,
-                      height: 40,
-                      color: AppColors.blue500,
+                    PrimaryOutlinedButton(
+                      hasText: true,
+                      title: 'Sign up with Google',
+                      onPressed: () {},
                     ),
                     gapH40,
                     const CustomDivider(
@@ -81,6 +82,56 @@ class SignUpScreen extends StatelessWidget {
                       onPressed: () => Get.offAllNamed(
                         AppRoutes.registration1Route,
                       ),
+                    ),
+                    gapH24,
+                    Text.rich(
+                      TextSpan(
+                        style: Get.textTheme.bodyMedium,
+                        text: 'By continuing you accept our standard ',
+                        children: const [
+                          WidgetSpan(
+                            child: Text(
+                              'terms and conditions ',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                          WidgetSpan(
+                            child: Text(
+                              'and our ',
+                              style: TextStyle(),
+                            ),
+                          ),
+                          WidgetSpan(
+                            child: Text(
+                              'privacy policy.',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    gapH24,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Already have an account?',
+                          style: Get.textTheme.bodyMedium,
+                        ),
+                        PrimaryTextButton(
+                          defaultTextStyle: false,
+                          style: Get.textTheme.bodyMedium?.copyWith(
+                            decoration: TextDecoration.underline,
+                          ),
+                          buttonLabel: 'Log in',
+                          onPressed: () {},
+                        ),
+                      ],
                     ),
                   ],
                 ),
