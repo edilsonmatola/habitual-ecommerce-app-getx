@@ -40,7 +40,9 @@ class IntroductionScreen extends StatelessWidget {
                     textColor: AppColors.neutral800,
                     fontWeight: FontWeight.w600,
                     buttonLabel: 'Already have an account?',
-                    onPressed: () {},
+                    onPressed: () => Get.toNamed(
+                      AppRoutes.signInRoute,
+                    ),
                   ),
                 ],
               ),
