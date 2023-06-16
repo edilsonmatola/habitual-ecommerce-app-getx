@@ -127,7 +127,9 @@ class SignUpScreen extends StatelessWidget {
                             decoration: TextDecoration.underline,
                           ),
                           buttonLabel: 'Log in',
-                          onPressed: () {},
+                          onPressed: () => Get.to(
+                            AppRoutes.signInRoute,
+                          ),
                         ),
                       ],
                     ),
