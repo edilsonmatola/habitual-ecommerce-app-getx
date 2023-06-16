@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/common_widgets/custom_divider.dart';
+import 'package:habitual/src/common_widgets/forms/custom_text_field.dart';
 import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
 import 'package:habitual/src/routes/routes_export.dart';
 
@@ -58,22 +59,19 @@ class SignUpScreen extends StatelessWidget {
                       text: 'or Sign up with Email',
                     ),
                     gapH40,
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        label: Text('Full name'),
-                      ),
+                    const CustomTextField(
+                      labelText: 'Full name',
+                      textInputType: TextInputType.text,
                     ),
                     gapH16,
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        label: Text('Email'),
-                      ),
+                    const CustomTextField(
+                      labelText: 'Email',
+                      textInputType: TextInputType.emailAddress,
                     ),
                     gapH16,
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        label: Text('Password'),
-                      ),
+                    const CustomTextField(
+                      labelText: 'Password',
+                      isSecret: true,
                     ),
                     gapH40,
                     PrimaryButton(
