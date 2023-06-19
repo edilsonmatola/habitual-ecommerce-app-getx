@@ -20,8 +20,8 @@ class Registration1Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 2,
-                stepName: 'Personalization',
+                currentStep: 1,
+                stepName: 'Account',
               ),
               gapH32,
               Padding(
