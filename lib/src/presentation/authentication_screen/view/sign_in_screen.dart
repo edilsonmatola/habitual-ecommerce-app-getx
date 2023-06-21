@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
@@ -15,11 +16,18 @@ class SignInScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          padding: const EdgeInsets.all(
+          padding: const EdgeInsets.fromLTRB(
             Sizes.p24,
+            Sizes.p48,
+            Sizes.p24,
+            0,
           ),
           child: Column(
             children: [
+              SvgPicture.asset(
+                AppAssets.appLogoBlack,
+              ),
+              gapH48,
               Text(
                 'Sign in to your account',
                 style: Get.textTheme.headlineSmall,
@@ -68,7 +76,7 @@ class SignInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'New to Habitual',
+                    'New to Habitual?',
                     style: Get.textTheme.bodyMedium,
                   ),
                   PrimaryTextButton(
@@ -77,8 +85,8 @@ class SignInScreen extends StatelessWidget {
                       decoration: TextDecoration.underline,
                     ),
                     buttonLabel: 'Sign up',
-                    onPressed: () => Get.to(
-                      AppRoutes.signInRoute,
+                    onPressed: () => Get.toNamed(
+                      AppRoutes.signUpRoute,
                     ),
                   ),
                 ],
