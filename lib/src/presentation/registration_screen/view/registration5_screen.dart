@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
-import 'package:habitual/src/core/core_export.dart';
-import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
 import 'package:habitual/src/routes/routes_export.dart';
 
-class Registration1Screen extends StatelessWidget {
-  const Registration1Screen({super.key});
+import '../../../core/core_export.dart';
+import '../widgets/registration_progress_bar.dart';
+
+class Registration5Screen extends StatelessWidget {
+  const Registration5Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class Registration1Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 1,
-                stepName: 'Account',
+                currentStep: 5,
+                stepName: 'Interest Details',
               ),
               gapH32,
               Padding(
@@ -31,12 +31,13 @@ class Registration1Screen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Add a Photo',
+                      "Let's dig deeper!",
                       style: Get.textTheme.headlineSmall,
+                      textAlign: TextAlign.center,
                     ),
                     gapH12,
                     Text(
-                      'Add a photo so other members know who you are.',
+                      'We have some recommended options for the interests that you have chosen.',
                       style: Get.textTheme.bodyMedium?.copyWith(
                         color: AppColors.neutral600,
                         fontWeight: Fonts.interRegular,
@@ -44,36 +45,16 @@ class Registration1Screen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     gapH40,
-                    CircleAvatar(
-                      maxRadius: 60,
-                      minRadius: 60,
-                      backgroundColor: AppColors.neutral100,
-                      child: SvgPicture.asset(
-                        AppIcons.profileIcon,
-                        width: 40,
-                        height: 40,
-                        color: AppColors.neutral400,
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: PrimaryButton(
+                        buttonWidth: 165,
+                        buttonColor: AppColors.neutral800,
+                        buttonLabel: 'Continue',
+                        onPressed: () => Get.toNamed(
+                          AppRoutes.registrationCompleteRoute,
+                        ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        PrimaryTextButton(
-                          buttonLabel: 'Skip',
-                          onPressed: () => Get.toNamed(
-                            AppRoutes.registration2Route,
-                          ),
-                        ),
-                        Expanded(
-                          child: PrimaryButton(
-                            buttonWidth: 165,
-                            buttonColor: AppColors.neutral800,
-                            buttonLabel: 'Upload my photo',
-                            onPressed: () => Get.toNamed(
-                              AppRoutes.registration2Route,
-                            ),
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/core/core_export.dart';
 import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
 import 'package:habitual/src/routes/routes_export.dart';
+
+import '../../../common_widgets/custom_divider.dart';
+import '../../../common_widgets/forms/custom_text_field.dart';
 
 class Registration1Screen extends StatelessWidget {
   const Registration1Screen({super.key});
@@ -20,23 +22,25 @@ class Registration1Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 2,
-                stepName: 'Personalization',
+                currentStep: 1,
+                stepName: 'Account',
               ),
-              gapH32,
+              gapH40,
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Sizes.p24,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
-                      'Add a Photo',
+                      'Create account',
                       style: Get.textTheme.headlineSmall,
+                      textAlign: TextAlign.center,
                     ),
-                    gapH12,
+                    gapH16,
                     Text(
-                      'Add a photo so other members know who you are.',
+                      'Find the things that you love!',
                       style: Get.textTheme.bodyMedium?.copyWith(
                         color: AppColors.neutral600,
                         fontWeight: Fonts.interRegular,
@@ -44,35 +48,89 @@ class Registration1Screen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     gapH40,
-                    CircleAvatar(
-                      maxRadius: 60,
-                      minRadius: 60,
-                      backgroundColor: AppColors.neutral100,
-                      child: SvgPicture.asset(
-                        AppIcons.profileIcon,
-                        width: 40,
-                        height: 40,
-                        color: AppColors.neutral400,
+                    PrimaryOutlinedButton(
+                      hasText: true,
+                      title: 'Sign up with Google',
+                      onPressed: () {},
+                    ),
+                    gapH40,
+                    const CustomDivider(
+                      hasText: true,
+                      text: 'or Sign up with Email',
+                    ),
+                    gapH40,
+                    const CustomTextField(
+                      labelText: 'Full name',
+                      textInputType: TextInputType.text,
+                    ),
+                    gapH16,
+                    const CustomTextField(
+                      labelText: 'Email',
+                      textInputType: TextInputType.emailAddress,
+                    ),
+                    gapH16,
+                    const CustomTextField(
+                      labelText: 'Password',
+                      isSecret: true,
+                    ),
+                    gapH40,
+                    PrimaryButton(
+                      buttonColor: AppColors.neutral800,
+                      buttonLabel: 'Sign Up',
+                      onPressed: () => Get.offAllNamed(
+                        AppRoutes.registration1Route,
                       ),
                     ),
-                    Row(
-                      children: [
-                        PrimaryTextButton(
-                          buttonLabel: 'Skip',
-                          onPressed: () => Get.toNamed(
-                            AppRoutes.registration2Route,
-                          ),
-                        ),
-                        Expanded(
-                          child: PrimaryButton(
-                            buttonWidth: 165,
-                            buttonColor: AppColors.neutral800,
-                            buttonLabel: 'Upload my photo',
-                            onPressed: () => Get.toNamed(
-                              AppRoutes.registration2Route,
+                    gapH24,
+                    Text.rich(
+                      TextSpan(
+                        style: Get.textTheme.bodyMedium,
+                        text: 'By continuing you accept our standard ',
+                        children: const [
+                          WidgetSpan(
+                            child: Text(
+                              'terms and conditions ',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                              ),
                             ),
                           ),
+                          WidgetSpan(
+                            child: Text(
+                              'and our ',
+                              style: TextStyle(),
+                            ),
+                          ),
+                          WidgetSpan(
+                            child: Text(
+                              'privacy policy.',
+                              style: TextStyle(
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    gapH24,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Already have an account?',
+                          style: Get.textTheme.bodyMedium,
                         ),
+                        PrimaryTextButton(
+                          defaultTextStyle: false,
+                          style: Get.textTheme.bodyMedium?.copyWith(
+                            decoration: TextDecoration.underline,
+                          ),
+                          buttonLabel: 'Log in',
+                          onPressed: () => Get.toNamed(
+                            AppRoutes.signInRoute,
+                          ),
+                      ),
                       ],
                     ),
                   ],

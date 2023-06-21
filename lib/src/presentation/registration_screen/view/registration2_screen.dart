@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/core/core_export.dart';
@@ -19,10 +20,10 @@ class Registration2Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 3,
-                stepName: 'Your Goals',
+                currentStep: 2,
+                stepName: 'Personalization',
               ),
-              gapH40,
+              gapH32,
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Sizes.p24,
@@ -30,47 +31,49 @@ class Registration2Screen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'What do you want to achieve with Habitual?',
+                      'Add a Photo',
                       style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
                     ),
                     gapH12,
                     Text(
-                      'This will help us make a unique experience that is just for you.',
+                      'Add a photo so other members know who you are.',
                       style: Get.textTheme.bodyMedium?.copyWith(
                         color: AppColors.neutral600,
                         fontWeight: Fonts.interRegular,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    gapH32,
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: AppColors.blue300,
-                    ),
-                    gapH12,
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: AppColors.blue300,
-                    ),
-                    gapH12,
-                    Container(
-                      width: 200,
-                      height: 100,
-                      color: AppColors.blue300,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: PrimaryButton(
-                        buttonWidth: 165,
-                        buttonColor: AppColors.neutral800,
-                        buttonLabel: 'Continue',
-                        onPressed: () => Get.toNamed(
-                          AppRoutes.registration3Route,
-                        ),
+                    gapH40,
+                    CircleAvatar(
+                      maxRadius: 60,
+                      minRadius: 60,
+                      backgroundColor: AppColors.neutral100,
+                      child: SvgPicture.asset(
+                        AppIcons.profileIcon,
+                        width: 40,
+                        height: 40,
+                        color: AppColors.neutral400,
                       ),
+                    ),
+                    Row(
+                      children: [
+                        PrimaryTextButton(
+                          buttonLabel: 'Skip',
+                          onPressed: () => Get.toNamed(
+                            AppRoutes.registration2Route,
+                          ),
+                        ),
+                        Expanded(
+                          child: PrimaryButton(
+                            buttonWidth: 165,
+                            buttonColor: AppColors.neutral800,
+                            buttonLabel: 'Upload my photo',
+                            onPressed: () => Get.toNamed(
+                              AppRoutes.registration2Route,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

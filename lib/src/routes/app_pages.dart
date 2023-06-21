@@ -16,6 +16,7 @@ import '../presentation/registration_screen/view/registration1_screen.dart';
 import '../presentation/registration_screen/view/registration2_screen.dart';
 import '../presentation/registration_screen/view/registration3_screen.dart';
 import '../presentation/registration_screen/view/registration4_screen.dart';
+import '../presentation/registration_screen/view/registration5_screen.dart';
 
 abstract class AppPages {
   static const initial = AppRoutes.introRoute;
@@ -138,6 +139,13 @@ abstract class AppPages {
       transition: Transition.fadeIn,
     ),
     GetPage(
+      name: AppRoutes.registration5Route,
+      page: () => const Registration5Screen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
       name: AppRoutes.registrationCompleteRoute,
       page: () => const RegistrationCompleted(),
       transitionDuration: const Duration(milliseconds: 300),
@@ -158,6 +166,7 @@ abstract class AppRoutes {
   static const registration2Route = '/registration2';
   static const registration3Route = '/registration3';
   static const registration4Route = '/registration4';
+  static const registration5Route = '/registration5';
   static const registrationCompleteRoute = '/registrationComplete';
   static const baseRoute = '/';
   static const cartRoute = '/cart';

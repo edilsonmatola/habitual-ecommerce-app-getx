@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
+import 'package:habitual/src/core/core_export.dart';
+import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
 import 'package:habitual/src/routes/routes_export.dart';
-
-import '../../../core/core_export.dart';
-import '../widgets/registration_progress_bar.dart';
 
 class Registration3Screen extends StatelessWidget {
   const Registration3Screen({super.key});
@@ -20,10 +19,10 @@ class Registration3Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 4,
-                stepName: 'Interests',
+                currentStep: 3,
+                stepName: 'Your Goals',
               ),
-              gapH32,
+              gapH40,
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: Sizes.p24,
@@ -35,7 +34,33 @@ class Registration3Screen extends StatelessWidget {
                       style: Get.textTheme.headlineSmall,
                       textAlign: TextAlign.center,
                     ),
-                    gapH40,
+                    gapH12,
+                    Text(
+                      'This will help us make a unique experience that is just for you.',
+                      style: Get.textTheme.bodyMedium?.copyWith(
+                        color: AppColors.neutral600,
+                        fontWeight: Fonts.interRegular,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    gapH32,
+                    Container(
+                      width: 200,
+                      height: 100,
+                      color: AppColors.blue300,
+                    ),
+                    gapH12,
+                    Container(
+                      width: 200,
+                      height: 100,
+                      color: AppColors.blue300,
+                    ),
+                    gapH12,
+                    Container(
+                      width: 200,
+                      height: 100,
+                      color: AppColors.blue300,
+                    ),
                     Align(
                       alignment: Alignment.centerRight,
                       child: PrimaryButton(
@@ -43,7 +68,7 @@ class Registration3Screen extends StatelessWidget {
                         buttonColor: AppColors.neutral800,
                         buttonLabel: 'Continue',
                         onPressed: () => Get.toNamed(
-                          AppRoutes.registration4Route,
+                          AppRoutes.registration3Route,
                         ),
                       ),
                     ),

@@ -20,8 +20,8 @@ class Registration4Screen extends StatelessWidget {
           child: Column(
             children: [
               const RegistrationProgressBar(
-                currentStep: 5,
-                stepName: 'Interest Details',
+                currentStep: 4,
+                stepName: 'Interests',
               ),
               gapH32,
               Padding(
@@ -31,17 +31,8 @@ class Registration4Screen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Let's dig deeper!",
+                      'What do you want to achieve with Habitual?',
                       style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH12,
-                    Text(
-                      'We have some recommended options for the interests that you have chosen.',
-                      style: Get.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.neutral600,
-                        fontWeight: Fonts.interRegular,
-                      ),
                       textAlign: TextAlign.center,
                     ),
                     gapH40,
@@ -52,7 +43,7 @@ class Registration4Screen extends StatelessWidget {
                         buttonColor: AppColors.neutral800,
                         buttonLabel: 'Continue',
                         onPressed: () => Get.toNamed(
-                          AppRoutes.registrationCompleteRoute,
+                          AppRoutes.registration4Route,
                         ),
                       ),
                     ),
