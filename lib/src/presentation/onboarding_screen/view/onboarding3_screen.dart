@@ -52,7 +52,7 @@ class OnBoarding3Screen extends StatelessWidget {
                 buttonColor: AppColors.yellow300,
                 labelColor: AppColors.neutral800,
                 onPressed: () => Get.toNamed(
-                  AppRoutes.signUpRoute,
+                  AppRoutes.registration1Route,
                 ),
               ),
             ],
