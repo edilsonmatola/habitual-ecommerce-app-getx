@@ -43,7 +43,7 @@ class Registration4Screen extends StatelessWidget {
                         buttonColor: AppColors.neutral800,
                         buttonLabel: 'Continue',
                         onPressed: () => Get.toNamed(
-                          AppRoutes.registration4Route,
+                          AppRoutes.registration5Route,
                         ),
                       ),
                     ),

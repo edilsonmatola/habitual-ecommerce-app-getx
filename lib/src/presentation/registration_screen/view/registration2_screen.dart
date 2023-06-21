@@ -60,7 +60,7 @@ class Registration2Screen extends StatelessWidget {
                         PrimaryTextButton(
                           buttonLabel: 'Skip',
                           onPressed: () => Get.toNamed(
-                            AppRoutes.registration2Route,
+                            AppRoutes.registration3Route,
                           ),
                         ),
                         Expanded(
@@ -69,7 +69,7 @@ class Registration2Screen extends StatelessWidget {
                             buttonColor: AppColors.neutral800,
                             buttonLabel: 'Upload my photo',
                             onPressed: () => Get.toNamed(
-                              AppRoutes.registration2Route,
+                              AppRoutes.registration3Route,
                             ),
                           ),
                         ),
