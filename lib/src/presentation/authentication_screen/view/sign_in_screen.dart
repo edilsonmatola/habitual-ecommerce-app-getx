@@ -15,83 +15,86 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(
-            Sizes.p24,
-            Sizes.p48,
-            Sizes.p24,
-            0,
-          ),
-          child: Column(
-            children: [
-              SvgPicture.asset(
-                AppAssets.appLogoBlack,
-              ),
-              gapH48,
-              Text(
-                'Sign in to your account',
-                style: Get.textTheme.headlineSmall,
-                textAlign: TextAlign.center,
-              ),
-              gapH16,
-              Text(
-                'Log in to start and explore your personalized shopping experience.',
-                style: Get.textTheme.bodyMedium?.copyWith(
-                  color: AppColors.neutral600,
-                  fontWeight: Fonts.interRegular,
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(
+              Sizes.p24,
+              Sizes.p48,
+              Sizes.p24,
+              0,
+            ),
+            child: Column(
+              children: [
+                SvgPicture.asset(
+                  AppAssets.appLogoBlack,
                 ),
-                textAlign: TextAlign.center,
-              ),
-              gapH40,
-              PrimaryOutlinedButton(
-                hasText: true,
-                title: 'Continue with Google',
-                onPressed: () {},
-              ),
-              gapH40,
-              const CustomDivider(
-                hasText: true,
-                text: 'or Log in with Email',
-              ),
-              gapH40,
-              const CustomTextField(
-                labelText: 'Email',
-                textInputType: TextInputType.emailAddress,
-              ),
-              gapH16,
-              const CustomTextField(
-                labelText: 'Password',
-                isSecret: true,
-              ),
-              gapH40,
-              PrimaryButton(
-                buttonColor: AppColors.neutral800,
-                buttonLabel: 'Log in',
-                onPressed: () => Get.offAllNamed(
-                  AppRoutes.baseRoute,
+                gapH48,
+                Text(
+                  'Sign in to your account',
+                  style: Get.textTheme.headlineSmall,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              gapH24,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'New to Habitual?',
-                    style: Get.textTheme.bodyMedium,
+                gapH16,
+                Text(
+                  'Log in to start and explore your personalized shopping experience.',
+                  style: Get.textTheme.bodyMedium?.copyWith(
+                    color: AppColors.neutral600,
+                    fontWeight: Fonts.interRegular,
                   ),
-                  PrimaryTextButton(
-                    defaultTextStyle: false,
-                    style: Get.textTheme.bodyMedium?.copyWith(
-                      decoration: TextDecoration.underline,
-                    ),
-                    buttonLabel: 'Sign up',
-                    onPressed: () => Get.toNamed(
-                      AppRoutes.signUpRoute,
-                    ),
+                  textAlign: TextAlign.center,
+                ),
+                gapH40,
+                PrimaryOutlinedButton(
+                  hasText: true,
+                  title: 'Continue with Google',
+                  onPressed: () {},
+                ),
+                gapH40,
+                const CustomDivider(
+                  hasText: true,
+                  text: 'or Log in with Email',
+                ),
+                gapH40,
+                const CustomTextField(
+                  labelText: 'Email',
+                  textInputType: TextInputType.emailAddress,
+                ),
+                gapH16,
+                const CustomTextField(
+                  labelText: 'Password',
+                  isSecret: true,
+                ),
+                gapH40,
+                PrimaryButton(
+                  buttonColor: AppColors.neutral800,
+                  buttonLabel: 'Log in',
+                  onPressed: () => Get.offAllNamed(
+                    AppRoutes.baseRoute,
                   ),
-                ],
-              ),
-            ],
+                ),
+                gapH24,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'New to Habitual?',
+                      style: Get.textTheme.bodyMedium,
+                    ),
+                    PrimaryTextButton(
+                      defaultTextStyle: false,
+                      style: Get.textTheme.bodyMedium?.copyWith(
+                        decoration: TextDecoration.underline,
+                      ),
+                      buttonLabel: 'Sign up',
+                      onPressed: () => Get.toNamed(
+                        AppRoutes.signUpRoute,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

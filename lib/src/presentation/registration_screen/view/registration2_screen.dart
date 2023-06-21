@@ -13,72 +13,75 @@ class Registration2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(
-            vertical: Sizes.p16,
-          ),
-          child: Column(
-            children: [
-              const RegistrationProgressBar(
-                currentStep: 2,
-                stepName: 'Personalization',
-              ),
-              gapH32,
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Sizes.p24,
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(
+              vertical: Sizes.p16,
+            ),
+            child: Column(
+              children: [
+                const RegistrationProgressBar(
+                  currentStep: 2,
+                  stepName: 'Personalization',
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      'Add a Photo',
-                      style: Get.textTheme.headlineSmall,
-                    ),
-                    gapH12,
-                    Text(
-                      'Add a photo so other members know who you are.',
-                      style: Get.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.neutral600,
-                        fontWeight: Fonts.interRegular,
+                gapH32,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: Sizes.p24,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Add a Photo',
+                        style: Get.textTheme.headlineSmall,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH40,
-                    CircleAvatar(
-                      maxRadius: 60,
-                      minRadius: 60,
-                      backgroundColor: AppColors.neutral100,
-                      child: SvgPicture.asset(
-                        AppIcons.profileIcon,
-                        width: 40,
-                        height: 40,
-                        color: AppColors.neutral400,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        PrimaryTextButton(
-                          buttonLabel: 'Skip',
-                          onPressed: () => Get.toNamed(
-                            AppRoutes.registration3Route,
-                          ),
+                      gapH12,
+                      Text(
+                        'Add a photo so other members know who you are.',
+                        style: Get.textTheme.bodyMedium?.copyWith(
+                          color: AppColors.neutral600,
+                          fontWeight: Fonts.interRegular,
                         ),
-                        Expanded(
-                          child: PrimaryButton(
-                            buttonWidth: 165,
-                            buttonColor: AppColors.neutral800,
-                            buttonLabel: 'Upload my photo',
+                        textAlign: TextAlign.center,
+                      ),
+                      gapH40,
+                      CircleAvatar(
+                        maxRadius: 60,
+                        minRadius: 60,
+                        backgroundColor: AppColors.neutral100,
+                        child: SvgPicture.asset(
+                          AppIcons.profileIcon,
+                          width: 40,
+                          height: 40,
+                          color: AppColors.neutral400,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          PrimaryTextButton(
+                            buttonLabel: 'Skip',
                             onPressed: () => Get.toNamed(
                               AppRoutes.registration3Route,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Expanded(
+                            child: PrimaryButton(
+                              buttonWidth: 165,
+                              buttonColor: AppColors.neutral800,
+                              buttonLabel: 'Upload my photo',
+                              onPressed: () => Get.toNamed(
+                                AppRoutes.registration3Route,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

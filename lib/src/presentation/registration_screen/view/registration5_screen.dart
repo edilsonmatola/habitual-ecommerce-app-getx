@@ -13,53 +13,56 @@ class Registration5Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(
-            vertical: Sizes.p16,
-          ),
-          child: Column(
-            children: [
-              const RegistrationProgressBar(
-                currentStep: 5,
-                stepName: 'Interest Details',
-              ),
-              gapH32,
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Sizes.p24,
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(
+              vertical: Sizes.p16,
+            ),
+            child: Column(
+              children: [
+                const RegistrationProgressBar(
+                  currentStep: 5,
+                  stepName: 'Interest Details',
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      "Let's dig deeper!",
-                      style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH12,
-                    Text(
-                      'We have some recommended options for the interests that you have chosen.',
-                      style: Get.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.neutral600,
-                        fontWeight: Fonts.interRegular,
+                gapH32,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: Sizes.p24,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Let's dig deeper!",
+                        style: Get.textTheme.headlineSmall,
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH40,
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: PrimaryButton(
-                        buttonWidth: 165,
-                        buttonColor: AppColors.neutral800,
-                        buttonLabel: 'Continue',
-                        onPressed: () => Get.toNamed(
-                          AppRoutes.registrationCompleteRoute,
+                      gapH12,
+                      Text(
+                        'We have some recommended options for the interests that you have chosen.',
+                        style: Get.textTheme.bodyMedium?.copyWith(
+                          color: AppColors.neutral600,
+                          fontWeight: Fonts.interRegular,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      gapH40,
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: PrimaryButton(
+                          buttonWidth: 165,
+                          buttonColor: AppColors.neutral800,
+                          buttonLabel: 'Continue',
+                          onPressed: () => Get.toNamed(
+                            AppRoutes.registrationCompleteRoute,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

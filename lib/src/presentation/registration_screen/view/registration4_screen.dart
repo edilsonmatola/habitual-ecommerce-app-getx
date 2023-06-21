@@ -13,44 +13,47 @@ class Registration4Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(
-            vertical: Sizes.p16,
-          ),
-          child: Column(
-            children: [
-              const RegistrationProgressBar(
-                currentStep: 4,
-                stepName: 'Interests',
-              ),
-              gapH32,
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Sizes.p24,
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(
+              vertical: Sizes.p16,
+            ),
+            child: Column(
+              children: [
+                const RegistrationProgressBar(
+                  currentStep: 4,
+                  stepName: 'Interests',
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      'What do you want to achieve with Habitual?',
-                      style: Get.textTheme.headlineSmall,
-                      textAlign: TextAlign.center,
-                    ),
-                    gapH40,
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: PrimaryButton(
-                        buttonWidth: 165,
-                        buttonColor: AppColors.neutral800,
-                        buttonLabel: 'Continue',
-                        onPressed: () => Get.toNamed(
-                          AppRoutes.registration5Route,
+                gapH32,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: Sizes.p24,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'What do you want to achieve with Habitual?',
+                        style: Get.textTheme.headlineSmall,
+                        textAlign: TextAlign.center,
+                      ),
+                      gapH40,
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: PrimaryButton(
+                          buttonWidth: 165,
+                          buttonColor: AppColors.neutral800,
+                          buttonLabel: 'Continue',
+                          onPressed: () => Get.toNamed(
+                            AppRoutes.registration5Route,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
