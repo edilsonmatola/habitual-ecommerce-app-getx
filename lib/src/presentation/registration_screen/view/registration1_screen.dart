@@ -78,7 +78,7 @@ class Registration1Screen extends StatelessWidget {
                       buttonColor: AppColors.neutral800,
                       buttonLabel: 'Sign Up',
                       onPressed: () => Get.offAllNamed(
-                        AppRoutes.registration1Route,
+                        AppRoutes.registration2Route,
                       ),
                     ),
                     gapH24,
@@ -130,7 +130,7 @@ class Registration1Screen extends StatelessWidget {
                           onPressed: () => Get.toNamed(
                             AppRoutes.signInRoute,
                           ),
-                      ),
+                        ),
                       ],
                     ),
                   ],
