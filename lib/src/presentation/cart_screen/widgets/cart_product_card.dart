@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/core_export.dart';
+import 'package:habitual/src/presentation/cart_screen/widgets/quantity_widget.dart';
 
 class CartProductCard extends StatelessWidget {
   const CartProductCard({Key? key}) : super(key: key);
@@ -60,11 +61,7 @@ class CartProductCard extends StatelessWidget {
                       maxLines: 2,
                     ),
                     gapH8,
-                    Container(
-                      width: 134,
-                      height: 36,
-                      color: AppColors.blue300,
-                    ),
+                    const QuantityWidget(),
                   ],
                 ),
               ),
