@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../../../common_widgets/svg_icon.dart';
 import '../../../core/core_export.dart';
 
 class AccountCard extends StatelessWidget {
@@ -50,8 +50,8 @@ class AccountCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: SvgPicture.asset(
-                          AppIcons.shoppingBagIcon,
+                        child: SvgIcon(
+                          icon: AppIcons.shoppingBagIcon,
                           width: 40,
                           height: 40,
                           color: AppColors.neutral300,

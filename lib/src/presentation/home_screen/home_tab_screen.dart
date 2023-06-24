@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
+import 'package:habitual/src/common_widgets/svg_icon.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/my_interests_card.dart';
@@ -26,14 +26,14 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>
             [
           SliverAppBar(
-            leading: Padding(
-              padding: const EdgeInsets.only(
+            leading: const Padding(
+              padding: EdgeInsets.only(
                 left: Sizes.p24,
                 top: Sizes.p16,
                 bottom: Sizes.p16,
               ),
-              child: SvgPicture.asset(
-                AppAssets.appLogoBlackSmall,
+              child: SvgIcon(
+                icon: AppAssets.appLogoBlackSmall,
               ),
             ),
             actions: [

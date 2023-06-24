@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../common_widgets/svg_icon.dart';
 import '../../../core/core_export.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -20,14 +20,14 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SvgPicture.asset(
-          AppAssets.appLogoBlackSmall,
+        const SvgIcon(
+          icon: AppAssets.appLogoBlackSmall,
           width: Sizes.p24,
           height: Sizes.p24,
         ),
         IconButton(
-          icon: SvgPicture.asset(
-            iconButton,
+          icon: SvgIcon(
+            icon: iconButton,
             width: Sizes.p20,
             height: Sizes.p20,
             color: color ?? AppColors.neutral800,
