@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/core/core_export.dart';
 import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
+import 'package:habitual/src/presentation/registration_screen/widgets/user_goal_card.dart';
 import 'package:habitual/src/routes/routes_export.dart';
 
 class Registration3Screen extends StatelessWidget {
@@ -46,22 +47,24 @@ class Registration3Screen extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       gapH32,
-                      Container(
-                        width: 200,
-                        height: 100,
-                        color: AppColors.blue300,
+                      const UserGoalCard(
+                        text: 'Discover new products',
+                        isSelected: false,
                       ),
                       gapH12,
-                      Container(
-                        width: 200,
-                        height: 100,
-                        color: AppColors.blue300,
+                      const UserGoalCard(
+                        text: 'Make monthly shopping easier',
+                        isSelected: false,
                       ),
                       gapH12,
-                      Container(
-                        width: 200,
-                        height: 100,
-                        color: AppColors.blue300,
+                      const UserGoalCard(
+                        text: 'Relevant recommendations',
+                        isSelected: true,
+                      ),
+                      gapH12,
+                      const UserGoalCard(
+                        text: 'Get notified of deals',
+                        isSelected: true,
                       ),
                       Align(
                         alignment: Alignment.centerRight,
