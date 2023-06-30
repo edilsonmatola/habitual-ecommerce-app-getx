@@ -133,7 +133,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: AppRoutes.registration4Route,
-      page: () => const Registration4Screen(),
+      page: () =>  Registration4Screen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       transition: Transition.fadeIn,
