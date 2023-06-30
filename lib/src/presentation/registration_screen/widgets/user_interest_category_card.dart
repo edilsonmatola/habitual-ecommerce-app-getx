@@ -37,19 +37,21 @@ class UserInterestCategoryCard extends StatelessWidget {
             placeholder: (_, url) => const Center(
               child: CircularProgressIndicator.adaptive(),
             ),
+            width: Sizes.deviceWidth * .6,
+            height: Sizes.deviceHeight * .3,
             imageUrl: imageUrl,
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
             alignment: Alignment.center,
           ),
           gapH8,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 category,
                 style: Get.textTheme.displayLarge,
               ),
-              gapW8,
+              gapW32,
               PrimaryOutlinedButton(
                 width: 44,
                 height: 36,
