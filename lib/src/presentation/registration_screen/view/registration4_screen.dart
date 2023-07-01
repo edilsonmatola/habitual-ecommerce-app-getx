@@ -15,7 +15,7 @@ class Registration4Screen extends StatelessWidget {
     AppColors.blue300,
     AppColors.red300,
     AppColors.green300,
-    AppColors.purple300,
+    AppColors.yellow300,
   ];
 
   final images = [
