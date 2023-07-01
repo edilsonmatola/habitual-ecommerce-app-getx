@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/profile_biography_field.dart';
+import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
 import '../../core/core_export.dart';
@@ -36,8 +37,10 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                   right: Sizes.p24,
                 ),
                 child: PrimaryIconButton(
-                  icon: AppIcons.shoppingCartIcon,
-                  onPressed: () {},
+                  icon: AppIcons.logoutIcon,
+                  onPressed: () => Get.offAllNamed(
+                    AppRoutes.signInRoute,
+                  ),
                 ),
               ),
             ],
