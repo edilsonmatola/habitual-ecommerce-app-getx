@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/svg_icon.dart';
 
 import '../../core/core_export.dart';
 
@@ -12,12 +13,14 @@ class PrimaryButton extends StatelessWidget {
     this.buttonWidth,
     this.buttonHeight,
     this.labelColor,
+    this.forwardIcon = false,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String buttonLabel;
   final Color? buttonColor, labelColor;
   final double? buttonWidth, buttonHeight;
+  final bool? forwardIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +36,33 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(
-          buttonLabel,
-          style: Get.textTheme.bodyLarge?.copyWith(
-            color: labelColor ?? AppColors.white,
-            fontWeight: Fonts.interMedium,
-          ),
-        ),
+        child: forwardIcon!
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    buttonLabel,
+                    style: Get.textTheme.bodyLarge?.copyWith(
+                      color: labelColor ?? AppColors.white,
+                      fontWeight: Fonts.interMedium,
+                    ),
+                  ),
+                  gapW8,
+                  SvgIcon(
+                    icon: AppIcons.rightArrowIcon,
+                    color: AppColors.white,
+                    width: Sizes.p20,
+                    height: Sizes.p20,
+                  ),
+                ],
+              )
+            : Text(
+                buttonLabel,
+                style: Get.textTheme.bodyLarge?.copyWith(
+                  color: labelColor ?? AppColors.white,
+                  fontWeight: Fonts.interMedium,
+                ),
+              ),
       ),
     );
   }
