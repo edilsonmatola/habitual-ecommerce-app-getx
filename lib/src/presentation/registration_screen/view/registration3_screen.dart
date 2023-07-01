@@ -13,76 +13,102 @@ class Registration3Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: ScrollConfiguration(
-          behavior: const ScrollBehavior().copyWith(overscroll: false),
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              vertical: Sizes.p16,
-            ),
-            child: Column(
-              children: [
-                const RegistrationProgressBar(
-                  currentStep: 3,
-                  stepName: 'Your Goals',
-                ),
-                gapH40,
-                Padding(
+        body: Stack(
+          children: [
+            Positioned(
+              child: ScrollConfiguration(
+                behavior: const ScrollBehavior().copyWith(overscroll: false),
+                child: SingleChildScrollView(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: Sizes.p24,
+                    vertical: Sizes.p16,
                   ),
                   child: Column(
                     children: [
-                      Text(
-                        'What do you want to achieve with Habitual?',
-                        style: Get.textTheme.headlineSmall,
-                        textAlign: TextAlign.center,
+                      const RegistrationProgressBar(
+                        currentStep: 3,
+                        stepName: 'Your Goals',
                       ),
-                      gapH12,
-                      Text(
-                        'This will help us make a unique experience that is just for you.',
-                        style: Get.textTheme.bodyMedium?.copyWith(
-                          color: AppColors.neutral600,
-                          fontWeight: Fonts.interRegular,
+                      gapH40,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: Sizes.p24,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      gapH32,
-                      const UserGoalCard(
-                        text: 'Discover new products',
-                        isSelected: false,
-                      ),
-                      gapH12,
-                      const UserGoalCard(
-                        text: 'Make monthly shopping easier',
-                        isSelected: false,
-                      ),
-                      gapH12,
-                      const UserGoalCard(
-                        text: 'Relevant recommendations',
-                        isSelected: true,
-                      ),
-                      gapH12,
-                      const UserGoalCard(
-                        text: 'Get notified of deals',
-                        isSelected: true,
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: PrimaryButton(
-                          buttonWidth: 165,
-                          buttonColor: AppColors.neutral800,
-                          buttonLabel: 'Continue',
-                          onPressed: () => Get.toNamed(
-                            AppRoutes.registration4Route,
-                          ),
+                        child: Column(
+                          children: [
+                            Text(
+                              'What do you want to achieve with Habitual?',
+                              style: Get.textTheme.headlineSmall,
+                              textAlign: TextAlign.center,
+                            ),
+                            gapH12,
+                            Text(
+                              'This will help us make a unique experience that is just for you.',
+                              style: Get.textTheme.bodyMedium?.copyWith(
+                                color: AppColors.neutral600,
+                                fontWeight: Fonts.interRegular,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            gapH32,
+                            const UserGoalCard(
+                              text: 'Discover new products',
+                              isSelected: false,
+                            ),
+                            gapH12,
+                            const UserGoalCard(
+                              text: 'Make monthly shopping easier',
+                              isSelected: false,
+                            ),
+                            gapH12,
+                            const UserGoalCard(
+                              text: 'Relevant recommendations',
+                              isSelected: true,
+                            ),
+                            gapH12,
+                            const UserGoalCard(
+                              text: 'Get notified of deals',
+                              isSelected: true,
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.all(
+                Sizes.p24,
+              ),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PrimaryTextButton(
+                      buttonLabel: 'Skip',
+                      onPressed: () => Get.toNamed(
+                        AppRoutes.registration3Route,
+                      ),
+                    ),
+                    Expanded(
+                      flex: -1,
+                      child: PrimaryButton(
+                        forwardIcon: true,
+                        buttonWidth: 165,
+                        buttonColor: AppColors.neutral800,
+                        buttonLabel: 'Continue',
+                        onPressed: () => Get.toNamed(
+                          AppRoutes.registration4Route,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

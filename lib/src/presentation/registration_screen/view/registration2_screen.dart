@@ -85,7 +85,7 @@ class Registration2Screen extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: -5,
+                      flex: -1,
                       child: PrimaryButton(
                         buttonWidth: 165,
                         buttonColor: AppColors.neutral800,

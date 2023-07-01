@@ -38,63 +38,89 @@ class Registration4Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: ScrollConfiguration(
-          behavior: const ScrollBehavior().copyWith(overscroll: false),
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              vertical: Sizes.p16,
-            ),
-            child: Column(
-              children: [
-                const RegistrationProgressBar(
-                  currentStep: 4,
-                  stepName: 'Interests',
-                ),
-                gapH32,
-                Padding(
+        body: Stack(
+          children: [
+            Positioned(
+              child: ScrollConfiguration(
+                behavior: const ScrollBehavior().copyWith(overscroll: false),
+                child: SingleChildScrollView(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: Sizes.p24,
+                    vertical: Sizes.p16,
                   ),
                   child: Column(
                     children: [
-                      Text(
-                        'Get started by picking some interests.',
-                        style: Get.textTheme.headlineSmall,
-                        textAlign: TextAlign.center,
+                      const RegistrationProgressBar(
+                        currentStep: 4,
+                        stepName: 'Interests',
                       ),
-                      gapH40,
-                      SizedBox(
-                        height: Sizes.deviceHeight * .45,
-                        child: ListView.separated(
-                          itemCount: categories.length,
-                          separatorBuilder: (_, index) => gapW16,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) =>
-                              UserInterestCategoryCard(
-                            imageUrl: images[index],
-                            isSelected: false,
-                            color: colors[index],
-                            category: categories[index],
-                          ),
+                      gapH32,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: Sizes.p24,
                         ),
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: PrimaryButton(
-                          buttonWidth: 165,
-                          buttonColor: AppColors.neutral800,
-                          buttonLabel: 'Continue',
-                          onPressed: () => Get.toNamed(
-                            AppRoutes.registration5Route,
-                          ),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Get started by picking some interests.',
+                              style: Get.textTheme.headlineSmall,
+                              textAlign: TextAlign.center,
+                            ),
+                            gapH40,
+                            SizedBox(
+                              height: Sizes.deviceHeight * .5,
+                              child: ListView.separated(
+                                itemCount: categories.length,
+                                separatorBuilder: (_, index) => gapW16,
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) =>
+                                    UserInterestCategoryCard(
+                                  imageUrl: images[index],
+                                  isSelected: false,
+                                  color: colors[index],
+                                  category: categories[index],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.all(
+                Sizes.p24,
+              ),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PrimaryTextButton(
+                      buttonLabel: 'Skip',
+                      onPressed: () => Get.toNamed(
+                        AppRoutes.registration3Route,
+                      ),
+                    ),
+                    Expanded(
+                      flex: -1,
+                      child: PrimaryButton(
+                        forwardIcon: true,
+                        buttonWidth: 165,
+                        buttonColor: AppColors.neutral800,
+                        buttonLabel: 'Continue',
+                        onPressed: () => Get.toNamed(
+                          AppRoutes.registration5Route,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
