@@ -4,6 +4,7 @@ import 'package:habitual/src/presentation/authentication_screen/view/sign_in_scr
 import 'package:habitual/src/presentation/authentication_screen/view/sign_up_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_confirmation_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_screen.dart';
+import 'package:habitual/src/presentation/my_interests_screen/view/my_interests_screen.dart';
 import 'package:habitual/src/presentation/product_details_screen/view/view_product_details.dart';
 import 'package:habitual/src/presentation/registration_screen/view/registration_completed.dart';
 
@@ -133,7 +134,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: AppRoutes.registration4Route,
-      page: () =>  Registration4Screen(),
+      page: () => Registration4Screen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       transition: Transition.fadeIn,
@@ -151,6 +152,14 @@ abstract class AppPages {
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       transition: Transition.fadeIn,
+    ),
+    //* ==== In App Pages ======
+    GetPage(
+      name: AppRoutes.myInterestsRoute,
+      page: () => const MyInterestsScreen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+      transition: Transition.rightToLeft,
     ),
   ];
 }
