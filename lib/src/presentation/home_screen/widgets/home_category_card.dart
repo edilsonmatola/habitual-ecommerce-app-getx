@@ -4,8 +4,8 @@ import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 
 import '../../../core/core_export.dart';
 
-class CategoryCard extends StatelessWidget {
-  const CategoryCard({
+class HomeCategoryCard extends StatelessWidget {
+  const HomeCategoryCard({
     Key? key,
     this.width,
     this.height,
