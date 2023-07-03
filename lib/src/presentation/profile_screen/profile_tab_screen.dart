@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/presentation/categories_screen/view/categories_screen.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/profile_biography_field.dart';
 import 'package:habitual/src/routes/app_pages.dart';
@@ -46,59 +47,64 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
             ],
           ),
         ],
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.only(
-            left: Sizes.p24,
-            right: Sizes.p24,
-            bottom: Sizes.p32,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              ProfileBiography(
-                userName: 'Leslie Flores',
-                userBiography:
-                    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.',
-                editFunction: () {},
-              ),
-              gapH24,
-              EmptyStateCard(
-                hasDescription: true,
-                cardImage: AppAssets.profileEmpty,
-                cardTitle: 'What interests you!',
-                cardDescription:
-                    "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
-                cardColor: AppColors.red300,
-                buttonText: '+ Add my interests',
-                buttonPressed: () {},
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Text(
-                      'Account',
-                      style: Theme.of(context).textTheme.headlineSmall,
-                    ),
-                  ),
-                  PrimaryTextButton(
-                    buttonLabel: 'View all',
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              gapH16,
-              SizedBox(
-                height: Get.size.height * .15,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: 10,
-                  separatorBuilder: (context, index) => gapW16,
-                  itemBuilder: (context, index) => const AccountCard(),
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.only(
+              left: Sizes.p24,
+              right: Sizes.p24,
+              bottom: Sizes.p32,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                ProfileBiography(
+                  userName: 'Leslie Flores',
+                  userBiography:
+                      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia.',
+                  editFunction: () {},
                 ),
-              ),
-            ],
+                gapH24,
+                EmptyStateCard(
+                  hasDescription: true,
+                  cardImage: AppAssets.profileEmpty,
+                  cardTitle: 'What interests you!',
+                  cardDescription:
+                      "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
+                  cardColor: AppColors.red300,
+                  buttonText: '+ Add my interests',
+                  buttonPressed: () => Get.to(
+                    () => const CategoriesScreen(),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        'Account',
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                    ),
+                    PrimaryTextButton(
+                      buttonLabel: 'View all',
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+                gapH16,
+                SizedBox(
+                  height: Get.size.height * .15,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: 10,
+                    separatorBuilder: (context, index) => gapW16,
+                    itemBuilder: (context, index) => const AccountCard(),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
