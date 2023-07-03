@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/common_widgets/svg_icon.dart';
-import 'package:habitual/src/presentation/home_screen/widgets/category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
+import 'package:habitual/src/presentation/home_screen/widgets/home_category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/my_interests_card.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
@@ -150,7 +150,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       Row(
                         children: [
                           Expanded(
-                            child: CategoryCard(
+                            child: HomeCategoryCard(
                               width: Sizes.deviceWidth * .50,
                               height: Sizes.deviceHeight * .20,
                               title: AppTitles.categoryCard1Title,
@@ -159,7 +159,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                             ),
                           ),
                           Expanded(
-                            child: CategoryCard(
+                            child: HomeCategoryCard(
                               width: Sizes.deviceWidth * .50,
                               height: Sizes.deviceHeight * .20,
                               title: AppTitles.categoryCard2Title,
@@ -174,7 +174,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       Row(
                         children: [
                           Expanded(
-                            child: CategoryCard(
+                            child: HomeCategoryCard(
                               width: Sizes.deviceWidth * .50,
                               height: Sizes.deviceHeight * .20,
                               title: AppTitles.categoryCard3Title,
@@ -184,7 +184,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                             ),
                           ),
                           Expanded(
-                            child: CategoryCard(
+                            child: HomeCategoryCard(
                               width: Sizes.deviceWidth * .50,
                               height: Sizes.deviceHeight * .20,
                               title: AppTitles.categoryCard4Title,
