@@ -59,7 +59,7 @@ class CategoryCard extends StatelessWidget {
           ),
         ),
       ),
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(Sizes.p16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
