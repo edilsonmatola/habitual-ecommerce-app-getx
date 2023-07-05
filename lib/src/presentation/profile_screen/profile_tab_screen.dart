@@ -72,7 +72,9 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                       "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
                   cardColor: AppColors.red300,
                   buttonText: '+ Add my interests',
-                  buttonPressed: () {},
+                  buttonPressed: () => Get.toNamed(
+                    AppRoutes.myInterestsRoute,
+                  ),
                 ),
                 Row(
                   children: [
