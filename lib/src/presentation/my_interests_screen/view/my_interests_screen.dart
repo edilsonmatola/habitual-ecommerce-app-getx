@@ -11,54 +11,65 @@ class MyInterestsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-       child: Scaffold(
+      child: Scaffold(
         body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          SliverAppBar(
-            centerTitle: false,
-            title: Padding(
-              padding: const EdgeInsets.only(
-                left: Sizes.p8,
-              ),
-              child: Text(
-                AppTitles.profileTitle,
-                style: Get.textTheme.headlineSmall,
-              ),
-            ),
-            actions: [
-              Padding(
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+            SliverAppBar(
+              centerTitle: false,
+              title: Padding(
                 padding: const EdgeInsets.only(
-                  right: Sizes.p24,
+                  left: Sizes.p8,
                 ),
-                child: PrimaryIconButton(
-                  icon: AppIcons.logoutIcon,
-                  onPressed: () => Get.offAllNamed(
-                    AppRoutes.signInRoute,
+                child: Text(
+                  AppTitles.profileTitle,
+                  style: Get.textTheme.headlineSmall,
+                ),
+              ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    right: Sizes.p24,
+                  ),
+                  child: PrimaryIconButton(
+                    icon: AppIcons.logoutIcon,
+                    onPressed: () => Get.offAllNamed(
+                      AppRoutes.signInRoute,
+                    ),
                   ),
                 ),
+              ],
+            ),
+          ],
+          body: ScrollConfiguration(
+            behavior: const ScrollBehavior().copyWith(overscroll: false),
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(
+                Sizes.p24,
               ),
-            ],
-          ),
-        ],
-        body: ScrollConfiguration(behavior: const ScrollBehavior().copyWith(overscroll: false), child: SingleChildScrollView(
-          padding: const EdgeInsets.all(Sizes.p24,),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
                 children: [
-                  Text('Interests', style: Get.textTheme.displayLarge,),
-                  PrimaryOutlinedButton(hasText: true, title: 'Edit', onPressed: () {
-                    
-                  },),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Interests',
+                        style: Get.textTheme.displayLarge,
+                      ),
+                      PrimaryOutlinedButton(
+                        hasText: true,
+                        title: 'Edit',
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                  gapH16,
+                  // TODO: Staggered Grid View
                 ],
               ),
-              gapH16,
-              // TODO: Staggered Grid View
-            ],
+            ),
           ),
-        ),),
-       ),),
+        ),
+      ),
     );
   }
 }
