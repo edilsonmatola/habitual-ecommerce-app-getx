@@ -6,6 +6,7 @@ import 'package:habitual/src/presentation/categories_screen/widgets/staggered_ca
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../home_screen/widgets/deals_card.dart';
+import '../widgets/category_card_item.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key});
@@ -15,7 +16,7 @@ class CategoriesScreen extends StatefulWidget {
 }
 
 class _CategoriesScreenState extends State<CategoriesScreen> {
-  List<int> selectedIndex = [];
+  final List<int> selectedIndex = [];
 
   final title = [
     'Action & Adventure',
@@ -173,30 +174,17 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                               }
                             });
                           },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: selectedIndex.contains(index)
-                                    ? AppColors.neutral800
-                                    : AppColors.neutral300,
-                              ),
-                              color: selectedIndex.contains(index)
-                                  ? AppColors.neutral800
-                                  : AppColors.white,
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            padding: const EdgeInsets.all(
-                              Sizes.p16,
-                            ),
-                            child: Text(
-                              categories[index],
-                              style: Get.textTheme.bodyMedium?.copyWith(
-                                color: selectedIndex.contains(index)
-                                    ? AppColors.white
-                                    : AppColors.neutral800,
-                                fontWeight: Fonts.interMedium,
-                              ),
-                            ),
+                          child: CategoryCardItem(
+                            borderColor: selectedIndex.contains(index)
+                                ? AppColors.neutral800
+                                : AppColors.neutral300,
+                            cardColor: selectedIndex.contains(index)
+                                ? AppColors.neutral800
+                                : AppColors.white,
+                            categoryName: categories[index],
+                            textColor: selectedIndex.contains(index)
+                                ? AppColors.white
+                                : AppColors.neutral800,
                           ),
                         ),
                       )
