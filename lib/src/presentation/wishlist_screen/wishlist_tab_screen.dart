@@ -84,7 +84,10 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
                   separatorBuilder: (_, index) => gapW16,
-                  itemBuilder: (_, index) => const MainCard(),
+                  itemBuilder: (_, index) => const MainCard(
+                    imageUrl:
+                        'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                  ),
                 ),
               ),
             ],
