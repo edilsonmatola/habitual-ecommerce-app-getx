@@ -38,7 +38,7 @@ class UserInterestCategoryCard extends StatelessWidget {
               child: CircularProgressIndicator.adaptive(),
             ),
             width: Sizes.deviceWidth * .6,
-            height: Sizes.deviceHeight * .36,
+            height: Sizes.deviceHeight * .65 / 2,
             imageUrl: imageUrl,
             fit: BoxFit.contain,
             alignment: Alignment.center,
