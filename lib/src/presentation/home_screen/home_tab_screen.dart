@@ -94,6 +94,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     itemCount: 10,
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => MainCard(
+                      imageUrl:
+                          'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
                       onPressed: () => Get.toNamed(
                         AppRoutes.productDetailsRoute,
                       ),
