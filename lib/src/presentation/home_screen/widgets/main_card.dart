@@ -10,13 +10,14 @@ class MainCard extends StatelessWidget {
     super.key,
     this.width,
     this.height,
-    this.color,
-    this.onPressed,
+    this.cardColor,
+    this.onPressed, required this.imageUrl,
   });
 
   final double? width;
   final double? height;
-  final Color? color;
+  final Color? cardColor;
+  final String imageUrl;
   final VoidCallback? onPressed;
 
   @override
@@ -32,7 +33,7 @@ class MainCard extends StatelessWidget {
                 Radius.circular(Sizes.p10),
               ),
             ),
-            color: color ?? AppColors.blue300,
+            color: cardColor ?? AppColors.blue300,
             child: InkWell(
               highlightColor: AppColors.neutral300.withOpacity(.9),
               borderRadius: const BorderRadius.all(
@@ -41,15 +42,17 @@ class MainCard extends StatelessWidget {
               onTap: onPressed,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(Sizes.p10),
-                child: Padding( 
-                  padding: const EdgeInsets.all(Sizes.p16),
+                child: Padding(
+                  padding: const EdgeInsets.all(
+                    Sizes.p16,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
                         child: CachedNetworkImage(
-                          imageUrl:
-                              'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                          imageUrl: imageUrl,
+                          fit: BoxFit.contain,
                           placeholder: (context, url) => Center(
                             child: CircularProgressIndicator.adaptive(
                               valueColor: AlwaysStoppedAnimation(
