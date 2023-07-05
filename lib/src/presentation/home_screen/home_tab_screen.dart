@@ -190,7 +190,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                               title: AppTitles.categoryCard4Title,
                               color: AppColors.green300,
                               buttonPressed: () {},
-                              cardPressed: () {},
+                              cardPressed: () => Get.toNamed(
+                                AppRoutes.categoriesRoute,
+                              ),
                             ),
                           ),
                         ],
