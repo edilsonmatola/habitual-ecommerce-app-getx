@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/authentication_screen/view/sign_in_screen.dart';
 import 'package:habitual/src/presentation/authentication_screen/view/sign_up_screen.dart';
+import 'package:habitual/src/presentation/categories_screen/view/categories_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_confirmation_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_screen.dart';
 import 'package:habitual/src/presentation/my_interests_screen/view/my_interests_screen.dart';
@@ -157,6 +158,13 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.myInterestsRoute,
       page: () => const MyInterestsScreen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.categoriesRoute,
+      page: () => const CategoriesScreen(),
       transitionDuration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       transition: Transition.rightToLeft,
