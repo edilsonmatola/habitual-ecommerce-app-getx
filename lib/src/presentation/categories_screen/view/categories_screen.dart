@@ -5,6 +5,7 @@ import 'package:habitual/src/core/core_export.dart';
 import 'package:habitual/src/presentation/categories_screen/widgets/staggered_category_card.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
+import '../../home_screen/widgets/deals_card.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key});
@@ -122,6 +123,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 Sizes.p24,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Most Popular',
@@ -149,26 +151,6 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                       ),
                     ),
                   ),
-                  // StaggeredGrid.count(
-                  //   crossAxisCount: 3,
-                  //   mainAxisSpacing: Sizes.p16,
-                  //   crossAxisSpacing: Sizes.p16,
-                  //   children: List.generate(
-                  //     6,
-                  //     (index) => StaggeredGridTile.count(
-                  //       crossAxisCellCount: 4,
-                  //       mainAxisCellCount: 4,
-                  //       child: ListView.builder(
-                  //         itemBuilder: (context, index) => StaggeredCard(
-                  //           color: AppColors.purple300,
-                  //           categoryName: 'Tech',
-                  //           imageUrl:
-                  //               'https://media.croma.com/image/upload/v1685969049/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256608_rm160r.png',
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
                   gapH24,
                   Text(
                     'All Categories',
@@ -176,7 +158,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                   ),
                   gapH16,
                   Wrap(
-                    spacing: 10,
+                    spacing: Sizes.p8,
+                    runSpacing: Sizes.p8,
                     children: [
                       ...List.generate(
                         categories.length,
@@ -185,14 +168,12 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             setState(() {
                               if (selectedIndex.contains(index)) {
                                 selectedIndex.remove(index);
+                              } else {
+                                selectedIndex.add(index);
                               }
-                              selectedIndex.add(index);
                             });
                           },
                           child: Container(
-                            margin: const EdgeInsetsDirectional.all(
-                              Sizes.p4,
-                            ),
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: selectedIndex.contains(index)
@@ -202,22 +183,56 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                               color: selectedIndex.contains(index)
                                   ? AppColors.neutral800
                                   : AppColors.white,
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(100),
                             ),
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(
+                              Sizes.p16,
+                            ),
                             child: Text(
-                              "Item ${categories[index]}",
+                              categories[index],
                               style: Get.textTheme.bodyMedium?.copyWith(
                                 color: selectedIndex.contains(index)
                                     ? AppColors.white
                                     : AppColors.neutral800,
-                                fontWeight: Fonts.interRegular,
+                                fontWeight: Fonts.interMedium,
                               ),
                             ),
                           ),
                         ),
                       )
                     ],
+                  ),
+                  gapH24,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Deals',
+                          style: Get.textTheme.displayLarge,
+                        ),
+                      ),
+                      PrimaryTextButton(
+                        buttonLabel: 'View all',
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  gapH16,
+                  SizedBox(
+                    height: Sizes.deviceHeight * .3,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      physics: const BouncingScrollPhysics(),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: Sizes.p24,
+                      ),
+                      itemCount: 10,
+                      separatorBuilder: (_, index) => gapW16,
+                      itemBuilder: (_, index) => DealsCard(
+                        onCardTap: () {},
+                        onLikeTap: () {},
+                      ),
+                    ),
                   ),
                 ],
               ),
