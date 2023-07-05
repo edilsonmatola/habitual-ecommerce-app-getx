@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/presentation/categories_screen/view/categories_screen.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/profile_biography_field.dart';
 import 'package:habitual/src/routes/app_pages.dart';
@@ -73,9 +72,7 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                       "You don't have any interests listed. Tell us what you love the most and we'll recommend relevant products to you.",
                   cardColor: AppColors.red300,
                   buttonText: '+ Add my interests',
-                  buttonPressed: () => Get.to(
-                    () => const CategoriesScreen(),
-                  ),
+                  buttonPressed: () {},
                 ),
                 Row(
                   children: [
