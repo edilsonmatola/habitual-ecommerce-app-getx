@@ -56,7 +56,7 @@ class DealsCard extends StatelessWidget {
                       CachedNetworkImage(
                         imageUrl:
                             'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
-                        height: 115,
+                        height: Sizes.deviceHeight * .25 / 2,
                         placeholder: (_, url) => Center(
                           child: CircularProgressIndicator.adaptive(
                             valueColor: AlwaysStoppedAnimation(
