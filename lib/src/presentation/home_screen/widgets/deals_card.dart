@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/svg_icon.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/like_button_widget.dart';
 
 import '../../../core/core_export.dart';
@@ -11,10 +11,14 @@ class DealsCard extends StatelessWidget {
     super.key,
     this.width,
     this.height,
+    this.onLikeTap,
+    this.onCardTap,
   });
 
   final double? width;
   final double? height;
+  final VoidCallback? onLikeTap;
+  final VoidCallback? onCardTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,7 @@ class DealsCard extends StatelessWidget {
       children: [
         SizedBox(
           width: width ?? 163,
-          height: height ?? 218,
+          height: height ?? 300,
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
@@ -34,9 +38,11 @@ class DealsCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
-              onTap: () {},
+              onTap: onCardTap,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(Sizes.p10),
+                borderRadius: BorderRadius.circular(
+                  Sizes.p10,
+                ),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(
                     Sizes.p12,
@@ -45,19 +51,16 @@ class DealsCard extends StatelessWidget {
                     Sizes.p12,
                   ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Expanded(
-                        child: Center(
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
-                            placeholder: (context, url) => Center(
-                              child: CircularProgressIndicator.adaptive(
-                                valueColor: AlwaysStoppedAnimation(
-                                  AppColors.neutral800,
-                                ),
-                              ),
+                      CachedNetworkImage(
+                        imageUrl:
+                            'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+                        height: Sizes.deviceHeight * .25 / 2,
+                        placeholder: (_, url) => Center(
+                          child: CircularProgressIndicator.adaptive(
+                            valueColor: AlwaysStoppedAnimation(
+                              AppColors.neutral800,
                             ),
                           ),
                         ),
@@ -66,14 +69,14 @@ class DealsCard extends StatelessWidget {
                       Text(
                         'Bose Noise Cancellation',
                         style: Get.textTheme.displayMedium,
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
                       gapH4,
                       Row(
                         children: [
-                          SvgPicture.asset(
-                            AppIcons.starIcon,
+                          const SvgIcon(
+                            icon: AppIcons.starIcon,
                             width: Sizes.p10,
                             height: Sizes.p10,
                           ),
@@ -102,9 +105,9 @@ class DealsCard extends StatelessWidget {
           top: Sizes.p4,
           right: Sizes.p16,
           child: LikeButtonWidget(
-            onPressed: () {},
+            onPressed: onLikeTap,
           ),
-        )
+        ),
       ],
     );
   }

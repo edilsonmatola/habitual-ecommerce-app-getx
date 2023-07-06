@@ -4,8 +4,8 @@ import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 
 import '../../../core/core_export.dart';
 
-class CategoryCard extends StatelessWidget {
-  const CategoryCard({
+class HomeCategoryCard extends StatelessWidget {
+  const HomeCategoryCard({
     Key? key,
     this.width,
     this.height,
@@ -19,8 +19,8 @@ class CategoryCard extends StatelessWidget {
   final double? height;
   final Color? color;
   final String title;
-  final VoidCallback buttonPressed;
-  final VoidCallback cardPressed;
+  final VoidCallback? buttonPressed;
+  final VoidCallback? cardPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class CategoryCard extends StatelessWidget {
           right: Sizes.p24,
           bottom: Sizes.p16,
           child: PrimaryOutlinedButton(
-            isText: false,
+            hasText: false,
             onPressed: buttonPressed,
           ),
         ),

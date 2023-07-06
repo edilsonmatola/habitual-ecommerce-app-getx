@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-import '../../common_widgets/common_widgets_export.dart';
-import '../../core/core_export.dart';
-import '../../routes/routes_export.dart';
-import 'widgets/header_section.dart';
+import '../../../common_widgets/common_widgets_export.dart';
+import '../../../core/core_export.dart';
+import '../../../routes/routes_export.dart';
+import '../widgets/header_section.dart';
 
 class OnBoarding2Screen extends StatelessWidget {
   const OnBoarding2Screen({Key? key}) : super(key: key);
@@ -20,7 +20,9 @@ class OnBoarding2Screen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               HeaderSection(
-                onPressed: () => Get.toNamed(AppRoutes.onBoarding3Route),
+                onPressed: () => Get.toNamed(
+                  AppRoutes.onBoarding3Route,
+                ),
               ),
               gapH16,
               SvgPicture.asset(
@@ -38,7 +40,7 @@ class OnBoarding2Screen extends StatelessWidget {
                 AppTitles.onboarding2Description,
                 style: Get.textTheme.displaySmall?.copyWith(
                   color: AppColors.neutral600,
-                  fontWeight: AppFonts.interRegular,
+                  fontWeight: Fonts.interRegular,
                   height: 1.5,
                 ),
                 textAlign: TextAlign.center,
@@ -47,7 +49,9 @@ class OnBoarding2Screen extends StatelessWidget {
               PrimaryButton(
                 buttonLabel: 'Next',
                 buttonColor: AppColors.neutral800,
-                onPressed: () => Get.toNamed(AppRoutes.onBoarding3Route),
+                onPressed: () => Get.toNamed(
+                  AppRoutes.onBoarding3Route,
+                ),
               ),
             ],
           ),

@@ -27,6 +27,7 @@ class AppIcons {
    */
   static const closeIcon = 'assets/icons/x.svg';
   static const leftArrowIcon = 'assets/icons/others/arrow-left.svg';
+  static const rightArrowIcon = 'assets/icons/others/arrow-right.svg';
   static const circleRightArrowIcon =
       'assets/icons/others/arrow-right-circle.svg';
   static const circleLeftArrowIcon =
@@ -64,6 +65,7 @@ class AppIcons {
 // * Others
       closeIcon,
       leftArrowIcon,
+      rightArrowIcon,
       circleRightArrowIcon,
       circleLeftArrowIcon,
       iOSLeftArrowIcon,

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class AppFonts {
+class Fonts {
   static const loraFontFamily = 'Lora';
   static const loraSemiBold = FontWeight.w600;
   // Titles Font: Lora

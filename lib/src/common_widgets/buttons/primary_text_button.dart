@@ -8,26 +8,40 @@ class PrimaryTextButton extends StatelessWidget {
     Key? key,
     this.onPressed,
     required this.buttonLabel,
-    this.buttonColor,
+    this.textColor,
     this.fontWeight,
+    this.defaultTextStyle = true,
+    this.style,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String buttonLabel;
-  final Color? buttonColor;
+  final bool defaultTextStyle;
+  final Color? textColor;
   final FontWeight? fontWeight;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(
-        buttonLabel,
-        style: Get.textTheme.bodyMedium?.copyWith(
-          color: buttonColor ?? AppColors.neutral600,
-          fontWeight: fontWeight ?? AppFonts.interRegular,
+    if (defaultTextStyle) {
+      return TextButton(
+        onPressed: onPressed,
+        child: Text(
+          buttonLabel,
+          style: Get.textTheme.bodyMedium?.copyWith(
+            color: textColor ?? AppColors.neutral600,
+            fontWeight: fontWeight ?? Fonts.interRegular,
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      return TextButton(
+        onPressed: onPressed,
+        child: Text(
+          buttonLabel,
+          style: style,
+        ),
+      );
+    }
   }
 }

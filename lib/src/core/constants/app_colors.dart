@@ -41,6 +41,8 @@ class AppColors {
   * ========= Green Colors ==================
    */
 
+  static Color green700 = fromHex('1E9C40');
+
   static Color green500 = fromHex('#B4D479');
 
   static Color green300 = fromHex('#D8E4C2');
@@ -52,6 +54,8 @@ class AppColors {
    */
 
   static Color red500 = fromHex('#EA8389');
+  
+  static Color red400 = fromHex('#CC474E');
 
   static Color red300 = fromHex('#E2BDBF');
 

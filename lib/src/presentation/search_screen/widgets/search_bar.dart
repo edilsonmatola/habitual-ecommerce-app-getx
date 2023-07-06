@@ -8,11 +8,11 @@ import 'package:habitual/src/core/constants/app_icons.dart';
 import 'package:habitual/src/core/constants/app_sizes.dart';
 
 class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({Key? key}) : super(key: key);
+  CustomSearchBar({Key? key}) : super(key: key);
 
+  final searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final searchController = TextEditingController();
     return TextFormField(
       controller: searchController,
       onChanged: (value) {},
@@ -27,7 +27,7 @@ class CustomSearchBar extends StatelessWidget {
         ),
         suffixIcon: PrimaryTextButton(
           buttonLabel: 'Done',
-          fontWeight: AppFonts.interSemiBold,
+          fontWeight: Fonts.interSemiBold,
           onPressed: () {
             searchController.clear();
             FocusScope.of(context).unfocus();
@@ -36,7 +36,7 @@ class CustomSearchBar extends StatelessWidget {
         hintText: 'Search by keyword or categories',
         hintStyle: Get.textTheme.displaySmall?.copyWith(
           color: AppColors.neutral400,
-          fontWeight: AppFonts.interRegular,
+          fontWeight: Fonts.interRegular,
         ),
         isDense: true,
         border: const OutlineInputBorder(

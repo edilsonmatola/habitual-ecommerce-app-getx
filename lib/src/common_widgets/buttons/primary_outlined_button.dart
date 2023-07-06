@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/common_widgets/svg_icon.dart';
 import 'package:habitual/src/core/core_export.dart';
 
 class PrimaryOutlinedButton extends StatelessWidget {
@@ -8,16 +8,20 @@ class PrimaryOutlinedButton extends StatelessWidget {
     Key? key,
     this.onPressed,
     this.title,
-    required this.isText,
+    required this.hasText,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
   final String? title;
-  final bool isText;
+  final bool hasText;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
-    if (isText) {
+    if (hasText) {
       return OutlinedButton(
         style: OutlinedButton.styleFrom(
           textStyle: Get.textTheme.bodyMedium,
@@ -26,19 +30,22 @@ class PrimaryOutlinedButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(title!),
+        child: Text(
+          title!,
+          style: Get.textTheme.bodyLarge,
+        ),
       );
     } else {
       return SizedBox(
-        width: 36,
-        height: 36,
+        width: width ?? 36,
+        height: height ?? 36,
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
             padding: const EdgeInsets.all(0),
           ),
           onPressed: onPressed,
-          child: SvgPicture.asset(
-            AppIcons.iOSRightArrowIcon,
+          child: SvgIcon(
+            icon: AppIcons.iOSRightArrowIcon,
             width: Sizes.p16,
             height: Sizes.p16,
             color: AppColors.neutral800,
