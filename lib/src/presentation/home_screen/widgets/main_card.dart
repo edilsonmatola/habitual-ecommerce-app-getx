@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:habitual/src/data/models/item_model.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/like_button_widget.dart';
+import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../core/core_export.dart';
 
@@ -11,14 +13,14 @@ class MainCard extends StatelessWidget {
     this.width,
     this.height,
     this.cardColor,
-    this.onPressed, required this.imageUrl,
+    required this.item,
   });
+
+  final ItemModel item;
 
   final double? width;
   final double? height;
   final Color? cardColor;
-  final String imageUrl;
-  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,10 @@ class MainCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
-              onTap: onPressed,
+              onTap: () => Get.toNamed(
+                AppRoutes.productDetailsRoute,
+                arguments: item,
+              ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(Sizes.p10),
                 child: Padding(
@@ -51,9 +56,9 @@ class MainCard extends StatelessWidget {
                     children: [
                       Expanded(
                         child: CachedNetworkImage(
-                          imageUrl: imageUrl,
+                          imageUrl: item.images[0],
                           fit: BoxFit.contain,
-                          placeholder: (context, url) => Center(
+                          placeholder: (_, url) => Center(
                             child: CircularProgressIndicator.adaptive(
                               valueColor: AlwaysStoppedAnimation(
                                 AppColors.neutral800,
@@ -64,7 +69,7 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH12,
                       Text(
-                        'Chuck 70 Hi Sneakers Chuck 70 Hi Sneakers',
+                        item.itemName,
                         style: Get.textTheme.displayLarge,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
@@ -72,7 +77,7 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH4,
                       Text(
-                        'Converse',
+                        item.brand,
                         style: Get.textTheme.bodySmall?.copyWith(
                           fontWeight: Fonts.interRegular,
                         ),
@@ -81,7 +86,7 @@ class MainCard extends StatelessWidget {
                       ),
                       gapH16,
                       Text(
-                        r'$70.99',
+                        '\$${item.prices[0]}',
                         style: Get.textTheme.bodyLarge?.copyWith(
                           fontWeight: Fonts.interRegular,
                         ),

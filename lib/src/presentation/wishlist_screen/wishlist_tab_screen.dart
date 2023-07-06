@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:habitual/src/core/constants/constants_export.dart';
 
 import '../../common_widgets/common_widgets_export.dart';
+import '../../data/data.dart' as app_data;
 import '../home_screen/widgets/main_card.dart';
 
 class WishlistTabScreen extends StatefulWidget {
@@ -82,11 +83,10 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
-                  itemCount: 10,
+                  itemCount: app_data.trending.length,
                   separatorBuilder: (_, index) => gapW16,
-                  itemBuilder: (_, index) => const MainCard(
-                    imageUrl:
-                        'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                  itemBuilder: (_, index) => MainCard(
+                    item: app_data.trending[index],
                   ),
                 ),
               ),

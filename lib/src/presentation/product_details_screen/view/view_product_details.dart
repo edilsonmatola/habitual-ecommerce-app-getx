@@ -11,11 +11,15 @@ import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
+import '../../../data/data.dart' as app_data;
+import '../../../data/models/item_model.dart';
 import '../../cart_screen/widgets/cart_product_card.dart';
 import '../../home_screen/widgets/main_card.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
-  const ProductDetailsScreen({super.key});
+  ProductDetailsScreen({super.key});
+
+  final ItemModel item = Get.arguments;
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -259,15 +263,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         color: AppColors.blue300,
                         child: PageView.builder(
                           controller: pageController,
-                          itemCount: 6,
+                          itemCount: widget.item.images.length,
                           onPageChanged: (value) => setState(() {
                             currentIndex.value = value;
                           }),
                           itemBuilder: (_, index) => Container(
                             color: AppColors.blue300,
                             child: CachedNetworkImage(
-                              imageUrl:
-                                  'https://scufgaming.com/media/prismic/ODMwZTBlYzgtMDYzZi00ZGNmLWE3MTctNjZjMDUyMjA2YjRm_7a716d11-edb0-4a68-83a1-cdefacd9b8a5_reflex_compare_model_base_black_front_850x600.png',
+                              imageUrl: widget.item.images[index],
                               placeholder: (_, url) => const Center(
                                 child: CircularProgressIndicator.adaptive(),
                               ),
@@ -282,7 +285,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         right: 0,
                         child: PageDotsSecondary(
                           currentIndex: currentIndex.value,
-                          countLength: 6,
+                          countLength: widget.item.images.length,
                         ),
                       ),
                     ],
@@ -296,12 +299,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'DualSense Wireless Controller',
+                          widget.item.itemName,
                           style: Get.textTheme.headlineMedium,
                         ),
                         gapH8,
                         Text(
-                          'Sony',
+                          widget.item.brand,
                           style: Get.textTheme.titleLarge?.copyWith(
                             color: AppColors.neutral600,
                             fontWeight: Fonts.interRegular,
@@ -321,16 +324,31 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         SizedBox(
                           height: Sizes.deviceHeight * .15,
                           child: ListView.separated(
-                            itemCount: 3,
+                            itemCount: widget.item.colors!.length,
                             scrollDirection: Axis.horizontal,
                             separatorBuilder: (_, index) => gapW16,
-                            itemBuilder: (_, index) => OptionCard(
-                              isActive: true,
-                              inStock: true,
-                              price: 79.99,
-                              colorName: 'Black',
-                              onTap: () {},
-                            ),
+                            itemBuilder: (_, index) {
+                              if ((widget.item.colors!.length < 2 ||
+                                      widget.item.colors == null ||
+                                      widget.item.colors!.isEmpty) &&
+                                  widget.item.prices.length < 2) {
+                                return OptionCard(
+                                  isActive: true,
+                                  inStock: widget.item.inStock[0],
+                                  price: widget.item.prices[0],
+                                  colorName: widget.item.colors![0],
+                                  onTap: () {},
+                                );
+                              } else {
+                                return OptionCard(
+                                  isActive: true,
+                                  inStock: widget.item.inStock[index],
+                                  price: widget.item.prices[index],
+                                  colorName: widget.item.colors![index],
+                                  onTap: () {},
+                                );
+                              }
+                            },
                           ),
                         ),
                         gapH32,
@@ -388,12 +406,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           child: ListView.separated(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
-                            itemCount: 10,
+                            itemCount: app_data.justForYou.length,
                             separatorBuilder: (_, index) => gapW16,
                             itemBuilder: (_, index) => MainCard(
-                              imageUrl:
-                                  'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
-                              onPressed: () {},
+                              item: app_data.justForYou[index],
                             ),
                           ),
                         ),

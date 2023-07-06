@@ -8,6 +8,7 @@ import 'package:habitual/src/presentation/home_screen/widgets/my_interests_card.
 import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../core/core_export.dart';
+import '../../data/data.dart' as app_data;
 import 'widgets/main_card.dart';
 
 class HomeTabScreen extends StatefulWidget {
@@ -91,15 +92,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       horizontal: Sizes.p24,
                     ),
                     physics: const BouncingScrollPhysics(),
-                    itemCount: 10,
+                    itemCount: app_data.trending.length,
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => MainCard(
-                      imageUrl:
-                          'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
-                      onPressed: () => Get.toNamed(
-                        AppRoutes.productDetailsRoute,
+                      item: app_data.trending[index],
                       ),
-                    ),
+                    
                   ),
                 ),
                 gapH32,
@@ -132,10 +130,10 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     padding: const EdgeInsets.symmetric(
                       horizontal: Sizes.p24,
                     ),
-                    itemCount: 10,
+                    itemCount: app_data.deals.length,
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => DealsCard(
-                      onCardTap: () {},
+                      item: app_data.deals[index],
                       onLikeTap: () {},
                     ),
                   ),

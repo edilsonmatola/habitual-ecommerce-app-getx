@@ -2,7 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/data/models/item_model.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/like_button_widget.dart';
+import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../core/core_export.dart';
 
@@ -12,13 +14,14 @@ class DealsCard extends StatelessWidget {
     this.width,
     this.height,
     this.onLikeTap,
-    this.onCardTap,
+    required this.item,
   });
+
+  final ItemModel item;
 
   final double? width;
   final double? height;
   final VoidCallback? onLikeTap;
-  final VoidCallback? onCardTap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +41,7 @@ class DealsCard extends StatelessWidget {
               borderRadius: const BorderRadius.all(
                 Radius.circular(Sizes.p10),
               ),
-              onTap: onCardTap,
+              onTap: () => Get.toNamed(AppRoutes.productDetailsRoute, arguments: item,),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(
                   Sizes.p10,
@@ -54,8 +57,7 @@ class DealsCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       CachedNetworkImage(
-                        imageUrl:
-                            'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+                        imageUrl: item.images[0],
                         height: Sizes.deviceHeight * .25 / 2,
                         placeholder: (_, url) => Center(
                           child: CircularProgressIndicator.adaptive(
@@ -67,7 +69,7 @@ class DealsCard extends StatelessWidget {
                       ),
                       gapH4,
                       Text(
-                        'Bose Noise Cancellation',
+                        item.itemName,
                         style: Get.textTheme.displayMedium,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -89,7 +91,7 @@ class DealsCard extends StatelessWidget {
                       ),
                       gapH8,
                       Text(
-                        r'$400.99',
+                        '\$${item.prices[0]}',
                         style: Get.textTheme.bodyMedium?.copyWith(
                           color: AppColors.neutral600,
                         ),
