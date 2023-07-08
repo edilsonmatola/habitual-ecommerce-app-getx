@@ -11,7 +11,7 @@ class HeaderSection extends StatelessWidget {
     this.buttonLabel,
   }) : super(key: key);
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String? buttonLabel;
 
   @override
