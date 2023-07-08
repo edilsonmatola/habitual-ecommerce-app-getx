@@ -11,6 +11,7 @@ import 'package:habitual/src/presentation/registration_screen/view/registration_
 
 import '../presentation/base_screen/base_screen.dart';
 import '../presentation/introduction_screen/introduction_screen.dart';
+import '../presentation/onboarding_screen/onboarding_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding1_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding2_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding3_screen.dart';
@@ -34,6 +35,13 @@ abstract class AppPages {
     /* 
     * ===== Onboarding Pages =====
      */
+    GetPage(
+      name: AppRoutes.onBoardingRoute,
+      page: () => const OnboardingScreen(),
+      transitionDuration: const Duration(milliseconds: 500),
+      curve: Curves.easeOut,
+      transition: Transition.fadeIn,
+    ),
     GetPage(
       name: AppRoutes.onBoarding1Route,
       page: () => const OnBoarding1Screen(),
@@ -115,9 +123,9 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.registration1Route,
       page: () => const Registration1Screen(),
-      transitionDuration: const Duration(milliseconds: 300),
+      transitionDuration: const Duration(milliseconds: 600),
       curve: Curves.easeOut,
-      transition: Transition.fadeIn,
+      transition: Transition.rightToLeft,
     ),
     GetPage(
       name: AppRoutes.registration2Route,
@@ -176,6 +184,7 @@ abstract class AppRoutes {
   static const introRoute = '/intro';
   static const signInRoute = '/signIn';
   static const signUpRoute = '/signUp';
+  static const onBoardingRoute = '/onBoarding';
   static const onBoarding1Route = '/onBoarding1';
   static const onBoarding2Route = '/onBoarding2';
   static const onBoarding3Route = '/onBoarding3';

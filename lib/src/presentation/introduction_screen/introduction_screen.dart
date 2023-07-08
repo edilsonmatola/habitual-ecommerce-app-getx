@@ -31,7 +31,7 @@ class IntroductionScreen extends StatelessWidget {
                   gapH70,
                   PrimaryButton(
                     labelColor: AppColors.neutral800,
-                    onPressed: () => Get.toNamed(AppRoutes.onBoarding1Route),
+                    onPressed: () => Get.toNamed(AppRoutes.onBoardingRoute),
                     buttonLabel: "Let's begin",
                     buttonColor: AppColors.yellow300,
                   ),
