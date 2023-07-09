@@ -22,58 +22,54 @@ class MyInterestsProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: Sizes.deviceWidth,
-      height: Sizes.deviceHeight * .12,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(Sizes.p8),
-        onTap: onPressed,
-        child: Row(
-          children: [
-            Expanded(
-              child: CachedNetworkImage(
-                placeholder: (_, url) => const Center(
-                  child: CircularProgressIndicator.adaptive(),
+    return InkWell(
+      borderRadius: BorderRadius.circular(Sizes.p8),
+      onTap: onPressed,
+      child: Row(
+        children: [
+          Expanded(
+            child: CachedNetworkImage(
+              placeholder: (_, url) => const Center(
+                child: CircularProgressIndicator.adaptive(),
+              ),
+              imageUrl: imageUrl,
+              width: 80,
+              height: 80,
+            ),
+          ),
+          gapW16,
+          Expanded(
+            flex: 3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  name,
+                  style: Get.textTheme.displayMedium,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
                 ),
-                imageUrl: imageUrl,
-                width: 80,
-                height: 80,
-              ),
-            ),
-            gapW16,
-            Expanded(
-              flex: 3,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    name,
-                    style: Get.textTheme.displayMedium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
+                Text(
+                  brand,
+                  style: Get.textTheme.titleMedium?.copyWith(
+                    color: AppColors.neutral700,
+                    fontWeight: Fonts.interRegular,
                   ),
-                  Text(
-                    brand,
-                    style: Get.textTheme.titleMedium?.copyWith(
-                      color: AppColors.neutral700,
-                      fontWeight: Fonts.interRegular,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                  gapH4,
-                  Text(
-                    '\$${price.toStringAsFixed(2)}',
-                    style: Get.textTheme.bodyMedium,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  )
-                ],
-              ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+                gapH4,
+                Text(
+                  '\$${price.toStringAsFixed(2)}',
+                  style: Get.textTheme.bodyMedium,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                )
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
