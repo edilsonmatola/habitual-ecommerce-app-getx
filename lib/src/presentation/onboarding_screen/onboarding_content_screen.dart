@@ -7,16 +7,19 @@ import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../core/core_export.dart';
 
-class OnboardContent extends StatefulWidget {
-  const OnboardContent({Key? key}) : super(key: key);
+class OnboardContentScreen extends StatefulWidget {
+  const OnboardContentScreen({Key? key}) : super(key: key);
 
   @override
-  State<OnboardContent> createState() => _OnboardContentState();
+  State<OnboardContentScreen> createState() => _OnboardContentScreenState();
 }
 
-class _OnboardContentState extends State<OnboardContent> {
+class _OnboardContentScreenState extends State<OnboardContentScreen> {
   late PageController _pageController;
   double _progress = 0.0;
+
+  final duration = const Duration(milliseconds: 500);
+  final easeOut = Curves.easeOut;
 
   @override
   void initState() {
@@ -55,8 +58,8 @@ class _OnboardContentState extends State<OnboardContent> {
                             (_pageController.page ?? 0).toInt() + 2;
                         _pageController.animateToPage(
                           lastPage,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.ease,
+                          duration: duration,
+                          curve: easeOut,
                         );
                       }),
                       OnBoarding2Screen(
@@ -65,14 +68,14 @@ class _OnboardContentState extends State<OnboardContent> {
                               (_pageController.page ?? 0).toInt() + 2;
                           _pageController.animateToPage(
                             lastPage,
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.ease,
+                            duration: duration,
+                            curve: easeOut,
                           );
                         },
                       ),
                       OnBoarding3Screen(
                         onClick: () => Get.offAllNamed(
-                          AppRoutes.registration1Route,
+                          AppRoutes.baseRoute,
                         ),
                       ),
                     ],
@@ -116,14 +119,13 @@ class _OnboardContentState extends State<OnboardContent> {
                         Opacity(
                           opacity: _progress > 1 ? 0 : 1,
                           child: const Text(
-                            "Next",
+                            'Next',
                           ),
                         ),
                         Opacity(
                           opacity: _progress < 2 ? 0 : 1,
                           child: const Text(
-                            "Sign Up",
-                            softWrap: false,
+                            'Sign Up',
                           ),
                         ),
                       ],
@@ -136,8 +138,8 @@ class _OnboardContentState extends State<OnboardContent> {
                 if (nextPage < 3) {
                   _pageController.animateToPage(
                     nextPage,
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.ease,
+                    duration: duration,
+                    curve: easeOut,
                   );
                 } else {
                   Get.offAllNamed(

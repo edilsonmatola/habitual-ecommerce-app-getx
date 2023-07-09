@@ -13,7 +13,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: OnboardContent(),
+        body: OnboardContentScreen(),
       ),
     );
   }

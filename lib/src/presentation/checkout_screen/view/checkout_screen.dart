@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/common_widgets/custom_divider.dart';
+import 'package:habitual/src/presentation/checkout_screen/view/components/credit_card.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/components/promo_code_textfield.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
@@ -49,12 +50,8 @@ class CheckoutScreen extends StatelessWidget {
                     ],
                   ),
                   gapH16,
-                  //* Bank Card
-                  Container(
-                    width: 342,
-                    height: 192,
-                    color: AppColors.blue500,
-                  ),
+                  //* Credit Card
+                  const CreditCard(),
                   gapH24,
                   const CustomDivider(hasText: false),
                   gapH24,

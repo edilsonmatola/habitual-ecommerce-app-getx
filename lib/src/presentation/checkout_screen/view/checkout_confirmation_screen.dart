@@ -54,7 +54,7 @@ class _CheckoutConfirmationScreenState
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  gapH280,
+                  gapH64,
                   PrimaryButton(
                     labelColor: AppColors.neutral800,
                     buttonLabel: 'Continue',
