@@ -75,7 +75,7 @@ class _OnboardContentScreenState extends State<OnboardContentScreen> {
                       ),
                       OnBoarding3Screen(
                         onClick: () => Get.offAllNamed(
-                          AppRoutes.registration1Route,
+                          AppRoutes.baseRoute,
                         ),
                       ),
                     ],
