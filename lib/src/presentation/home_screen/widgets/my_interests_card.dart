@@ -65,7 +65,7 @@ class _MyInterestsCardState extends State<MyInterestsCard>
                   PrimaryTextButton(
                     buttonLabel: 'View all',
                     onPressed: () {},
-                )
+                  ),
                 ],
               ),
               TabBar(
@@ -151,12 +151,6 @@ class _MyInterestsCardState extends State<MyInterestsCard>
                   ],
                 ),
               ),
-              // gapH16,
-              // PrimaryButton(
-              //   labelColor: AppColors.neutral800,
-              //   buttonLabel: 'View "Tech" products',
-              //   onPressed: () {},
-              // ),
             ],
           ),
         ),
