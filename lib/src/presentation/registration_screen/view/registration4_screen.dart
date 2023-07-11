@@ -7,8 +7,15 @@ import '../../../core/core_export.dart';
 import '../widgets/registration_progress_bar.dart';
 import '../widgets/user_interest_category_card.dart';
 
-class Registration4Screen extends StatelessWidget {
-  Registration4Screen({super.key});
+class Registration4Screen extends StatefulWidget {
+  const Registration4Screen({super.key});
+
+  @override
+  State<Registration4Screen> createState() => _Registration4ScreenState();
+}
+
+class _Registration4ScreenState extends State<Registration4Screen> {
+  final List<int> selectedIndex = [];
 
   final colors = [
     AppColors.purple300,
@@ -75,9 +82,20 @@ class Registration4Screen extends StatelessWidget {
                                 itemBuilder: (context, index) =>
                                     UserInterestCategoryCard(
                                   imageUrl: images[index],
-                                  isSelected: false,
+                                  isSelected: selectedIndex.contains(index),
                                   color: colors[index],
                                   category: categories[index],
+                                  onTap: () {
+                                    setState(() {
+                                      if (selectedIndex.contains(index)) {
+                                        selectedIndex.remove(index);
+                                        print(selectedIndex);
+                                      } else {
+                                        selectedIndex.add(index);
+                                        print(selectedIndex);
+                                      }
+                                    });
+                                  },
                                 ),
                               ),
                             ),
