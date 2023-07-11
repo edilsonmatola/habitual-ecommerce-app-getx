@@ -38,6 +38,9 @@ class _RegistrationCompletedState extends State<RegistrationCompleted> {
                 primary: true,
                 children: [
                   Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Sizes.p24,
+                    ),
                     height: Sizes.deviceHeight * 2 - (Sizes.deviceHeight * .80),
                     decoration: BoxDecoration(
                       color: AppColors.white,
@@ -53,7 +56,7 @@ class _RegistrationCompletedState extends State<RegistrationCompleted> {
                         gapH24,
                         Text(
                           'Registration complete! Get ready to have the best shopping experiences of your life.',
-                          style: Get.textTheme.displaySmall?.copyWith(
+                          style: Get.textTheme.bodyLarge?.copyWith(
                             color: AppColors.neutral700,
                           ),
                           textAlign: TextAlign.center,
@@ -108,7 +111,7 @@ class _RegistrationCompletedState extends State<RegistrationCompleted> {
                   children: [
                     PrimaryButton(
                       labelColor: AppColors.neutral800,
-                      onPressed: () => Get.toNamed(AppRoutes.baseRoute),
+                      onPressed: () => Get.offAllNamed(AppRoutes.baseRoute),
                       buttonLabel: 'Let the shopping begin!',
                       buttonColor: AppColors.yellow300,
                     ),

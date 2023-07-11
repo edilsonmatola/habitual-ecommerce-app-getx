@@ -15,6 +15,13 @@ class ProfileTabScreen extends StatefulWidget {
 }
 
 class _ProfileTabScreenState extends State<ProfileTabScreen> {
+  final accountSettings = [
+    'Orders',
+    'Payment Methods',
+    'Address',
+    'Cupons',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,10 +44,8 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                   right: Sizes.p24,
                 ),
                 child: PrimaryIconButton(
-                  icon: AppIcons.logoutIcon,
-                  onPressed: () => Get.offAllNamed(
-                    AppRoutes.signInRoute,
-                  ),
+                  icon: AppIcons.settingsIcon,
+                  onPressed: () {},
                 ),
               ),
             ],
@@ -97,9 +102,11 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     physics: const BouncingScrollPhysics(),
-                    itemCount: 10,
-                    separatorBuilder: (context, index) => gapW16,
-                    itemBuilder: (context, index) => const AccountCard(),
+                    itemCount: accountSettings.length,
+                    separatorBuilder: (_, index) => gapW16,
+                    itemBuilder: (_, index) => AccountCard(
+                      text: accountSettings[index],
+                    ),
                   ),
                 ),
               ],

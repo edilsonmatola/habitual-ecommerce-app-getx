@@ -10,13 +10,13 @@ class AccountCard extends StatelessWidget {
     this.width,
     this.height,
     // required this.icon,
-    // required this.text,
+    required this.text,
   });
 
   final double? width;
   final double? height;
   // final String icon;
-  // final String text;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class AccountCard extends StatelessWidget {
                       ),
                       gapH8,
                       Text(
-                        'Orders',
+                        text,
                         style: Get.textTheme.bodyMedium?.copyWith(
                           fontWeight: Fonts.interSemiBold,
                         ),
