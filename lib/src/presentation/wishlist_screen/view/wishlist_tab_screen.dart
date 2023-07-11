@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/constants/constants_export.dart';
 
-import '../../common_widgets/common_widgets_export.dart';
-import '../home_screen/widgets/main_card.dart';
+import '../../../common_widgets/common_widgets_export.dart';
+import '../../home_screen/widgets/main_card.dart';
 
 class WishlistTabScreen extends StatefulWidget {
   const WishlistTabScreen({super.key});

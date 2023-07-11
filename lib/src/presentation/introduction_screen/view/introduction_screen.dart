@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../common_widgets/common_widgets_export.dart';
-import '../../core/core_export.dart';
-import '../../routes/routes_export.dart';
+import '../../../common_widgets/common_widgets_export.dart';
+import '../../../core/core_export.dart';
+import '../../../routes/routes_export.dart';
 
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({Key? key}) : super(key: key);

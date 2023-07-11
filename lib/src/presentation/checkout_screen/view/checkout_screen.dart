@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/common_widgets/custom_divider.dart';
-import 'package:habitual/src/presentation/checkout_screen/view/components/credit_card.dart';
-import 'package:habitual/src/presentation/checkout_screen/view/components/promo_code_textfield.dart';
+import 'package:habitual/src/presentation/checkout_screen/widgets/credit_card.dart';
+import 'package:habitual/src/presentation/checkout_screen/widgets/promo_code_textfield.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../core/core_export.dart';
