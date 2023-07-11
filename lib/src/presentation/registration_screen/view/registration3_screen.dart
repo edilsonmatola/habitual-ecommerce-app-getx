@@ -84,16 +84,8 @@ class _Registration3ScreenState extends State<Registration3Screen> {
                                         });
                                       },
                                       text: userGoals[index],
-                                      borderColor:
-                                          !selectedIndex.contains(index)
-                                              ? AppColors.neutral800
-                                              : AppColors.neutral300,
-                                      cardColor: !selectedIndex.contains(index)
-                                          ? Colors.transparent
-                                          : AppColors.neutral800,
-                                      textColor: !selectedIndex.contains(index)
-                                          ? AppColors.neutral800
-                                          : AppColors.white,
+                                      isSelected:
+                                          !selectedIndex.contains(index),
                                     ),
                                   ),
                                 ),
