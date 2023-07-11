@@ -76,7 +76,7 @@ class DealsCard extends StatelessWidget {
                       Row(
                         children: [
                           const SvgAsset(
-                            icon: AppIcons.starIcon,
+                            assetPath: AppIcons.starIcon,
                             width: Sizes.p10,
                             height: Sizes.p10,
                           ),

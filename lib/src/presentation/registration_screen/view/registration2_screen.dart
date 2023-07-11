@@ -55,7 +55,7 @@ class Registration2Screen extends StatelessWidget {
                               minRadius: 60,
                               backgroundColor: AppColors.neutral100,
                               child: SvgAsset(
-                                icon: AppIcons.profileIcon,
+                                assetPath: AppIcons.profileIcon,
                                 width: 40,
                                 height: 40,
                                 color: AppColors.neutral400,

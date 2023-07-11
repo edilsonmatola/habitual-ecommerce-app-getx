@@ -65,7 +65,7 @@ class UserInterestCategoryCard extends StatelessWidget {
                 onPressed: onTap,
                 child: isSelected
                     ? SvgAsset(
-                        icon: AppIcons.checkIcon,
+                        assetPath: AppIcons.checkIcon,
                         width: Sizes.p24,
                         height: Sizes.p24,
                         color: AppColors.neutral800,

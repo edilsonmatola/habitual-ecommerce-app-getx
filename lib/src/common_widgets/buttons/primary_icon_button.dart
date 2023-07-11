@@ -20,7 +20,7 @@ class PrimaryIconButton extends StatelessWidget {
       highlightColor: AppColors.neutral300,
       onPressed: onPressed,
       icon: SvgAsset(
-        icon: icon,
+        assetPath: icon,
         width: Sizes.p20,
         height: Sizes.p20,
         color: color ?? AppColors.neutral800,

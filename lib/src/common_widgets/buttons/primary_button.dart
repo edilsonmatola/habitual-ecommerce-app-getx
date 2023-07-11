@@ -49,7 +49,7 @@ class PrimaryButton extends StatelessWidget {
                   ),
                   gapW8,
                   SvgAsset(
-                    icon: AppIcons.rightArrowIcon,
+                    assetPath: AppIcons.rightArrowIcon,
                     color: AppColors.white,
                     width: Sizes.p20,
                     height: Sizes.p20,

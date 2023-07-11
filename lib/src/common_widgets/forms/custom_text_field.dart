@@ -107,7 +107,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                         Sizes.p12,
                       ),
                       child: SvgAsset(
-                        icon:
+                        assetPath:
                             _isObscure ? AppIcons.eyeOffIcon : AppIcons.eyeIcon,
                       ),
                     ),

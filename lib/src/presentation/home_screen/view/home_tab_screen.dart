@@ -33,7 +33,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 bottom: Sizes.p16,
               ),
               child: SvgAsset(
-                icon: AppAssets.appLogoBlackSmall,
+                assetPath: AppAssets.appLogoBlackSmall,
               ),
             ),
             actions: [

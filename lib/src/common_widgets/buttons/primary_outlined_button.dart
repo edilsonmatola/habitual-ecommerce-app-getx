@@ -45,7 +45,7 @@ class PrimaryOutlinedButton extends StatelessWidget {
           ),
           onPressed: onPressed,
           child: SvgAsset(
-            icon: AppIcons.iOSRightArrowIcon,
+            assetPath: AppIcons.iOSRightArrowIcon,
             width: Sizes.p16,
             height: Sizes.p16,
             color: AppColors.neutral800,

@@ -20,7 +20,7 @@ class HeaderSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const SvgAsset(
-          icon: AppAssets.appLogoBlackSmall,
+          assetPath: AppAssets.appLogoBlackSmall,
           width: Sizes.p24,
           height: Sizes.p24,
         ),

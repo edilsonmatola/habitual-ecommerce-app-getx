@@ -51,7 +51,7 @@ class AccountCard extends StatelessWidget {
                     children: [
                       Expanded(
                         child: SvgAsset(
-                          icon: AppIcons.shoppingBagIcon,
+                          assetPath: AppIcons.shoppingBagIcon,
                           width: 40,
                           height: 40,
                           color: AppColors.neutral300,

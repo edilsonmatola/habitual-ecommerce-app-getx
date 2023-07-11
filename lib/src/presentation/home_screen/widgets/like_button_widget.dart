@@ -21,7 +21,7 @@ class LikeButtonWidget extends StatelessWidget {
     return IconButton(
       onPressed: onPressed,
       icon: SvgAsset(
-        icon: AppIcons.favoriteIcon,
+        assetPath: AppIcons.favoriteIcon,
         width: width ?? Sizes.p20,
         height: height ?? Sizes.p20,
         color: color ?? AppColors.neutral800,

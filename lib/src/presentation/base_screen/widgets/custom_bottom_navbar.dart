@@ -41,7 +41,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       items: [
         BottomNavigationBarItem(
           icon: SvgAsset(
-            icon: AppIcons.homeIcon,
+            assetPath: AppIcons.homeIcon,
             color:
                 currentPage == 0 ? AppColors.neutral900 : AppColors.neutral400,
           ),
@@ -49,7 +49,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: SvgAsset(
-            icon: AppIcons.favoriteIcon,
+            assetPath: AppIcons.favoriteIcon,
             color:
                 currentPage == 1 ? AppColors.neutral900 : AppColors.neutral400,
           ),
@@ -57,7 +57,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: SvgAsset(
-            icon: AppIcons.profileIcon,
+            assetPath: AppIcons.profileIcon,
             color:
                 currentPage == 2 ? AppColors.neutral900 : AppColors.neutral400,
           ),
@@ -65,7 +65,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: SvgAsset(
-            icon: AppIcons.searchIcon,
+            assetPath: AppIcons.searchIcon,
             color:
                 currentPage == 3 ? AppColors.neutral900 : AppColors.neutral400,
           ),

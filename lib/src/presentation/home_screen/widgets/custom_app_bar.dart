@@ -21,13 +21,13 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const SvgAsset(
-          icon: AppAssets.appLogoBlackSmall,
+          assetPath: AppAssets.appLogoBlackSmall,
           width: Sizes.p24,
           height: Sizes.p24,
         ),
         IconButton(
           icon: SvgAsset(
-            icon: iconButton,
+            assetPath: iconButton,
             width: Sizes.p20,
             height: Sizes.p20,
             color: color ?? AppColors.neutral800,
