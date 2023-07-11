@@ -36,7 +36,7 @@ class UserGoalCard extends StatelessWidget {
           // color: cardColor,
           border: Border.all(
             // color: borderColor,
-            color: isSelected ? AppColors.neutral800 : AppColors.neutral300,
+            color: !isSelected ? AppColors.neutral800 : AppColors.neutral300,
           ),
           borderRadius: BorderRadius.circular(100),
         ),
