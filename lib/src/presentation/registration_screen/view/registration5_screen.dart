@@ -16,9 +16,9 @@ class Registration5Screen extends StatefulWidget {
 }
 
 class _Registration5ScreenState extends State<Registration5Screen> {
-  final isMusicChecked = false.obs;
-  final isFashionChecked = false.obs;
-  final isGamingChecked = false.obs;
+  final List<int> selectedMusicIndex = [];
+  final List<int> selectedFashionIndex = [];
+  final List<int> selectedGamingIndex = [];
 
   final musicInterests = ['Vynil', 'Live Music', 'Hip Hop', 'Instruments'];
 
@@ -75,11 +75,15 @@ class _Registration5ScreenState extends State<Registration5Screen> {
                         itemCount: musicInterests.length,
                         separatorBuilder: (_, index) => gapH8,
                         itemBuilder: (_, index) => InterestDetailsTile(
-                          value: isMusicChecked.value,
+                          value: selectedMusicIndex.contains(index),
                           interestTitle: musicInterests[index],
                           onChanged: (value) {
                             setState(() {
-                              isMusicChecked.value = value!;
+                              if (selectedMusicIndex.contains(index)) {
+                                selectedMusicIndex.remove(index);
+                              } else {
+                                selectedMusicIndex.add(index);
+                              }
                             });
                           },
                         ),
@@ -111,11 +115,17 @@ class _Registration5ScreenState extends State<Registration5Screen> {
                         itemCount: fashionInterests.length,
                         separatorBuilder: (_, index) => gapH8,
                         itemBuilder: (_, index) => InterestDetailsTile(
-                          value: isFashionChecked.value,
+                          value: selectedFashionIndex.contains(index),
                           interestTitle: fashionInterests[index],
                           onChanged: (value) {
                             setState(() {
-                              isFashionChecked.value = value!;
+                              setState(() {
+                                if (selectedFashionIndex.contains(index)) {
+                                  selectedFashionIndex.remove(index);
+                                } else {
+                                  selectedFashionIndex.add(index);
+                                }
+                              });
                             });
                           },
                         ),
@@ -147,11 +157,17 @@ class _Registration5ScreenState extends State<Registration5Screen> {
                         itemCount: gamingInterests.length,
                         separatorBuilder: (_, index) => gapH8,
                         itemBuilder: (_, index) => InterestDetailsTile(
-                          value: isGamingChecked.value,
+                          value: selectedGamingIndex.contains(index),
                           interestTitle: gamingInterests[index],
                           onChanged: (value) {
                             setState(() {
-                              isGamingChecked.value = value!;
+                              setState(() {
+                                if (selectedGamingIndex.contains(index)) {
+                                  selectedGamingIndex.remove(index);
+                                } else {
+                                  selectedGamingIndex.add(index);
+                                }
+                              });
                             });
                           },
                         ),
