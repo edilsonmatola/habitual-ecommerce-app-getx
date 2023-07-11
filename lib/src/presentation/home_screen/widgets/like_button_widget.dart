@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/core/core_export.dart';
 
 class LikeButtonWidget extends StatelessWidget {
@@ -20,7 +20,7 @@ class LikeButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: onPressed,
-      icon: SvgIcon(
+      icon: SvgAsset(
         icon: AppIcons.favoriteIcon,
         width: width ?? Sizes.p20,
         height: height ?? Sizes.p20,

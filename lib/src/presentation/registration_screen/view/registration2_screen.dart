@@ -5,7 +5,7 @@ import 'package:habitual/src/core/core_export.dart';
 import 'package:habitual/src/presentation/registration_screen/widgets/registration_progress_bar.dart';
 import 'package:habitual/src/routes/routes_export.dart';
 
-import '../../../common_widgets/svg_icon.dart';
+import '../../../common_widgets/svg_asset.dart';
 
 class Registration2Screen extends StatelessWidget {
   const Registration2Screen({super.key});
@@ -54,7 +54,7 @@ class Registration2Screen extends StatelessWidget {
                               maxRadius: 60,
                               minRadius: 60,
                               backgroundColor: AppColors.neutral100,
-                              child: SvgIcon(
+                              child: SvgAsset(
                                 icon: AppIcons.profileIcon,
                                 width: 40,
                                 height: 40,

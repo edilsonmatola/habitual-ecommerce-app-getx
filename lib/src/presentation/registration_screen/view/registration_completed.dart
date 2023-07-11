@@ -17,29 +17,33 @@ class RegistrationCompleted extends StatelessWidget {
             padding: const EdgeInsetsDirectional.symmetric(
               horizontal: Sizes.p24,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: Stack(
               children: [
-                Text(
-                  'Woohoo!',
-                  style: Get.textTheme.headlineLarge,
-                  textAlign: TextAlign.center,
-                ),
-                gapH24,
-                Text(
-                  'Registration complete! Get ready to have the best shopping experiences of your life.',
-                  style: Get.textTheme.displaySmall?.copyWith(
-                    color: AppColors.neutral700,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                gapH64,
-                PrimaryButton(
-                  labelColor: AppColors.neutral800,
-                  buttonLabel: 'Let the shopping begin!',
-                  onPressed: () => Get.offAllNamed(
-                    AppRoutes.baseRoute,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Woohoo!',
+                      style: Get.textTheme.headlineLarge,
+                      textAlign: TextAlign.center,
+                    ),
+                    gapH24,
+                    Text(
+                      'Registration complete! Get ready to have the best shopping experiences of your life.',
+                      style: Get.textTheme.displaySmall?.copyWith(
+                        color: AppColors.neutral700,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    gapH64,
+                    PrimaryButton(
+                      labelColor: AppColors.neutral800,
+                      buttonLabel: 'Let the shopping begin!',
+                      onPressed: () => Get.offAllNamed(
+                        AppRoutes.baseRoute,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/constants/constants_export.dart';
 
-import '../../../common_widgets/svg_icon.dart';
+import '../../../common_widgets/svg_asset.dart';
 
 class UserInterestCategoryCard extends StatelessWidget {
   const UserInterestCategoryCard({
@@ -64,7 +64,7 @@ class UserInterestCategoryCard extends StatelessWidget {
                 ),
                 onPressed: onTap,
                 child: isSelected
-                    ? SvgIcon(
+                    ? SvgAsset(
                         icon: AppIcons.checkIcon,
                         width: Sizes.p24,
                         height: Sizes.p24,

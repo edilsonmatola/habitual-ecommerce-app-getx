@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/core/core_export.dart';
 
 class CustomTextField extends StatefulWidget {
@@ -106,7 +106,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       padding: const EdgeInsets.all(
                         Sizes.p12,
                       ),
-                      child: SvgIcon(
+                      child: SvgAsset(
                         icon:
                             _isObscure ? AppIcons.eyeOffIcon : AppIcons.eyeIcon,
                       ),
