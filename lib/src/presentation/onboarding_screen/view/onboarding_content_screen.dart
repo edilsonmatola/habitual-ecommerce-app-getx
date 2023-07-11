@@ -7,7 +7,6 @@ import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../core/core_export.dart';
 
-
 class OnboardContentScreen extends StatefulWidget {
   const OnboardContentScreen({Key? key}) : super(key: key);
 
