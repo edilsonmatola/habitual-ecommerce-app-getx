@@ -111,7 +111,7 @@ class _RegistrationCompletedState extends State<RegistrationCompleted> {
                   children: [
                     PrimaryButton(
                       labelColor: AppColors.neutral800,
-                      onPressed: () => Get.toNamed(AppRoutes.baseRoute),
+                      onPressed: () => Get.offAllNamed(AppRoutes.baseRoute),
                       buttonLabel: 'Let the shopping begin!',
                       buttonColor: AppColors.yellow300,
                     ),
