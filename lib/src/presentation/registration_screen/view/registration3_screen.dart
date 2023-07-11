@@ -76,10 +76,8 @@ class _Registration3ScreenState extends State<Registration3Screen> {
                                         setState(() {
                                           if (selectedIndex.contains(index)) {
                                             selectedIndex.remove(index);
-                                            print(selectedIndex);
                                           } else {
                                             selectedIndex.add(index);
-                                            print(selectedIndex);
                                           }
                                         });
                                       },
