@@ -103,11 +103,14 @@ class _OnboardContentScreenState extends State<OnboardContentScreen> {
                       _progress <= 1 ? AppColors.white : AppColors.neutral800,
                   fontWeight: Fonts.interMedium,
                 ),
+                textAlign: TextAlign.center,
                 overflow: TextOverflow.fade,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Stack(
+                      alignment: Alignment.center,
                       fit: StackFit.passthrough,
                       children: [
                         Opacity(
