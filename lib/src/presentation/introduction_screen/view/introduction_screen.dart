@@ -25,7 +25,6 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
             if (notify is ScrollUpdateNotification) {
               setState(() {
                 divOne += notify.scrollDelta! / 1;
-                print('divOne: $divOne');
                 divFive += notify.scrollDelta! / 5;
               });
             }
