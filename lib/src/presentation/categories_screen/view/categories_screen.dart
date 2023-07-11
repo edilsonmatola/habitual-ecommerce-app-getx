@@ -187,7 +187,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                                 : AppColors.neutral800,
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   gapH24,
