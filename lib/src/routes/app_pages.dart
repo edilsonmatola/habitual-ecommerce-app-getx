@@ -11,10 +11,10 @@ import 'package:habitual/src/presentation/product_details_screen/view/view_produ
 import 'package:habitual/src/presentation/registration_screen/view/registration_completed.dart';
 
 import '../presentation/base_screen/base_screen.dart';
-import '../presentation/onboarding_screen/onboarding_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding1_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding2_screen.dart';
 import '../presentation/onboarding_screen/view/onboarding3_screen.dart';
+import '../presentation/onboarding_screen/view/onboarding_screen.dart';
 import '../presentation/registration_screen/view/registration1_screen.dart';
 import '../presentation/registration_screen/view/registration2_screen.dart';
 import '../presentation/registration_screen/view/registration3_screen.dart';
