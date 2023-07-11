@@ -4,13 +4,13 @@ import 'package:flutter_svg/svg.dart';
 class SvgAsset extends StatelessWidget {
   const SvgAsset({
     super.key,
-    required this.icon,
+    required this.assetPath,
     this.color,
     this.width,
     this.height,
   });
 
-  final String icon;
+  final String assetPath;
   final Color? color;
   final double? width;
   final double? height;
@@ -18,7 +18,7 @@ class SvgAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      icon,
+      assetPath,
       width: width,
       height: height,
       color: color,
