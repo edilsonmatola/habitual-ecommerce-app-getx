@@ -34,42 +34,51 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       currentIndex: currentPage,
       type: BottomNavigationBarType.fixed,
       backgroundColor: AppColors.white,
+      unselectedItemColor: AppColors.neutral400,
       unselectedLabelStyle: TextStyle(
         color: AppColors.neutral400,
         fontFamily: Fonts.interFontFamily,
       ),
       items: [
         BottomNavigationBarItem(
+          label: 'Home',
           icon: SvgAsset(
             assetPath: AppIcons.homeIcon,
             color:
                 currentPage == 0 ? AppColors.neutral900 : AppColors.neutral400,
           ),
-          label: 'Home',
+          backgroundColor:
+              currentPage == 0 ? AppColors.neutral900 : AppColors.neutral400,
         ),
         BottomNavigationBarItem(
+          label: 'Wishlist',
           icon: SvgAsset(
             assetPath: AppIcons.favoriteIcon,
             color:
                 currentPage == 1 ? AppColors.neutral900 : AppColors.neutral400,
           ),
-          label: 'Wishlist',
+          backgroundColor:
+              currentPage == 1 ? AppColors.neutral900 : AppColors.neutral400,
         ),
         BottomNavigationBarItem(
+          label: 'Profile',
           icon: SvgAsset(
             assetPath: AppIcons.profileIcon,
             color:
                 currentPage == 2 ? AppColors.neutral900 : AppColors.neutral400,
           ),
-          label: 'Profile',
+          backgroundColor:
+              currentPage == 2 ? AppColors.neutral900 : AppColors.neutral400,
         ),
         BottomNavigationBarItem(
+          label: 'Search',
           icon: SvgAsset(
             assetPath: AppIcons.searchIcon,
             color:
                 currentPage == 3 ? AppColors.neutral900 : AppColors.neutral400,
           ),
-          label: 'Search',
+          backgroundColor:
+              currentPage == 3 ? AppColors.neutral900 : AppColors.neutral400,
         ),
       ],
     );
