@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 
 import '../../core/core_export.dart';
 
@@ -48,8 +48,8 @@ class PrimaryButton extends StatelessWidget {
                     ),
                   ),
                   gapW8,
-                  SvgIcon(
-                    icon: AppIcons.rightArrowIcon,
+                  SvgAsset(
+                    assetPath: AppIcons.rightArrowIcon,
                     color: AppColors.white,
                     width: Sizes.p20,
                     height: Sizes.p20,

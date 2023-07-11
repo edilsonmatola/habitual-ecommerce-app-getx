@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/core/core_export.dart';
 
 class PrimaryIconButton extends StatelessWidget {
@@ -19,8 +19,8 @@ class PrimaryIconButton extends StatelessWidget {
     return IconButton(
       highlightColor: AppColors.neutral300,
       onPressed: onPressed,
-      icon: SvgIcon(
-        icon: icon,
+      icon: SvgAsset(
+        assetPath: icon,
         width: Sizes.p20,
         height: Sizes.p20,
         color: color ?? AppColors.neutral800,

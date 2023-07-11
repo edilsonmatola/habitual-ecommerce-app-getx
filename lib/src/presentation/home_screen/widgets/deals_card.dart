@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/like_button_widget.dart';
 
 import '../../../core/core_export.dart';
@@ -75,8 +75,8 @@ class DealsCard extends StatelessWidget {
                       gapH4,
                       Row(
                         children: [
-                          const SvgIcon(
-                            icon: AppIcons.starIcon,
+                          const SvgAsset(
+                            assetPath: AppIcons.starIcon,
                             width: Sizes.p10,
                             height: Sizes.p10,
                           ),

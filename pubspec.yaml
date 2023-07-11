@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -38,7 +38,7 @@ dependencies:
   flutter_svg: ^2.0.1
   responsive_framework: ^0.2.0
   cached_network_image: ^3.2.3
-  shimmer: ^2.0.0
+  shimmer: ^3.0.0
   flutter_localizations:
     sdk: flutter
   intl: any

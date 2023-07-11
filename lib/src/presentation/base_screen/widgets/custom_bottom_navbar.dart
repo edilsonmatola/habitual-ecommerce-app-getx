@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 
 import '../../../core/core_export.dart';
 
@@ -40,32 +40,32 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       ),
       items: [
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: AppIcons.homeIcon,
+          icon: SvgAsset(
+            assetPath: AppIcons.homeIcon,
             color:
                 currentPage == 0 ? AppColors.neutral900 : AppColors.neutral400,
           ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: AppIcons.favoriteIcon,
+          icon: SvgAsset(
+            assetPath: AppIcons.favoriteIcon,
             color:
                 currentPage == 1 ? AppColors.neutral900 : AppColors.neutral400,
           ),
           label: 'Wishlist',
         ),
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: AppIcons.profileIcon,
+          icon: SvgAsset(
+            assetPath: AppIcons.profileIcon,
             color:
                 currentPage == 2 ? AppColors.neutral900 : AppColors.neutral400,
           ),
           label: 'Profile',
         ),
         BottomNavigationBarItem(
-          icon: SvgIcon(
-            icon: AppIcons.searchIcon,
+          icon: SvgAsset(
+            assetPath: AppIcons.searchIcon,
             color:
                 currentPage == 3 ? AppColors.neutral900 : AppColors.neutral400,
           ),

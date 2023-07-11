@@ -38,17 +38,22 @@ class AppAssets {
   * ==== Paralax Background Images ====
    */
   static const paralaxImage1 =
-      'assets/images/intro_screen/paralax-background/image-1.svg';
+      'assets/images/intro_screen/image-1.png';
   static const paralaxImage2 =
-      'assets/images/intro_screen/paralax-background/image-2.svg';
+      'assets/images/intro_screen/image-2.png';
   static const paralaxImage3 =
-      'assets/images/intro_screen/paralax-background/image-3.svg';
+      'assets/images/intro_screen/image-3.png';
   static const paralaxImage4 =
-      'assets/images/intro_screen/paralax-background/image-4.svg';
+      'assets/images/intro_screen/image-4.png';
   static const paralaxImage5 =
-      'assets/images/intro_screen/paralax-background/image-5.svg';
+      'assets/images/intro_screen/image-5.png';
   static const paralaxImage6 =
-      'assets/images/intro_screen/paralax-background/image-6.svg';
+      'assets/images/intro_screen/image-6.png';
+      static const paralaxImage7 = 'assets/images/intro_screen/image-7.png';
+  static const paralaxImage8 = 'assets/images/intro_screen/image-8.png';
+  static const paralaxImage9 = 'assets/images/intro_screen/image-9.png';
+  static const paralaxImage10 = 'assets/images/intro_screen/image-10.png';
+  static const paralaxImage11 = 'assets/images/intro_screen/image-11.png';
 
   static Future<void> preloadSVGs() async {
     final assets = [
@@ -61,12 +66,12 @@ class AppAssets {
       wishlistEmpty,
       profileEmpty,
       // * Paralax
-      paralaxImage1,
-      paralaxImage2,
-      paralaxImage3,
-      paralaxImage4,
-      paralaxImage5,
-      paralaxImage6,
+      // paralaxImage1,
+      // paralaxImage2,
+      // paralaxImage3,
+      // paralaxImage4,
+      // paralaxImage5,
+      // paralaxImage6,
 // * Others
       lookingImage,
       mailboxImage,

@@ -6,9 +6,22 @@ import 'package:habitual/src/presentation/registration_screen/widgets/registrati
 import 'package:habitual/src/presentation/registration_screen/widgets/user_goal_card.dart';
 import 'package:habitual/src/routes/routes_export.dart';
 
-class Registration3Screen extends StatelessWidget {
+class Registration3Screen extends StatefulWidget {
   const Registration3Screen({super.key});
 
+  @override
+  State<Registration3Screen> createState() => _Registration3ScreenState();
+}
+
+class _Registration3ScreenState extends State<Registration3Screen> {
+  final List<int> selectedIndex = [];
+
+  final userGoals = [
+    'Discover new products',
+    'Make monthly shopping easier',
+    'Relevant recommendations',
+    'Get notified of deals',
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -50,24 +63,31 @@ class Registration3Screen extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                             gapH32,
-                            const UserGoalCard(
-                              text: 'Discover new products',
-                              isSelected: false,
-                            ),
-                            gapH12,
-                            const UserGoalCard(
-                              text: 'Make monthly shopping easier',
-                              isSelected: false,
-                            ),
-                            gapH12,
-                            const UserGoalCard(
-                              text: 'Relevant recommendations',
-                              isSelected: true,
-                            ),
-                            gapH12,
-                            const UserGoalCard(
-                              text: 'Get notified of deals',
-                              isSelected: true,
+                            Column(
+                              children: [
+                                ...List.generate(
+                                  userGoals.length,
+                                  (index) => Padding(
+                                    padding: const EdgeInsets.only(
+                                      bottom: Sizes.p12,
+                                    ),
+                                    child: UserGoalCard(
+                                      onTap: () {
+                                        setState(() {
+                                          if (selectedIndex.contains(index)) {
+                                            selectedIndex.remove(index);
+                                          } else {
+                                            selectedIndex.add(index);
+                                          }
+                                        });
+                                      },
+                                      text: userGoals[index],
+                                      isSelected:
+                                          !selectedIndex.contains(index),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),

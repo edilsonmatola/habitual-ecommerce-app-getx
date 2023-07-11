@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../home_screen/home_tab_screen.dart';
+import '../home_screen/view/home_tab_screen.dart';
 import '../profile_screen/profile_tab_screen.dart';
 import '../search_screen/search_tab_screen.dart';
-import '../wishlist_screen/wishlist_tab_screen.dart';
+import '../wishlist_screen/view/wishlist_tab_screen.dart';
 import 'widgets/custom_bottom_navbar.dart';
 
 class BaseScreen extends StatefulWidget {

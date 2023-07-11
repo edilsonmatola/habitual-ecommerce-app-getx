@@ -5,7 +5,7 @@ import 'package:habitual/src/presentation/onboarding_screen/view/onboarding2_scr
 import 'package:habitual/src/presentation/onboarding_screen/view/onboarding3_screen.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
-import '../../core/core_export.dart';
+import '../../../core/core_export.dart';
 
 class OnboardContentScreen extends StatefulWidget {
   const OnboardContentScreen({Key? key}) : super(key: key);

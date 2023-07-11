@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
-import 'package:habitual/src/common_widgets/svg_icon.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/home_category_card.dart';
 import 'package:habitual/src/presentation/home_screen/widgets/my_interests_card.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
-import '../../core/core_export.dart';
-import 'widgets/main_card.dart';
+import '../../../core/core_export.dart';
+import '../widgets/main_card.dart';
 
 class HomeTabScreen extends StatefulWidget {
   const HomeTabScreen({super.key});
@@ -32,8 +32,8 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                 top: Sizes.p16,
                 bottom: Sizes.p16,
               ),
-              child: SvgIcon(
-                icon: AppAssets.appLogoBlackSmall,
+              child: SvgAsset(
+                assetPath: AppAssets.appLogoBlackSmall,
               ),
             ),
             actions: [
