@@ -23,8 +23,8 @@ class AccountCard extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          width: width ?? 118,
-          height: height ?? 118,
+          width: width ?? 120,
+          height: height ?? 120,
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
@@ -52,8 +52,8 @@ class AccountCard extends StatelessWidget {
                       Expanded(
                         child: SvgAsset(
                           assetPath: AppIcons.shoppingBagIcon,
-                          width: 40,
-                          height: 40,
+                          width: 60,
+                          height: 60,
                           color: AppColors.neutral300,
                         ),
                       ),
