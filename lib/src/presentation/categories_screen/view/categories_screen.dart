@@ -87,6 +87,13 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     'https://cdn11.bigcommerce.com/s-h0bqu/images/stencil/1280x1280/products/4398/9412/Fender_Bullet_Stratocaster_HT_Electric_Guitar_Brown_Sunburst__34857.1678809883.png?c=2',
     'https://bookbins.in/wp-content/uploads/2021/08/The-48-Laws-Of-Power-Robert-Greene-Buy-Online-Bookbins-1.png',
   ];
+
+  final dealsImages = [
+    'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+    'https://images.csmonitor.com/csm/2014/06/hobbit.png?alias=standard_900x600nc',
+    'https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/171/17145/17145330_8.png',
+    'https://media2.sport-bittl.com/images/product_images/original_images/27826167676a_Birkenstock_Arizona_Schuh_He_schwarz.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -214,9 +221,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                       padding: const EdgeInsets.symmetric(
                         horizontal: Sizes.p24,
                       ),
-                      itemCount: 10,
+                      itemCount: dealsImages.length,
                       separatorBuilder: (_, index) => gapW16,
                       itemBuilder: (_, index) => DealsCard(
+                        imageUrl: dealsImages[index],
                         onCardTap: () {},
                         onLikeTap: () {},
                       ),
