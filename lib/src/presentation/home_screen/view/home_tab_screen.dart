@@ -18,6 +18,28 @@ class HomeTabScreen extends StatefulWidget {
 }
 
 class _HomeTabScreenState extends State<HomeTabScreen> {
+  final trendingCardColors = [
+    AppColors.blue300,
+    AppColors.green300,
+    AppColors.purple300,
+    AppColors.red300,
+    AppColors.yellow300,
+  ];
+
+  final trendingImages = [
+    'https://res-1.cloudinary.com/grover/image/upload/v1678133137/uwe0cdxwdhfmqp2z7tlt.png',
+    'https://bumpshoes.com/cdn/shop/products/main_1055x.png?v=1518846318',
+    'https://assets.sunglasshut.com/is/image/LuxotticaRetail/8056597614160__STD__shad__qt.png?impolicy=SGH_bgtransparent&width=1000',
+    'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104146487/fee_786_587_png',
+  ];
+
+  final dealsImages = [
+    'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+    'https://images.csmonitor.com/csm/2014/06/hobbit.png?alias=standard_900x600nc',
+    'https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/171/17145/17145330_8.png',
+    'https://media2.sport-bittl.com/images/product_images/original_images/27826167676a_Birkenstock_Arizona_Schuh_He_schwarz.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     const isLoggedIn = true;
@@ -91,11 +113,12 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                       horizontal: Sizes.p24,
                     ),
                     physics: const BouncingScrollPhysics(),
-                    itemCount: 10,
+                    itemCount: trendingImages.length,
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => MainCard(
-                      imageUrl:
-                          'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                      cardColor:
+                          trendingCardColors[index % trendingCardColors.length],
+                      imageUrl: trendingImages[index],
                       onPressed: () => Get.toNamed(
                         AppRoutes.productDetailsRoute,
                       ),
@@ -132,9 +155,10 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     padding: const EdgeInsets.symmetric(
                       horizontal: Sizes.p24,
                     ),
-                    itemCount: 10,
+                    itemCount: dealsImages.length,
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => DealsCard(
+                      imageUrl: dealsImages[index],
                       onCardTap: () {},
                       onLikeTap: () {},
                     ),
