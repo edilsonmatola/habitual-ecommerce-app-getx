@@ -35,12 +35,26 @@ class _MyInterestsScreenState extends State<MyInterestsScreen> {
     'https://bookbins.in/wp-content/uploads/2021/08/The-48-Laws-Of-Power-Robert-Greene-Buy-Online-Bookbins-1.png',
   ];
 
+  final trendingInGamingImages = [
+    'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+    'https://images.csmonitor.com/csm/2014/06/hobbit.png?alias=standard_900x600nc',
+    'https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/171/17145/17145330_8.png',
+    'https://media2.sport-bittl.com/images/product_images/original_images/27826167676a_Birkenstock_Arizona_Schuh_He_schwarz.png',
+  ];
+
+  final trendingInReadingImages = [
+    'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+    'https://images.csmonitor.com/csm/2014/06/hobbit.png?alias=standard_900x600nc',
+    'https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/171/17145/17145330_8.png',
+    'https://media2.sport-bittl.com/images/product_images/original_images/27826167676a_Birkenstock_Arizona_Schuh_He_schwarz.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          headerSliverBuilder: (_, innerBoxIsScrolled) => [
             SliverAppBar(
               title: Padding(
                 padding: const EdgeInsets.only(
@@ -110,8 +124,37 @@ class _MyInterestsScreenState extends State<MyInterestsScreen> {
                     ),
                   ),
                   gapH24,
-                  // TODO: Trending in Reading
-                  // TODO: Trending in Gaming
+                  // * Gaming
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Trending in Gaming',
+                          style: Get.textTheme.displayLarge,
+                        ),
+                      ),
+                      PrimaryTextButton(
+                        buttonLabel: 'View all',
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  gapH24,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Trending in Reading',
+                          style: Get.textTheme.displayLarge,
+                        ),
+                      ),
+                      PrimaryTextButton(
+                        buttonLabel: 'View all',
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  gapH8,
                 ],
               ),
             ),
