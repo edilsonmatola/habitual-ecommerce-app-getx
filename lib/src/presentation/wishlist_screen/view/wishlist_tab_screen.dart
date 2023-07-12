@@ -57,56 +57,59 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
             ],
           ),
         ],
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.only(
-            left: Sizes.p24,
-            right: Sizes.p24,
-            bottom: Sizes.p32,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              EmptyStateCard(
-                hasDescription: false,
-                cardImage: AppAssets.wishlistEmpty,
-                cardTitle: 'Uh Oh! You have no saved products.',
-                cardColor: AppColors.purple300,
-                buttonText: '+ Create a wishlist',
-                buttonPressed: () {},
-              ),
-              gapH32,
-              Row(
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: Text(
-                      'Trending',
-                      style: Get.textTheme.headlineSmall,
+        body: ScrollConfiguration(
+          behavior: const ScrollBehavior().copyWith(overscroll: false),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.only(
+              left: Sizes.p24,
+              right: Sizes.p24,
+              bottom: Sizes.p32,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                EmptyStateCard(
+                  hasDescription: false,
+                  cardImage: AppAssets.wishlistEmpty,
+                  cardTitle: 'Uh Oh! You have no saved products.',
+                  cardColor: AppColors.purple300,
+                  buttonText: '+ Create a wishlist',
+                  buttonPressed: () {},
+                ),
+                gapH32,
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        'Trending',
+                        style: Get.textTheme.headlineSmall,
+                      ),
+                    ),
+                    PrimaryTextButton(
+                      buttonLabel: 'View all',
+                      onPressed: () {},
+                    )
+                  ],
+                ),
+                gapH16,
+                SizedBox(
+                  height: Sizes.deviceHeight * .45,
+                  child: ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: trendingImages.length,
+                    separatorBuilder: (_, index) => gapW16,
+                    itemBuilder: (_, index) => MainCard(
+                      cardColor:
+                          trendingCardColors[index % trendingCardColors.length],
+                      imageUrl: trendingImages[index],
                     ),
                   ),
-                  PrimaryTextButton(
-                    buttonLabel: 'View all',
-                    onPressed: () {},
-                  )
-                ],
-              ),
-              gapH16,
-              SizedBox(
-                height: Sizes.deviceHeight * .45,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: trendingImages.length,
-                  separatorBuilder: (_, index) => gapW16,
-                  itemBuilder: (_, index) => MainCard(
-                    cardColor:
-                        trendingCardColors[index % trendingCardColors.length],
-                    imageUrl: trendingImages[index],
-                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
