@@ -11,7 +11,8 @@ class MainCard extends StatelessWidget {
     this.width,
     this.height,
     this.cardColor,
-    this.onPressed, required this.imageUrl,
+    this.onPressed,
+    required this.imageUrl,
   });
 
   final double? width;
@@ -48,15 +49,19 @@ class MainCard extends StatelessWidget {
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      gapH24,
                       Expanded(
-                        child: CachedNetworkImage(
-                          imageUrl: imageUrl,
-                          fit: BoxFit.contain,
-                          placeholder: (context, url) => Center(
-                            child: CircularProgressIndicator.adaptive(
-                              valueColor: AlwaysStoppedAnimation(
-                                AppColors.neutral800,
+                        child: Center(
+                          child: CachedNetworkImage(
+                            imageUrl: imageUrl,
+                            fit: BoxFit.contain,
+                            placeholder: (_, url) => Center(
+                              child: CircularProgressIndicator.adaptive(
+                                valueColor: AlwaysStoppedAnimation(
+                                  AppColors.neutral800,
+                                ),
                               ),
                             ),
                           ),
