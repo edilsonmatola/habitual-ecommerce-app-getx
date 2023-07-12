@@ -13,6 +13,21 @@ class WishlistTabScreen extends StatefulWidget {
 }
 
 class _WishlistTabScreenState extends State<WishlistTabScreen> {
+  final trendingCardColors = [
+    AppColors.blue300,
+    AppColors.green300,
+    AppColors.purple300,
+    AppColors.red300,
+    AppColors.yellow300,
+  ];
+
+  final trendingImages = [
+    'https://res-1.cloudinary.com/grover/image/upload/v1678133137/uwe0cdxwdhfmqp2z7tlt.png',
+    'https://bumpshoes.com/cdn/shop/products/main_1055x.png?v=1518846318',
+    'https://assets.sunglasshut.com/is/image/LuxotticaRetail/8056597614160__STD__shad__qt.png?impolicy=SGH_bgtransparent&width=1000',
+    'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104146487/fee_786_587_png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,11 +97,12 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   physics: const BouncingScrollPhysics(),
-                  itemCount: 10,
+                  itemCount: trendingImages.length,
                   separatorBuilder: (_, index) => gapW16,
-                  itemBuilder: (_, index) => const MainCard(
-                    imageUrl:
-                        'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                  itemBuilder: (_, index) => MainCard(
+                    cardColor:
+                        trendingCardColors[index % trendingCardColors.length],
+                    imageUrl: trendingImages[index],
                   ),
                 ),
               ),
