@@ -12,7 +12,8 @@ class DealsCard extends StatelessWidget {
     this.width,
     this.height,
     this.onLikeTap,
-    this.onCardTap, required this.imageUrl,
+    this.onCardTap,
+    required this.imageUrl,
   });
 
   final double? width;
@@ -26,8 +27,8 @@ class DealsCard extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          width: width ?? 163,
-          height: height ?? 300,
+          width: Sizes.deviceWidth * .40,
+          height: Sizes.deviceHeight * .30,
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
