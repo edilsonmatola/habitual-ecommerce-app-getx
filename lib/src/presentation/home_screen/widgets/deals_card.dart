@@ -12,11 +12,12 @@ class DealsCard extends StatelessWidget {
     this.width,
     this.height,
     this.onLikeTap,
-    this.onCardTap,
+    this.onCardTap, required this.imageUrl,
   });
 
   final double? width;
   final double? height;
+  final String imageUrl;
   final VoidCallback? onLikeTap;
   final VoidCallback? onCardTap;
 
@@ -54,8 +55,7 @@ class DealsCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       CachedNetworkImage(
-                        imageUrl:
-                            'https://tech4u.co.mz/wp-content/uploads/2023/01/cq5dam.web_.1280.1280.png',
+                        imageUrl: imageUrl,
                         height: Sizes.deviceHeight * .25 / 2,
                         placeholder: (_, url) => Center(
                           child: CircularProgressIndicator.adaptive(
