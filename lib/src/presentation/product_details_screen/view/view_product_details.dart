@@ -26,9 +26,32 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   final pageController = PageController(initialPage: 0);
 
+  final productImages = [
+    'https://icegames.co/image/cache/catalog/1212121219/dualsense-ps5-controller-midnight-black-accessory-front-550x550.png',
+    'https://i0.wp.com/sygnifictech.com/wp-content/uploads/2021/07/dualsense-ps5-controller-red-accessory-front.png?fit=580%2C580&ssl=1',
+    'https://gmedia.playstation.com/is/image/SIEPDC/dualsense-edge-listing-thumb-01-en-23aug22?\$1200px--t\$',
+    'https://i5.walmartimages.com/asr/21d776f3-018e-4ba3-878d-73042b187096.14f7e11bf00d0f5f0061fc65ca506ec5.png',
+    'https://astorekw.com/website/image/product.image/10179/image/300x300',
+  ];
+
+  final justForYouColors = [
+    AppColors.red300,
+    AppColors.purple300,
+    AppColors.blue300,
+    AppColors.green300,
+    AppColors.yellow300,
+  ];
+
+  final justForYouImages = [
+    'https://bookbins.in/wp-content/uploads/2021/08/The-48-Laws-Of-Power-Robert-Greene-Buy-Online-Bookbins-1.png',
+    'https://assets.sunglasshut.com/is/image/LuxotticaRetail/8056597665117__STD__shad__qt.png?impolicy=SGH_bgtransparent&width=1000',
+    'https://gfx.productsup.io/img/site/497092/render/eyJzaXRlX2lkIjo0OTcwOTIsInRlbXBsYXRlX2lkIjoxMDQ5MDQzLCJkYXRhIjp7ImltYWdlX2xpbmsiOiJodHRwczpcL1wvd3d3LndhbG1hcnQuY29tLm14XC9nbVwvM3BwXC9hc3JcL2IxYTM3ZDZiLTAyNjItNGIxZS1hYzQyLTdmNzRhMTNiYTEyMy5jMzA5NTFhYWRmOWY5ZTI2ZTNhMDc2ODdjNzM4NDZiMC5qcGVnP29kbkhlaWdodD0yMDAwJm9kbldpZHRoPTIwMDAmb2RuQmc9ZmZmZmZmIn19/6a188b40ad5ccf1f94fbdee11f530c94.png',
+    'https://media.croma.com/image/upload/v1685969130/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256606_ufqgl3.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final itemCount = 10.obs;
+    final itemCount = 1.obs;
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: AnimatedSwitcher(
@@ -191,7 +214,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                             ),
                                             gapH4,
                                             Text(
-                                              '\$85.98',
+                                              '\$79.99',
                                               style: Get.textTheme.titleSmall
                                                   ?.copyWith(
                                                 fontWeight: FontWeight.bold,
@@ -259,15 +282,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         color: AppColors.blue300,
                         child: PageView.builder(
                           controller: pageController,
-                          itemCount: 6,
+                          itemCount: productImages.length,
                           onPageChanged: (value) => setState(() {
                             currentIndex.value = value;
                           }),
                           itemBuilder: (_, index) => Container(
                             color: AppColors.blue300,
                             child: CachedNetworkImage(
-                              imageUrl:
-                                  'https://scufgaming.com/media/prismic/ODMwZTBlYzgtMDYzZi00ZGNmLWE3MTctNjZjMDUyMjA2YjRm_7a716d11-edb0-4a68-83a1-cdefacd9b8a5_reflex_compare_model_base_black_front_850x600.png',
+                              imageUrl: productImages[index],
                               placeholder: (_, url) => const Center(
                                 child: CircularProgressIndicator.adaptive(),
                               ),
@@ -282,7 +304,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         right: 0,
                         child: PageDotsSecondary(
                           currentIndex: currentIndex.value,
-                          countLength: 6,
+                          countLength: productImages.length,
                         ),
                       ),
                     ],
@@ -388,11 +410,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           child: ListView.separated(
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
-                            itemCount: 10,
+                            itemCount: justForYouImages.length,
                             separatorBuilder: (_, index) => gapW16,
                             itemBuilder: (_, index) => MainCard(
-                              imageUrl:
-                                  'https://res.cloudinary.com/dm1ikhi6x/image/upload/ar_1,c_pad/w_747,c_limit/q_auto:low,f_auto/products/MS03NzY3MDYyMjE2OTYwOjMzNjQ5MTY3MDQ',
+                              cardColor: justForYouColors[
+                                  index % justForYouColors.length],
+                              imageUrl: justForYouImages[index],
                               onPressed: () {},
                             ),
                           ),
