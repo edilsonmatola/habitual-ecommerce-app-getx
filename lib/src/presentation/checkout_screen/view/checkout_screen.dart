@@ -139,7 +139,7 @@ class CheckoutScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '85.98',
+                        '\$79.99',
                         style: Get.textTheme.headlineSmall,
                       ),
                     ],
