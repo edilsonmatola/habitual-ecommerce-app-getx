@@ -4,7 +4,13 @@ import 'package:get/get.dart';
 import '../../../core/core_export.dart';
 
 class CategoryCardItem extends StatelessWidget {
-  const CategoryCardItem({super.key, required this.borderColor, required this.cardColor, required this.textColor, required this.categoryName});
+  const CategoryCardItem({
+    super.key,
+    required this.borderColor,
+    required this.cardColor,
+    required this.textColor,
+    required this.categoryName,
+  });
 
   final Color borderColor;
   final Color cardColor;
