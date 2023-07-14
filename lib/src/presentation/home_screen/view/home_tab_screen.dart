@@ -42,7 +42,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     return Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>
@@ -159,7 +159,9 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                     separatorBuilder: (_, index) => gapW16,
                     itemBuilder: (_, index) => DealsCard(
                       imageUrl: dealsImages[index],
-                      onCardTap: () {},
+                      onCardTap: () => Get.toNamed(
+                        AppRoutes.productDetailsRoute,
+                      ),
                       onLikeTap: () {},
                     ),
                   ),
