@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/core/constants/constants_export.dart';
+import 'package:habitual/src/presentation/wishlist_screen/widgets/wishlist_card.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../home_screen/widgets/main_card.dart';
@@ -28,8 +29,18 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
     'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104146487/fee_786_587_png',
   ];
 
+  final wishlistNames = [
+    'Personal',
+    'Work Items',
+  ];
+  final wishlistItemImages = [
+    'Personal',
+    'Work Items',
+  ];
+
   @override
   Widget build(BuildContext context) {
+    const isLoggedIn = false;
     return Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
@@ -69,14 +80,24 @@ class _WishlistTabScreenState extends State<WishlistTabScreen> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                EmptyStateCard(
-                  hasDescription: false,
-                  cardImage: AppAssets.wishlistEmpty,
-                  cardTitle: 'Uh Oh! You have no saved products.',
-                  cardColor: AppColors.purple300,
-                  buttonText: '+ Create a wishlist',
-                  buttonPressed: () {},
+                if (isLoggedIn)
+                WishlistCard(
+                  listName: wishlistNames[0],
+                  imageUrl:
+                      'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_104146487/fee_786_587_png',
+                  itemName: '2014 Forest Hills Drive',
+                  price: 49.99,
                 ),
+                gapH32,
+                
+                  EmptyStateCard(
+                    hasDescription: false,
+                    cardImage: AppAssets.wishlistEmpty,
+                    cardTitle: 'Uh Oh! You have no saved products.',
+                    cardColor: AppColors.purple300,
+                    buttonText: '+ Create a wishlist',
+                    buttonPressed: () {},
+                  ),
                 gapH32,
                 Row(
                   children: [
