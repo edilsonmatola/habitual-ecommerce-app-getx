@@ -27,7 +27,7 @@ class DealsCard extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          width: Sizes.deviceWidth * .40,
+          width: Sizes.deviceWidth * .50,
           height: Sizes.deviceHeight * .30,
           child: Card(
             shape: const RoundedRectangleBorder(
