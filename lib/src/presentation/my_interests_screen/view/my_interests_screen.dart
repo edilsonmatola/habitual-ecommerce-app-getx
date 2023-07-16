@@ -172,6 +172,21 @@ class _MyInterestsScreenState extends State<MyInterestsScreen> {
                       )
                     ],
                   ),
+                  StaggeredGrid.count(
+                    crossAxisSpacing: Sizes.p16,
+                    mainAxisSpacing: Sizes.p16,
+                    crossAxisCount: 2,
+                    children: [
+                      ...List.generate(
+                        trendingInReadingImages.length,
+                        (index) => DealsCard(
+                          imageUrl: trendingInReadingImages[index],
+                          onCardTap: () {},
+                          onLikeTap: () {},
+                        ),
+                      ),
+                    ],
+                  ),
                   gapH8,
                 ],
               ),
