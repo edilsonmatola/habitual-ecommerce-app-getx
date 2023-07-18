@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
 import 'package:habitual/src/common_widgets/custom_divider.dart';
 import 'package:habitual/src/presentation/checkout_screen/widgets/credit_card.dart';
-import 'package:habitual/src/presentation/checkout_screen/widgets/promo_code_textfield.dart';
+import 'package:habitual/src/common_widgets/forms/secondary_textfield.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
 import '../../../core/core_export.dart';
@@ -95,7 +95,9 @@ class CheckoutScreen extends StatelessWidget {
                     children: [
                       const Expanded(
                         flex: 3,
-                        child: PromoCodeTextField(),
+                        child: SecondaryTextField(
+                          hintText: 'Promo Code',
+                        ),
                       ),
                       gapW8,
                       Expanded(
