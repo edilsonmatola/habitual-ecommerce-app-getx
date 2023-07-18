@@ -6,6 +6,7 @@ import 'package:habitual/src/presentation/categories_screen/view/categories_scre
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_confirmation_screen.dart';
 import 'package:habitual/src/presentation/checkout_screen/view/checkout_screen.dart';
 import 'package:habitual/src/presentation/introduction_screen/view/introduction_screen.dart';
+import 'package:habitual/src/presentation/my_interests_screen/view/edit_interests_screen.dart';
 import 'package:habitual/src/presentation/my_interests_screen/view/my_interests_screen.dart';
 import 'package:habitual/src/presentation/product_details_screen/view/view_product_details.dart';
 import 'package:habitual/src/presentation/registration_screen/view/registration_completed.dart';
@@ -164,6 +165,13 @@ abstract class AppPages {
     ),
     //* ==== In App Pages ======
     GetPage(
+      name: AppRoutes.editMyInterestsRoute,
+      page: () => const EditMyInterestsScreen(),
+      transitionDuration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
       name: AppRoutes.myInterestsRoute,
       page: () => const MyInterestsScreen(),
       transitionDuration: const Duration(milliseconds: 300),
@@ -199,6 +207,7 @@ abstract class AppRoutes {
   static const categoriesRoute = '/categories';
   static const checkoutRoute = '/checkout';
   static const myInterestsRoute = '/myInterests';
+  static const editMyInterestsRoute = '/editMyInterests';
   static const checkoutConfirmationRoute = '/checkoutConfirmation';
   static const productDetailsRoute = '/productDetails';
   static const profileRoute = '/profile';
