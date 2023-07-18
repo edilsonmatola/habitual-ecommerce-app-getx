@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/custom_divider.dart';
-import 'package:habitual/src/presentation/checkout_screen/widgets/promo_code_textfield.dart';
+import 'package:habitual/src/common_widgets/forms/secondary_textfield.dart';
 import 'package:habitual/src/presentation/my_interests_screen/widgets/edit_interest_tile.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
@@ -62,7 +62,9 @@ class _EditMyInterestsScreenState extends State<EditMyInterestsScreen> {
                     padding: EdgeInsets.symmetric(
                       horizontal: Sizes.p24,
                     ),
-                    child: PromoCodeTextField(),
+                    child: SecondaryTextField(
+                      hintText: 'search for interests',
+                    ),
                   ),
                   gapH24,
                   const CustomDivider(),
