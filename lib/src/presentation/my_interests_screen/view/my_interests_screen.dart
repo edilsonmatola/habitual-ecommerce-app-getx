@@ -5,6 +5,7 @@ import 'package:habitual/src/presentation/home_screen/widgets/deals_card.dart';
 
 import '../../../common_widgets/common_widgets_export.dart';
 import '../../../core/core_export.dart';
+import '../../../routes/routes_export.dart';
 import '../../categories_screen/widgets/staggered_category_card.dart';
 
 class MyInterestsScreen extends StatefulWidget {
@@ -100,7 +101,9 @@ class _MyInterestsScreenState extends State<MyInterestsScreen> {
                       PrimaryOutlinedButton(
                         hasText: true,
                         title: 'Edit',
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(
+                          AppRoutes.editMyInterestsRoute,
+                        ),
                       ),
                     ],
                   ),
