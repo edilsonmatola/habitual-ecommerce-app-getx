@@ -1,23 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:habitual/src/core/constants/app_colors.dart';
-import 'package:habitual/src/core/constants/app_sizes.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 
-class PromoCodeTextField extends StatelessWidget {
-  const PromoCodeTextField({super.key});
+import '../../core/core_export.dart';
+
+class SecondaryTextField extends StatelessWidget {
+  const SecondaryTextField({
+    super.key,
+    required this.hintText,
+    this.borderColor,
+    this.startIcon = true,
+  });
+
+  final String hintText;
+  final Color? borderColor;
+  final bool startIcon;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        hintText: 'Promo code',
+        prefixIcon: startIcon
+            ? const Padding(
+                padding: EdgeInsets.all(
+                  Sizes.p20,
+                ),
+                child: SvgAsset(
+                  assetPath: AppIcons.searchIcon,
+                ),
+              )
+            : null,
+        hintText: hintText,
         hintStyle: Get.textTheme.displaySmall?.copyWith(
           color: AppColors.neutral400,
+          fontWeight: Fonts.interRegular,
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: AppColors.neutral300,
+            color: borderColor ?? AppColors.neutral300,
           ),
           borderRadius: BorderRadius.circular(
             Sizes.p6,
@@ -25,7 +46,7 @@ class PromoCodeTextField extends StatelessWidget {
         ),
         border: OutlineInputBorder(
           borderSide: BorderSide(
-            color: AppColors.neutral300,
+            color: borderColor ?? AppColors.neutral300,
           ),
           borderRadius: BorderRadius.circular(
             Sizes.p6,
@@ -33,7 +54,7 @@ class PromoCodeTextField extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: AppColors.neutral300,
+            color: borderColor ?? AppColors.neutral300,
           ),
           borderRadius: BorderRadius.circular(
             Sizes.p6,
