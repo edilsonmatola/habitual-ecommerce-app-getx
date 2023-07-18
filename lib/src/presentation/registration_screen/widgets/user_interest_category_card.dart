@@ -74,7 +74,7 @@ class UserInterestCategoryCard extends StatelessWidget {
                         'Add',
                         style: Get.textTheme.bodyLarge,
                       ),
-              )
+              ),
             ],
           ),
         ],
