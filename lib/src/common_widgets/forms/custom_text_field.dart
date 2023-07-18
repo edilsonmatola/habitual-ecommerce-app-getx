@@ -20,7 +20,6 @@ class CustomTextField extends StatefulWidget {
   }) : super(key: key);
 
   final String labelText;
-
   final bool isSecret;
   final List<TextInputFormatter>? inputFormatters;
   final String? initialValue;
