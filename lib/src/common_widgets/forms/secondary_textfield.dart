@@ -21,6 +21,7 @@ class SecondaryTextField extends StatelessWidget {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
+        counterText: '',
         prefixIcon: startIcon
             ? const Padding(
                 padding: EdgeInsets.all(
