@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/common_widgets/common_widgets_export.dart';
+import 'package:habitual/src/common_widgets/svg_asset.dart';
 import 'package:habitual/src/core/constants/app_colors.dart';
 import 'package:habitual/src/core/constants/app_fonts.dart';
 import 'package:habitual/src/core/constants/app_icons.dart';
@@ -17,12 +17,14 @@ class CustomSearchBar extends StatelessWidget {
       controller: searchController,
       onChanged: (value) {},
       decoration: InputDecoration(
-        prefixIcon: Padding(
-          padding: const EdgeInsets.all(
+        counterText: '',
+        isDense: true,
+        prefixIcon: const Padding(
+          padding: EdgeInsets.all(
             Sizes.p20,
           ),
-          child: SvgPicture.asset(
-            AppIcons.searchIcon,
+          child: SvgAsset(
+            assetPath: AppIcons.searchIcon,
           ),
         ),
         suffixIcon: PrimaryTextButton(
@@ -38,7 +40,6 @@ class CustomSearchBar extends StatelessWidget {
           color: AppColors.neutral400,
           fontWeight: Fonts.interRegular,
         ),
-        isDense: true,
         border: const OutlineInputBorder(
           borderSide: BorderSide(
             width: 0,
