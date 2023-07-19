@@ -54,12 +54,18 @@ class AppColors {
    */
 
   static Color red500 = fromHex('#EA8389');
-  
+
   static Color red400 = fromHex('#CC474E');
 
   static Color red300 = fromHex('#E2BDBF');
 
   static Color red100 = fromHex('#F3E6E7');
+
+  /* 
+  * ========= Red Colors ==================
+   */
+
+  static Color organge300 = fromHex('#D68F26');
 
   /* 
   * ========= Blue Colors ==================
