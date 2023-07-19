@@ -15,7 +15,7 @@ class EditMyInterestsScreen extends StatefulWidget {
 }
 
 class _EditMyInterestsScreenState extends State<EditMyInterestsScreen> {
-  final List<int> selectedIndex = [];
+  final List<int> selectedIndex = [0, 2, 3, 4];
 
   final interests = [
     'Fashion',
