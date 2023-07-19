@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/account_card.dart';
+import 'package:habitual/src/presentation/profile_screen/widgets/order_card.dart';
 import 'package:habitual/src/presentation/profile_screen/widgets/profile_biography_field.dart';
 import 'package:habitual/src/routes/app_pages.dart';
 
@@ -110,6 +111,27 @@ class _ProfileTabScreenState extends State<ProfileTabScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      //* User Last/Recent Order
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Orders',
+                            style: Get.textTheme.displayLarge,
+                          ),
+                          PrimaryTextButton(
+                            buttonLabel: 'View all',
+                            onPressed: () => Get.toNamed(
+                              AppRoutes.myInterestsRoute,
+                            ),
+                          ),
+                        ],
+                      ),
+                      gapH16,
+                      OrderCard(
+                        onTap: () {},
+                      ),
+                      //* User Interests
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
